@@ -1,26 +1,496 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+/* =============================================================================
+   DESIGN SYSTEM — SINGLE SOURCE OF TRUTH
+   -----------------------------------------------------------------------------
+   Change the whole look of any site from here. These tokens feed Tailwind v4
+   utilities (bg-brand, shadow-lg, ease-emphasized, text-display, etc.).
+   Colors live in :root / .dark below. Everything else lives here.
+   ============================================================================ */
+@theme {
+  /* ---- Typography scale (fluid, clamp-based) ------------------------------ */
+  --text-display: clamp(2.75rem, 6vw, 5rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-h1: clamp(2.25rem, 4.5vw, 3.5rem);
+  --text-h1--line-height: 1.08;
+  --text-h1--letter-spacing: -0.025em;
+
+  --text-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.02em;
+
+  --text-h3: clamp(1.375rem, 2vw, 1.75rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.015em;
+
+  --text-lead: 1.25rem;
+  --text-lead--line-height: 1.6;
+
+  /* Tracking helpers */
+  --tracking-tightest: -0.04em;
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.12em;
+
+  /* ---- Spacing base (all Tailwind spacing derives from this) -------------- */
+  --spacing: 0.25rem;
+
+  /* ---- Section / layout rhythm ------------------------------------------- */
+  --section-py: clamp(2.75rem, 6vw, 5.5rem);
+  --section-py-sm: clamp(1.75rem, 4vw, 3.25rem);
+  --content-gap: clamp(1.5rem, 3vw, 3rem);
+
+  /* ---- Container widths --------------------------------------------------- */
+  --container-prose: 65ch;
+  --container-content: 80rem; /* 1280px */
+  --container-wide: 90rem; /* 1440px */
+
+  /* ---- Border radius (all derive from --radius in :root) ----------------- */
+  /* radius-sm..4xl are declared in @theme inline below */
+
+  /* ---- Shadows (soft, modern, layered) ----------------------------------- */
+  --shadow-xs: 0 1px 2px 0 oklch(0 0 0 / 0.05);
+  --shadow-sm:
+    0 1px 3px 0 oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.08);
+  --shadow-md:
+    0 4px 12px -2px oklch(0 0 0 / 0.1), 0 2px 6px -2px oklch(0 0 0 / 0.06);
+  --shadow-lg:
+    0 12px 28px -6px oklch(0 0 0 / 0.14), 0 4px 12px -4px oklch(0 0 0 / 0.08);
+  --shadow-xl:
+    0 24px 48px -12px oklch(0 0 0 / 0.2), 0 8px 20px -8px oklch(0 0 0 / 0.1);
+  --shadow-2xl: 0 40px 80px -20px oklch(0 0 0 / 0.28);
+  --shadow-glow: 0 0 40px -8px var(--primary);
+
+  /* ---- Motion: durations & easings --------------------------------------- */
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 700ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Breakpoints (Tailwind v4 responsive utilities) -------------------- */
+  --breakpoint-xs: 24rem; /* 384px */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  /* ---- Z-index scale (use via var(--z-*) in components) ------------------- */
+  --z-base: 0;
+  --z-docked: 10;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-banner: 1200;
+  --z-overlay: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-toast: 1600;
+  --z-tooltip: 1700;
+  --z-max: 2147483647;
 }
 
 @theme inline {
+  /* Brand accent — remap to any palette color to re-skin the whole site */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-shine: shine var(--duration) infinite linear;
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
+  --animate-meteor: meteor 5s linear infinite;
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size, 300%) 0;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes ripple {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+  @keyframes meteor {
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
+    }
+  }
+  --animate-aurora: aurora 8s ease-in-out infinite alternate;
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite
+    alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+  --animate-pulse: pulse var(--duration) ease-out infinite;
+  --animate-pulse-ripple: pulse-ripple var(--duration)
+    cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  --color-color-5: var(--color-5);
+  --color-color-4: var(--color-4);
+  --color-color-3: var(--color-3);
+  --color-color-2: var(--color-2);
+  --color-color-1: var(--color-1);
+  @keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+    25% {
+      background-position: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
+    }
+    75% {
+      background-position: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+  }
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  @keyframes shimmer-slide {
+    to {
+      transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+    0% {
+      transform: translateZ(0) rotate(0);
+    }
+    15%,
+    35% {
+      transform: translateZ(0) rotate(90deg);
+    }
+    65%,
+    85% {
+      transform: translateZ(0) rotate(270deg);
+    }
+    100% {
+      transform: translateZ(0) rotate(360deg);
+    }
+  }
+  @keyframes blink-cursor {
+    0%,
+    49% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg))
+        translateY(calc(var(--radius) * 1px))
+        rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+  @keyframes pulse {
+    0%,
+    100% {
+      boxshadow: 0 0 0 0 var(--pulse-color, oklch(from var(--bg) l c h / 0.5));
+    }
+    50% {
+      boxshadow: 0 0 0 var(--distance)
+        var(--pulse-color, oklch(from var(--bg) l c h / 0.5));
+    }
+  }
+  @keyframes pulse-ripple {
+    0% {
+      boxshadow: 0 0 0 0 oklch(from var(--pulse-color, var(--bg)) l c h / 1);
+    }
+    100% {
+      boxshadow: 0 0 0 var(--distance)
+        oklch(from var(--pulse-color, var(--bg)) l c h / 0);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  /* Font fallbacks — overridden by next/font variables on <html> in layout.tsx */
+  --font-heading: var(--font-sans);
+
+  /* ---------------------------------------------------------------------------
+     PIZZERIA NAPOLI — warm artisan palette
+     Deep red (brick / tomato) · cream · beige · warm brown · olive green.
+     Hues stay in the warm 30–120 range so the whole site feels like wood,
+     stone, fire and fresh produce. Brand accent points at the deep red.
+     --------------------------------------------------------------------------- */
+
+  /* Brand accent (deep red — small details, buttons) */
+  --brand: oklch(0.5 0.19 25);
+  --brand-foreground: oklch(0.99 0 0);
+
+  --background: oklch(1 0 0); /* pure white */
+  --foreground: oklch(0.2 0.015 122); /* near-black, faint olive cast */
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.2 0.015 122);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.2 0.015 122);
+  --primary: oklch(0.5 0.19 25); /* red — buttons / small details */
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.035 122); /* pale olive — large surfaces */
+  --secondary-foreground: oklch(0.3 0.05 122);
+  --muted: oklch(0.96 0.015 122); /* soft olive-tinted neutral */
+  --muted-foreground: oklch(0.45 0.02 122);
+  --accent: oklch(0.48 0.09 122); /* olive green — big cards */
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.5 0.19 25);
+  --border: oklch(0.9 0.01 122);
+  --input: oklch(0.9 0.01 122);
+  --ring: oklch(0.5 0.19 25);
+  --chart-1: oklch(0.5 0.19 25); /* red */
+  --chart-2: oklch(0.48 0.09 122); /* olive */
+  --chart-3: oklch(0.6 0.07 122); /* light olive */
+  --chart-4: oklch(0.3 0.02 0); /* near black */
+  --chart-5: oklch(0.7 0.05 122); /* pale olive */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.2 0.015 122);
+  --sidebar-primary: oklch(0.5 0.19 25);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.035 122);
+  --sidebar-accent-foreground: oklch(0.3 0.05 122);
+  --sidebar-border: oklch(0.9 0.01 122);
+  --sidebar-ring: oklch(0.5 0.19 25);
+  --color-1: oklch(0.5 0.19 25);
+  --color-2: oklch(0.48 0.09 122);
+  --color-3: oklch(0.6 0.07 122);
+  --color-4: oklch(0.3 0.02 0);
+  --color-5: oklch(0.7 0.05 122);
+}
+
+.dark {
+  /* Black, olive green, red */
+  --brand: oklch(0.62 0.19 25);
+  --brand-foreground: oklch(0.98 0 0);
+
+  --background: oklch(0.13 0.005 122); /* near-black */
+  --foreground: oklch(0.96 0.01 122); /* off-white */
+  --card: oklch(0.19 0.015 122);
+  --card-foreground: oklch(0.96 0.01 122);
+  --popover: oklch(0.19 0.015 122);
+  --popover-foreground: oklch(0.96 0.01 122);
+  --primary: oklch(0.62 0.19 25); /* red — buttons / small details */
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.28 0.04 122); /* olive — large surfaces */
+  --secondary-foreground: oklch(0.94 0.015 122);
+  --muted: oklch(0.22 0.015 122);
+  --muted-foreground: oklch(0.68 0.025 122);
+  --accent: oklch(0.55 0.1 122); /* olive glow — big cards */
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.62 0.19 25);
+  --border: oklch(0.92 0.02 122 / 12%);
+  --input: oklch(0.92 0.02 122 / 15%);
+  --ring: oklch(0.62 0.19 25);
+  --chart-1: oklch(0.62 0.19 25);
+  --chart-2: oklch(0.55 0.1 122);
+  --chart-3: oklch(0.65 0.07 122);
+  --chart-4: oklch(0.9 0 0);
+  --chart-5: oklch(0.4 0.04 122);
+  --sidebar: oklch(0.19 0.015 122);
+  --sidebar-foreground: oklch(0.96 0.01 122);
+  --sidebar-primary: oklch(0.62 0.19 25);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.28 0.04 122);
+  --sidebar-accent-foreground: oklch(0.94 0.015 122);
+  --sidebar-border: oklch(0.92 0.02 122 / 12%);
+  --sidebar-ring: oklch(0.62 0.19 25);
+  --color-1: oklch(0.62 0.19 25);
+  --color-2: oklch(0.55 0.1 122);
+  --color-3: oklch(0.65 0.07 122);
+  --color-4: oklch(0.9 0 0);
+  --color-5: oklch(0.4 0.04 122);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans antialiased;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+    /* Subtle trattoria gingham texture — nods to the classic checkered
+       tablecloth without competing with content. */
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        oklch(from var(--accent) l c h / 5%) 0 2px,
+        transparent 2px 34px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        oklch(from var(--primary) l c h / 4%) 0 2px,
+        transparent 2px 34px
+      );
+    background-attachment: fixed;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+  ::selection {
+    @apply bg-primary/90 text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  /* Horizontal page container with responsive gutters */
+  .container-content {
+    width: 100%;
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2.5rem);
+  }
+  .container-wide {
+    width: 100%;
+    max-width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2.5rem);
+  }
+  /* Vertical rhythm for page sections */
+  .section {
+    padding-block: var(--section-py);
+  }
+  .section-sm {
+    padding-block: var(--section-py-sm);
+  }
+  /* Respect reduced-motion for all animations */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

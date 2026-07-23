@@ -1,65 +1,155 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { Flame, Wheat, Leaf, ChefHat } from "lucide-react";
+
+import { constructMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
+import { Navbar02 } from "@/components/sections/navbar";
+import { Hero03 } from "@/components/sections/hero";
+import { Features01, Features02 } from "@/components/sections/features";
+import { Menu01 } from "@/components/sections/menu";
+import { Cta02 } from "@/components/sections/cta";
+import { Gallery01 } from "@/components/sections/gallery";
+import { Timeline01 } from "@/components/sections/timeline";
+import { Testimonials02 } from "@/components/sections/testimonials";
+import { Faq01 } from "@/components/sections/faq";
+import { Contact01 } from "@/components/sections/contact";
+import { Footer02 } from "@/components/sections/footer";
+
+export const metadata: Metadata = constructMetadata();
+
+const SPECIALTIES = [
+  {
+    icon: Flame,
+    title: "Horno de leña",
+    description:
+      "Cocción a 485° que sella el sabor en 90 segundos y da a la masa su borde aireado y ligeramente ahumado.",
+  },
+  {
+    icon: Wheat,
+    title: "Masa madre 48 h",
+    description:
+      "Fermentación lenta con masa madre viva para una pizza más ligera, digestiva y llena de aroma.",
+  },
+  {
+    icon: Leaf,
+    title: "Producto fresco",
+    description:
+      "Tomate San Marzano D.O.P., mozzarella fior di latte y verduras de temporada de productores locales.",
+  },
+  {
+    icon: ChefHat,
+    title: "Cocina abierta",
+    description:
+      "Nuestros pizzaioli trabajan a la vista: cada pizza es un pequeño espectáculo artesanal.",
+  },
+];
+
+const RESTAURANT_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  servesCuisine: ["Pizza", "Restaurante"],
+  priceRange: "10-20 €",
+  url: siteConfig.url,
+  telephone: "+34934672130",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Carrer de Bilbao, 18-22",
+    postalCode: "08005",
+    addressLocality: "Barcelona",
+    addressCountry: "ES",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday"],
+      opens: "11:30",
+      closes: "23:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Friday", "Saturday"],
+      opens: "10:30",
+      closes: "00:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:30",
+      closes: "00:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "146",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(RESTAURANT_JSONLD) }}
+      />
+      <Navbar02 />
+      <main id="inicio" className="flex flex-col">
+        <Hero03 />
+
+        <Features02 id="nosotros" />
+
+        <Features01
+          id="especialidades"
+          eyebrow="Nuestro oficio"
+          title="Cuatro obsesiones, una sola pizza"
+          description="Todo lo que hacemos gira en torno a un objetivo: la pizza napolitana perfecta, honesta y llena de carácter."
+          features={SPECIALTIES}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        <Menu01 id="carta" />
+
+        <Cta02 />
+
+        <Gallery01 id="galeria" />
+
+        <Timeline01 id="historia" />
+
+        <Testimonials02 id="opiniones" />
+
+        <Faq01
+          id="faq"
+          eyebrow="Preguntas frecuentes"
+          title="Todo lo que necesitas saber"
+          description="¿No encuentras tu respuesta? Llámanos o escríbenos, te atendemos encantados."
+          items={[
+            {
+              question: "¿Es necesario reservar mesa?",
+              answer:
+                "Lo recomendamos, sobre todo de viernes a domingo. Puedes reservar desde nuestra web en menos de un minuto o por teléfono.",
+            },
+            {
+              question: "¿Tenéis opciones vegetarianas o sin gluten?",
+              answer:
+                "Sí. Contamos con varias pizzas vegetarianas y una masa sin gluten elaborada en zona separada. Indícanoslo al reservar.",
+            },
+            {
+              question: "¿Se puede pedir para llevar?",
+              answer:
+                "Por supuesto. Puedes recoger tu pedido en el local; horneamos tu pizza justo antes de que llegues para que la disfrutes en su punto.",
+            },
+            {
+              question: "¿Organizáis eventos privados?",
+              answer:
+                "Reservamos el local para grupos y celebraciones. Escríbenos con la fecha y el número de personas y preparamos una propuesta a medida.",
+            },
+          ]}
+        />
+
+        <Contact01 id="contacto" />
       </main>
-    </div>
+      <Footer02 />
+    </>
   );
 }

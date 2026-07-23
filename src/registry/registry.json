@@ -1,0 +1,499 @@
+{
+  "generatedAt": "2026-07-22T21:02:41.298Z",
+  "count": 22,
+  "components": [
+    {
+      "family": "contact",
+      "id": "contact-01",
+      "name": "Contact 01",
+      "description": "Section contact deux colonnes : coordonnées (adresse, horaires, téléphone, email) et formulaire de réservation accessible avec retour toast.",
+      "tags": [
+        "contact",
+        "réservation",
+        "formulaire",
+        "horaires",
+        "carte",
+        "form"
+      ],
+      "useCases": [
+        "restaurant",
+        "réservation",
+        "local",
+        "service"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [
+        "sonner"
+      ],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "cta",
+      "id": "cta-01",
+      "name": "CTA 01",
+      "description": "Appel à l'action centré (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "conversion"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "cta",
+      "id": "cta-02",
+      "name": "Cta 02",
+      "description": "Bandeau d'appel à l'action premium : carte pleine largeur en couleur de marque, motif discret, titre serif et double action réserver/appeler.",
+      "tags": [
+        "cta",
+        "bandeau",
+        "réservation",
+        "marque",
+        "dot-pattern",
+        "banner"
+      ],
+      "useCases": [
+        "restaurant",
+        "réservation",
+        "événementiel",
+        "marque"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "faq",
+      "id": "faq-01",
+      "name": "FAQ 01",
+      "description": "Questions fréquentes en accordéon accessible (une ouverte à la fois).",
+      "tags": [
+        "accordéon",
+        "accessible",
+        "objections"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "features",
+      "id": "features-01",
+      "name": "Features 01",
+      "description": "Grille de cartes fonctionnalités avec icônes, 1 à 4 colonnes.",
+      "tags": [
+        "grille",
+        "cartes",
+        "icônes",
+        "atouts"
+      ],
+      "useCases": [
+        "saas",
+        "startup",
+        "agence",
+        "produit"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "features",
+      "id": "features-02",
+      "name": "Features 02",
+      "description": "Présentation éditoriale deux colonnes : image immersive avec carte statistique flottante et bloc texte avec liste de points cochés.",
+      "tags": [
+        "split",
+        "editorial",
+        "image",
+        "checklist",
+        "about",
+        "savoir-faire"
+      ],
+      "useCases": [
+        "restaurant",
+        "artisan",
+        "à-propos",
+        "marque"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "footer",
+      "id": "footer-01",
+      "name": "Footer 01",
+      "description": "Pied de page (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "footer"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "footer",
+      "id": "footer-02",
+      "name": "Footer 02",
+      "description": "Pied de page riche : marque, baseline, colonnes de liens, réseaux sociaux et barre inférieure copyright. Sombre et chaleureux.",
+      "tags": [
+        "footer",
+        "colonnes",
+        "réseaux",
+        "sombre",
+        "liens",
+        "riche"
+      ],
+      "useCases": [
+        "restaurant",
+        "marque",
+        "vitrine",
+        "hôtellerie"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "gallery",
+      "id": "gallery-01",
+      "name": "Gallery 01",
+      "description": "Galerie éditoriale en grille asymétrique (tuiles de tailles variables), zoom doux au survol et légende révélée au survol.",
+      "tags": [
+        "galerie",
+        "grille",
+        "masonry",
+        "asymétrique",
+        "hover",
+        "images"
+      ],
+      "useCases": [
+        "restaurant",
+        "lieu",
+        "portfolio",
+        "hôtellerie"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "hero",
+      "id": "hero-01",
+      "name": "Hero 01",
+      "description": "Hero centré avec fond en pointillés, badge, grand titre, sous-titre et double CTA.",
+      "tags": [
+        "centré",
+        "dot-pattern",
+        "badge",
+        "cta",
+        "polyvalent"
+      ],
+      "useCases": [
+        "saas",
+        "startup",
+        "agence",
+        "portfolio"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "hero",
+      "id": "hero-02",
+      "name": "Hero 02",
+      "description": "Hero centré générique (scaffold), titre et sous-titre animés.",
+      "tags": [
+        "centré",
+        "minimal",
+        "scaffold"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "hero",
+      "id": "hero-03",
+      "name": "Hero 03",
+      "description": "Accroche plein cadre sur photographie avec dégradé chaud, marque serif, double CTA et bandeau de preuves (note et chiffres clés).",
+      "tags": [
+        "plein-cadre",
+        "image",
+        "overlay",
+        "cta",
+        "stats",
+        "immersif"
+      ],
+      "useCases": [
+        "restaurant",
+        "hôtellerie",
+        "luxe",
+        "événementiel"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "logos",
+      "id": "logos-01",
+      "name": "Logos 01",
+      "description": "Bandeau de logos clients (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "confiance",
+        "logos"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "menu",
+      "id": "menu-01",
+      "name": "Menu 01",
+      "description": "Carte mise en avant en grille de cartes photo : nom, sous-titre italique, description, prix et badge signature, avec CTA carte complète.",
+      "tags": [
+        "carte",
+        "grille",
+        "photo",
+        "prix",
+        "badge",
+        "menu"
+      ],
+      "useCases": [
+        "restaurant",
+        "pizzeria",
+        "café",
+        "bistrot"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "navbar",
+      "id": "navbar-01",
+      "name": "Navbar 01",
+      "description": "Barre de navigation (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "navigation",
+        "header"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "navbar",
+      "id": "navbar-02",
+      "name": "Navbar 02",
+      "description": "En-tête collant translucide (effet verre au défilement), marque serif, nav ancrée, bascule de thème, CTA et menu latéral mobile accessible.",
+      "tags": [
+        "collant",
+        "translucide",
+        "glass",
+        "sticky",
+        "mobile",
+        "sheet",
+        "theme-toggle"
+      ],
+      "useCases": [
+        "restaurant",
+        "luxe",
+        "marque",
+        "vitrine"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [
+        "next-themes"
+      ],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "pricing",
+      "id": "pricing-01",
+      "name": "Pricing 01",
+      "description": "Trois offres en cartes avec offre recommandée mise en avant.",
+      "tags": [
+        "cartes",
+        "3-offres",
+        "recommandé",
+        "abonnement"
+      ],
+      "useCases": [
+        "saas",
+        "services"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "services",
+      "id": "services-01",
+      "name": "Services 01",
+      "description": "Présentation de prestations (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "prestations"
+      ],
+      "useCases": [
+        "agence",
+        "artisan",
+        "b2b"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "stats",
+      "id": "stats-01",
+      "name": "Stats 01",
+      "description": "Chiffres clés (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "chiffres",
+        "kpi"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "testimonials",
+      "id": "testimonials-01",
+      "name": "Testimonials 01",
+      "description": "Section témoignages (scaffold générique à personnaliser).",
+      "tags": [
+        "scaffold",
+        "avis",
+        "preuve-sociale"
+      ],
+      "useCases": [
+        "polyvalent"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "beta",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "testimonials",
+      "id": "testimonials-02",
+      "name": "Testimonials 02",
+      "description": "Avis clients en grille de cartes : citation, note en étoiles, avatar à initiales, nom et rôle. Sobre et accessible.",
+      "tags": [
+        "avis",
+        "témoignages",
+        "étoiles",
+        "avatar",
+        "grille",
+        "reviews"
+      ],
+      "useCases": [
+        "restaurant",
+        "service",
+        "marque-locale",
+        "e-commerce"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    },
+    {
+      "family": "timeline",
+      "id": "timeline-01",
+      "name": "Timeline 01",
+      "description": "Récit chronologique avec image d'ambiance et frise verticale (année, titre, texte) ponctuée de points sur un rail.",
+      "tags": [
+        "frise",
+        "chronologie",
+        "histoire",
+        "story",
+        "vertical",
+        "image"
+      ],
+      "useCases": [
+        "restaurant",
+        "marque",
+        "à-propos",
+        "artisan"
+      ],
+      "responsive": true,
+      "animated": true,
+      "dependencies": [],
+      "status": "stable",
+      "createdAt": "2026-07-22"
+    }
+  ]
+}
