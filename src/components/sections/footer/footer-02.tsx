@@ -1,6 +1,6 @@
 "use client";
 
-import { Flame, MapPin } from "lucide-react";
+import Image from "next/image";
 import { NavLink } from "@/components/ui/nav-link";
 
 import { cn } from "@/lib/utils";
@@ -76,30 +76,36 @@ export function Footer02({
     >
       <div className="container-content section-sm">
         <Reveal>
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
             {/* Brand & Contact */}
-            <div className="flex flex-col gap-4 lg:col-span-1">
-              <div className="flex items-center gap-2">
-                <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full">
-                  <Flame className="size-5" aria-hidden />
-                </span>
-                <span className="font-heading text-background text-lg font-semibold">
-                  {brand}
-                </span>
+            <div className="flex max-w-xl items-start gap-5 lg:col-span-6">
+              <div className="flex size-22 shrink-0 items-center justify-center overflow-hidden rounded-full bg-background shadow-md ring-1 ring-background/20 md:size-24">
+                <Image
+                  src="/logo-copasyencants.svg"
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="size-full object-contain"
+                  aria-hidden
+                />
               </div>
-              <p className="text-background/70 text-sm text-pretty">
-                {tagline}
-              </p>
-              <p className="text-background/60 flex items-start gap-2 text-sm">
-                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
-                <span>{address}</span>
-              </p>
+              <div className="flex min-w-0 flex-col gap-4 pt-2">
+                <p className="max-w-md text-sm leading-relaxed text-background/75 text-pretty">
+                  {tagline}
+                </p>
+                <p className="max-w-sm text-sm leading-relaxed text-background/55">
+                  {address}
+                </p>
+              </div>
             </div>
 
             {/* Navigation */}
             {columns.map((col) => (
-              <nav key={col.title} className="flex flex-col gap-4 lg:col-span-1">
-                <h3 className="text-background font-heading text-sm font-bold tracking-wide uppercase">
+              <nav
+                key={col.title}
+                className="flex flex-col gap-4 md:pl-2 lg:col-span-2 lg:pl-0"
+              >
+                <h3 className="font-heading text-sm font-bold tracking-wide text-background uppercase">
                   {col.title}
                 </h3>
                 <ul className="flex flex-col gap-3">
@@ -118,15 +124,20 @@ export function Footer02({
             ))}
 
             {/* Schedule */}
-            <div className="flex flex-col gap-4 lg:col-span-1">
-              <h3 className="text-background font-heading text-sm font-bold tracking-wide uppercase">
+            <div className="flex flex-col gap-4 lg:col-span-4 lg:pl-4">
+              <h3 className="font-heading text-sm font-bold tracking-wide text-background uppercase">
                 {scheduleTitle}
               </h3>
-              <dl className="flex flex-col gap-3 text-sm">
+              <dl className="flex max-w-sm flex-col overflow-hidden rounded-lg border border-background/10 text-sm">
                 {schedule.map((item) => (
-                  <div key={item.day} className="flex items-center justify-between gap-3">
-                    <dt className="text-background/70">{item.day}</dt>
-                    <dd className="text-background font-medium">{item.hours}</dd>
+                  <div
+                    key={item.day}
+                    className="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-background/10 px-4 py-3 last:border-b-0"
+                  >
+                    <dt className="text-background/65">{item.day}</dt>
+                    <dd className="text-right font-semibold text-background">
+                      {item.hours}
+                    </dd>
                   </div>
                 ))}
               </dl>

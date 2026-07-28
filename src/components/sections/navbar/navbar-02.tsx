@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, Flame } from "lucide-react";
+import Image from "next/image";
+import { Menu } from "lucide-react";
 import { NavLink } from "@/components/ui/nav-link";
 import { Link } from "@/i18n/navigation";
 
@@ -79,14 +80,18 @@ export function Navbar02({
       <nav className="container-content flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href={logoHref}
-          className="group flex items-center gap-2"
+          className="group flex items-center"
           aria-label={logoAriaLabel ?? brand}
         >
-          <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full">
-            <Flame className="size-5" aria-hidden />
-          </span>
-          <span className="font-heading text-xl font-semibold tracking-tight">
-            {brand}
+          <span className="flex size-12 items-center justify-center overflow-hidden rounded-full bg-background shadow-sm ring-1 ring-border/60 md:size-13">
+            <Image
+              src="/logo-copasyencants.svg"
+              alt=""
+              width={52}
+              height={52}
+              className="size-full object-contain"
+              aria-hidden
+            />
           </span>
         </Link>
 
