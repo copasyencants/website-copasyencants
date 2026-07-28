@@ -170,27 +170,27 @@
       "description": "Thousands of nights shared around the fire. Here are some of the voices that keep us kneading.",
       "items": [
         {
-          "quote": "The best pizza I've had outside of Italy. The dough is light, aromatic, and you can taste the wood-fired oven in every bite.",
-          "name": "Lucía Fernández",
-          "role": "Regular customer",
+          "quote": "Great place! The food is excellent and absolutely worth the price. Delicious dishes, exquisite drinks and a warm welcome that leaves a lasting impression. I highly recommend it.",
+          "name": "Kinga Seroczyńska",
+          "role": "Google Maps · 11 reviews · 5 months ago",
           "rating": 5
         },
         {
-          "quote": "A place with soul. The service is warm, the open kitchen is quite a show, and the Tartufo is simply memorable.",
-          "name": "Andrés Molina",
-          "role": "Food critic",
+          "quote": "Very nice place, good pizza and great service.",
+          "name": "Mégane F",
+          "role": "Local Guide · 17 reviews · 2 weeks ago",
           "rating": 5
         },
         {
-          "quote": "We celebrated our anniversary here and it was perfect. Fresh ingredients, cozy atmosphere and a tiramisu on another level.",
-          "name": "Carla Ruiz",
-          "role": "Google Reviews",
+          "quote": "Very nice restaurant with a sunny terrace. Great salad and a varied selection of tapas with good value for money. They are very welcoming and the restaurant is in a lovely neighborhood.",
+          "name": "Alice Caron",
+          "role": "Local Guide · 22 reviews · 5 months ago",
           "rating": 5
         },
         {
-          "quote": "You can feel the Italian authenticity without falling into cliché. Book ahead, it's always full and now I understand why.",
-          "name": "Javier Ortega",
-          "role": "Local neighbor",
+          "quote": "Perfect tapas and a very good four seasons pizza! Impeccable service and a calm atmosphere on a square away from the crowds. A great address in Poblenou, for example after leaving the beach. I recommend it.",
+          "name": "Tojo Andriantseheno",
+          "role": "Local Guide · 24 reviews · 1 month ago",
           "rating": 5
         }
       ]
@@ -271,7 +271,11 @@
       "description": "Discover all our artisan Neapolitan pizzas, carefully selected drinks and authentic cocktails. Every dish made with the finest fresh ingredients.",
       "phone": "934 672 130",
       "address": "Carrer de Bilbao, 18-22",
-      "instagramHandle": "@copasyencants"
+      "instagramHandle": "@copasyencants",
+      "reserve": "Book a table",
+      "orderLabel": "Order for takeaway",
+      "orderGlovo": "Order on Glovo",
+      "orderUberEats": "Order on Uber Eats"
     },
     "sections": {
       "clasicas": "Classic Pizzas",

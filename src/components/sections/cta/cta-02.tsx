@@ -20,7 +20,6 @@ export interface Cta02Props extends SectionProps {
   description?: string;
   primary?: Cta02Action;
   secondary?: Cta02Action;
-  orderLabel?: string;
   orderActions?: Cta02Action[];
 }
 
@@ -36,7 +35,6 @@ export function Cta02({
   description = "Las mejores mesas vuelan. Reserva en segundos y vive una velada napolitana junto al horno.",
   primary = { label: "Reservar ahora", href: "#contacto" },
   secondary = { label: "934 67 21 30", href: "tel:+34934672130" },
-  orderLabel = "O pide para llevar",
   orderActions = [],
   ...props
 }: Cta02Props) {
@@ -63,11 +61,11 @@ export function Cta02({
             <p className="text-primary-foreground/85 text-lg text-pretty">
               {description}
             </p>
-            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-2 flex w-full max-w-4xl flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
               <Button
                 asChild
                 variant="secondary"
-                className="h-12 px-7 text-base"
+                className="h-12 min-w-40 px-5 text-base"
               >
                 <Link href={primary.href}>
                   <CalendarCheck className="size-4" />
@@ -77,39 +75,27 @@ export function Cta02({
               <Button
                 asChild
                 variant="outline"
-                className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground dark:border-primary-foreground/40 h-12 bg-transparent px-7 text-base dark:bg-transparent"
+                className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground dark:border-primary-foreground/40 h-12 min-w-40 bg-transparent px-5 text-base dark:bg-transparent"
               >
                 <Link href={secondary.href}>
                   <Phone className="size-4" />
                   {secondary.label}
                 </Link>
               </Button>
+              {orderActions.map((action) => (
+                <Button
+                  key={action.href}
+                  asChild
+                  variant="outline"
+                  className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-foreground dark:border-primary-foreground/40 h-12 min-w-40 bg-transparent px-5 text-base dark:bg-transparent"
+                >
+                  <a href={action.href} target="_blank" rel="noreferrer">
+                    <ShoppingBag className="size-4" />
+                    {action.label}
+                  </a>
+                </Button>
+              ))}
             </div>
-            {orderActions.length > 0 ? (
-              <div className="flex flex-col items-center gap-3 pt-2">
-                <p className="text-primary-foreground/75 text-sm font-medium">
-                  {orderLabel}
-                </p>
-                <div className="flex flex-col gap-3 sm:flex-row">
-                  {orderActions.map((action) => (
-                    <Button
-                      key={action.href}
-                      asChild
-                      className="h-11 bg-white px-6 text-base text-neutral-950 hover:bg-white/90 hover:text-neutral-950"
-                    >
-                      <a
-                        href={action.href}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <ShoppingBag className="size-4" />
-                        {action.label}
-                      </a>
-                    </Button>
-                  ))}
-                </div>
-              </div>
-            ) : null}
           </div>
         </div>
       </Reveal>

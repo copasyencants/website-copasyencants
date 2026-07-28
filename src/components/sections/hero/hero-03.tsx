@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Star, Flame } from "lucide-react";
+import { ArrowRight, Flame, ShoppingBag, Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
@@ -27,6 +27,7 @@ export interface Hero03Props extends SectionProps {
   description?: string;
   primary?: Hero03Action;
   secondary?: Hero03Action;
+  orderActions?: Hero03Action[];
   stats?: Hero03Stat[];
   reviewsLabel?: string;
   imageSrc?: string;
@@ -54,6 +55,7 @@ export function Hero03({
   description = "Masa madre madurada 48 horas, ingredientes frescos de temporada y el calor vivo de nuestro horno de leña. Cocina abierta, alma italiana.",
   primary = { label: "Reservar mesa", href: "#contacto" },
   secondary = { label: "Ver la carta", href: "/carta" },
+  orderActions = [],
   stats = DEFAULT_STATS,
   reviewsLabel = "4,8/5 · 146 reseñas",
   imageSrc = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80",
@@ -121,8 +123,11 @@ export function Hero03({
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <Button asChild className="h-12 px-7 text-base shadow-lg shadow-black/20">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+              <Button
+                asChild
+                className="h-12 px-7 text-base shadow-lg shadow-black/20"
+              >
                 <Link href={primary.href}>
                   {primary.label}
                   <ArrowRight className="size-4" />
@@ -135,6 +140,19 @@ export function Hero03({
               >
                 <Link href={secondary.href}>{secondary.label}</Link>
               </Button>
+              {orderActions.map((action) => (
+                <Button
+                  key={action.href}
+                  asChild
+                  variant="outline"
+                  className="h-12 border-white/25 bg-black/20 px-5 text-sm text-white backdrop-blur-sm hover:bg-white hover:text-neutral-950 dark:border-white/25 dark:bg-black/20"
+                >
+                  <a href={action.href} target="_blank" rel="noreferrer">
+                    <ShoppingBag className="size-4" />
+                    {action.label}
+                  </a>
+                </Button>
+              ))}
             </div>
           </Reveal>
 

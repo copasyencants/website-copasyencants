@@ -183,6 +183,10 @@ export default async function Home({
           description={t("hero.description")}
           primary={{ label: t("hero.primary"), href: "#contacto" }}
           secondary={{ label: t("hero.secondary"), href: "/carta" }}
+          orderActions={[
+            { label: t("cta.orderGlovo"), href: GLOVO_URL },
+            { label: t("cta.orderUberEats"), href: UBER_EATS_URL },
+          ]}
           reviewsLabel={t("hero.reviewsLabel")}
           stats={t.raw("hero.stats")}
         />
@@ -222,7 +226,6 @@ export default async function Home({
           description={t("cta.description")}
           primary={{ label: t("cta.primary"), href: "#contacto" }}
           secondary={{ label: t("cta.secondary"), href: "tel:+34934672130" }}
-          orderLabel={t("cta.orderLabel")}
           orderActions={[
             { label: t("cta.orderGlovo"), href: GLOVO_URL },
             { label: t("cta.orderUberEats"), href: UBER_EATS_URL },

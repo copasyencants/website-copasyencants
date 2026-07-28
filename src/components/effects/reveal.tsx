@@ -20,7 +20,7 @@ interface RevealProps extends HTMLMotionProps<"div"> {
  */
 export function Reveal({
   delay = 0,
-  y = 16,
+  y = 12,
   className,
   children,
   ...props
@@ -48,9 +48,9 @@ export function Reveal({
     <motion.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay }}
-      className={cn(className)}
+      viewport={{ once: true, amount: 0.18, margin: "0px 0px -8% 0px" }}
+      transition={{ duration: 0.42, ease: [0.16, 1, 0.3, 1], delay }}
+      className={cn("transform-gpu", className)}
       {...props}
     >
       {children}

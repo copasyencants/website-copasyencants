@@ -49,14 +49,15 @@ export function Features02({
     <section className={cn("section container-content", className)} {...props}>
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal className="relative">
-          <div className="border-border bg-muted relative aspect-[4/5] overflow-hidden rounded-3xl border shadow-lg">
+          <div className="border-border bg-muted relative aspect-[4/5] overflow-hidden rounded-3xl border shadow-xl">
             <Image
               src={imageSrc}
               alt={imageAlt}
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
           </div>
           {badge ? (
             <div className="bg-card border-border absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border p-5 shadow-xl sm:right-6">

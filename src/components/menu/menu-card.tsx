@@ -18,22 +18,22 @@ export function MenuCard({
     <Reveal>
       <article
         className={cn(
-          "bg-card border border-border/40 rounded-xl p-5 flex flex-col gap-3 hover:border-primary/30 transition-colors",
-          className
+          "bg-card border-border/60 flex min-h-28 flex-col gap-3 rounded-xl border p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md",
+          className,
         )}
       >
         <div className="flex items-start justify-between gap-4">
-          <div className="flex-1 min-w-0">
+          <div className="min-w-0 flex-1">
             <h4 className="font-heading text-lg font-semibold leading-tight">
               {name}
             </h4>
           </div>
-          <span className="bg-primary/10 text-primary font-bold whitespace-nowrap px-3 py-1 rounded-lg text-sm">
+          <span className="bg-primary/10 text-primary rounded-full px-3 py-1 text-sm font-bold whitespace-nowrap">
             {price}
           </span>
         </div>
         {description ? (
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
             {description}
           </p>
         ) : null}

@@ -86,25 +86,21 @@ export function Gallery01({
         ) : null}
       </div>
 
-      <div className="grid auto-rows-[200px] grid-cols-2 gap-4 sm:auto-rows-[220px] sm:grid-cols-4">
+      <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[220px] sm:grid-cols-4 sm:gap-4">
         {images.map((image, i) => (
           <Reveal
             key={image.src}
             delay={0.04 * i}
             className={cn("h-full", image.area)}
           >
-            <figure className="group bg-muted relative h-full w-full overflow-hidden rounded-2xl">
+            <figure className="group bg-muted relative h-full w-full overflow-hidden rounded-2xl shadow-sm">
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 sizes="(min-width: 640px) 45vw, 90vw"
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <figcaption className="absolute bottom-0 left-0 translate-y-2 p-4 text-sm font-medium text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                {image.alt}
-              </figcaption>
             </figure>
           </Reveal>
         ))}

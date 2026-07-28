@@ -8,6 +8,12 @@ import { MenuCard } from "@/components/menu/menu-card";
 import { MenuHeader } from "@/components/menu/menu-header";
 import { constructMetadata } from "@/lib/metadata";
 
+const GLOVO_URL =
+  "https://glovoapp.com/es/es/barcelona/stores/copas-y-encants-barcelona?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google";
+
+const UBER_EATS_URL =
+  "https://www.ubereats.com/es/store/copas-y-encants-pizza-napoletana/wG3xvmaoViGOzbVwUE_eog?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas";
+
 export async function generateMetadata({
   params,
 }: {
@@ -53,6 +59,14 @@ export default async function CartaPage({
     postres: MenuDataItem[];
   };
 
+  const categoryLinks = [
+    { href: "#clasicas", label: t("sections.clasicas") },
+    { href: "#blancas", label: t("sections.blancas") },
+    { href: "#entrantes", label: t("sections.entrantes") },
+    { href: "#bebidas", label: t("sections.bebidas") },
+    { href: "#postres", label: t("sections.postres") },
+  ];
+
   return (
     <>
       <Navbar02
@@ -78,11 +92,34 @@ export default async function CartaPage({
           phone={t("header.phone")}
           address={t("header.address")}
           instagramHandle={t("header.instagramHandle")}
+          reserveAction={{ label: t("header.reserve"), href: "/#contacto" }}
+          orderLabel={t("header.orderLabel")}
+          orderActions={[
+            { label: t("header.orderGlovo"), href: GLOVO_URL },
+            { label: t("header.orderUberEats"), href: UBER_EATS_URL },
+          ]}
         />
 
-        <div className="container-content py-12 space-y-20">
+        <nav
+          aria-label="Menu categories"
+          className="border-border/70 bg-background/85 sticky top-16 z-30 border-y backdrop-blur-md md:top-20"
+        >
+          <div className="container-content flex gap-2 overflow-x-auto py-3">
+            {categoryLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="border-border/70 bg-card hover:border-primary/40 hover:text-primary shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </nav>
+
+        <div className="container-content space-y-20 py-12">
           {/* Pizzas Clásicas */}
-          <section>
+          <section id="clasicas" className="scroll-mt-32">
             <div className="mb-8">
               <h2 className="text-h2 font-heading font-semibold mb-2">
                 {t("sections.clasicas")}
@@ -97,7 +134,7 @@ export default async function CartaPage({
           </section>
 
           {/* Pizzas Blancas */}
-          <section>
+          <section id="blancas" className="scroll-mt-32">
             <div className="mb-8">
               <h2 className="text-h2 font-heading font-semibold mb-2">
                 {t("sections.blancas")}
@@ -112,7 +149,7 @@ export default async function CartaPage({
           </section>
 
           {/* Entrantes */}
-          <section>
+          <section id="entrantes" className="scroll-mt-32">
             <div className="mb-8">
               <h2 className="text-h2 font-heading font-semibold mb-2">
                 {t("sections.entrantes")}
@@ -127,7 +164,7 @@ export default async function CartaPage({
           </section>
 
           {/* Bebidas */}
-          <section>
+          <section id="bebidas" className="scroll-mt-32">
             <div className="mb-8">
               <h2 className="text-h2 font-heading font-semibold mb-2">
                 {t("sections.bebidas")}
@@ -187,7 +224,7 @@ export default async function CartaPage({
           </section>
 
           {/* Postres */}
-          <section>
+          <section id="postres" className="scroll-mt-32">
             <div className="mb-8">
               <h2 className="text-h2 font-heading font-semibold mb-2">
                 {t("sections.postres")}

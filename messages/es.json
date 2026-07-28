@@ -170,27 +170,27 @@
       "description": "Miles de noches compartidas alrededor del fuego. Estas son algunas de las voces que nos hacen seguir amasando.",
       "items": [
         {
-          "quote": "La mejor pizza que he comido fuera de Italia. La masa es ligera, aromática y se nota el horno de leña en cada bocado.",
-          "name": "Lucía Fernández",
-          "role": "Cliente habitual",
+          "quote": "¡Un lugar genial! La comida es excelente y vale totalmente su precio. Platos deliciosos, bebidas exquisitas y una bienvenida cálida que deja un recuerdo imborrable. Lo recomiendo muchísimo.",
+          "name": "Kinga Seroczyńska",
+          "role": "Google Maps · 11 reseñas · hace 5 meses",
           "rating": 5
         },
         {
-          "quote": "Un lugar con alma. El servicio es cálido, la cocina abierta es todo un espectáculo y la Tartufo es simplemente memorable.",
-          "name": "Andrés Molina",
-          "role": "Crítico gastronómico",
+          "quote": "Muy agradable, buena pizza y servicio excelente.",
+          "name": "Mégane F",
+          "role": "Local Guide · 17 reseñas · hace 2 semanas",
           "rating": 5
         },
         {
-          "quote": "Celebramos aquí nuestro aniversario y fue perfecto. Ingredientes frescos, ambiente acogedor y un tiramisú de otro nivel.",
-          "name": "Carla Ruiz",
-          "role": "Google Reseñas",
+          "quote": "Restaurante muy agradable, con terraza soleada. Muy buena ensalada y una variedad de tapas con muy buena relación calidad-precio. Son muy acogedores y está situado en un barrio muy bonito.",
+          "name": "Alice Caron",
+          "role": "Local Guide · 22 reseñas · hace 5 meses",
           "rating": 5
         },
         {
-          "quote": "Se respira autenticidad italiana sin caer en lo típico. Reservad con antelación, siempre está lleno y ahora entiendo por qué.",
-          "name": "Javier Ortega",
-          "role": "Vecino del barrio",
+          "quote": "¡Tapas perfectas y una pizza 4 estaciones muy buena! Servicio impecable y ambiente tranquilo en una plaza lejos del bullicio. Una dirección estupenda en Poblenou, por ejemplo al salir de la playa. Lo recomiendo.",
+          "name": "Tojo Andriantseheno",
+          "role": "Local Guide · 24 reseñas · hace un mes",
           "rating": 5
         }
       ]
@@ -271,7 +271,11 @@
       "description": "Descubre todas nuestras pizzas napolitanas artesanales, bebidas cuidadosamente seleccionadas y cócteles auténticos. Cada plato elaborado con los mejores ingredientes frescos.",
       "phone": "934 672 130",
       "address": "Carrer de Bilbao, 18-22",
-      "instagramHandle": "@copasyencants"
+      "instagramHandle": "@copasyencants",
+      "reserve": "Reservar mesa",
+      "orderLabel": "Pide para llevar",
+      "orderGlovo": "Pedir en Glovo",
+      "orderUberEats": "Pedir en Uber Eats"
     },
     "sections": {
       "clasicas": "Pizzas Clásicas",
