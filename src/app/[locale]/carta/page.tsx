@@ -93,7 +93,6 @@ export default async function CartaPage({
           address={t("header.address")}
           instagramHandle={t("header.instagramHandle")}
           reserveAction={{ label: t("header.reserve"), href: "/#contacto" }}
-          orderLabel={t("header.orderLabel")}
           orderActions={[
             { label: t("header.orderGlovo"), href: GLOVO_URL },
             { label: t("header.orderUberEats"), href: UBER_EATS_URL },

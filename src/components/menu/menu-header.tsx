@@ -20,7 +20,6 @@ export interface MenuHeaderProps {
   instagramHandle?: string;
   instagramHref?: string;
   reserveAction?: MenuHeaderAction;
-  orderLabel?: string;
   orderActions?: MenuHeaderAction[];
 }
 
@@ -35,7 +34,6 @@ export function MenuHeader({
   instagramHandle = "@copasyencants",
   instagramHref = "https://instagram.com/copasyencants",
   reserveAction = { label: "Reservar mesa", href: "/#contacto" },
-  orderLabel = "Pide para llevar",
   orderActions = [],
 }: MenuHeaderProps) {
   return (
@@ -82,14 +80,6 @@ export function MenuHeader({
               ))}
             </div>
           </Reveal>
-
-          {orderActions.length > 0 ? (
-            <Reveal delay={0.18}>
-              <p className="text-muted-foreground text-sm font-medium">
-                {orderLabel}
-              </p>
-            </Reveal>
-          ) : null}
 
           <Reveal delay={0.2}>
             <div className="text-muted-foreground mt-2 flex flex-col gap-2 text-sm sm:flex-row sm:justify-center sm:gap-6">
