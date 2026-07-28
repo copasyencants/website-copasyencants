@@ -30,7 +30,7 @@ const DEFAULT_COLUMNS: FooterColumn[] = [
     title: "Explora",
     links: [
       { label: "Especialidades", href: "#especialidades" },
-      { label: "Carta", href: "#carta" },
+      { label: "Carta", href: "/carta" },
       { label: "Galería", href: "#galeria" },
       { label: "Historia", href: "#historia" },
     ],

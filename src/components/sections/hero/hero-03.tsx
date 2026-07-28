@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/effects/reveal";
-import { placeholderImage } from "@/lib/images";
 
 export interface Hero03Action {
   label: string;
@@ -53,7 +52,7 @@ export function Hero03({
   titleBottom = "hecho a mano",
   description = "Masa madre madurada 48 horas, ingredientes frescos de temporada y el calor vivo de nuestro horno de leña. Cocina abierta, alma italiana.",
   primary = { label: "Reservar mesa", href: "#contacto" },
-  secondary = { label: "Ver la carta", href: "#carta" },
+  secondary = { label: "Ver la carta", href: "/carta" },
   stats = DEFAULT_STATS,
   imageSrc = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80",
   imageAlt = "Pizza napolitana recién salida del horno de leña",
@@ -63,7 +62,7 @@ export function Hero03({
   return (
     <section
       className={cn(
-        "relative isolate flex min-h-[92vh] items-end overflow-hidden",
+        "relative isolate flex min-h-[calc(100svh-4rem)] items-start overflow-hidden pt-12 sm:items-center sm:pt-0 md:min-h-[calc(100svh-5rem)]",
         className,
       )}
       {...props}
@@ -72,7 +71,7 @@ export function Hero03({
       <div className="bg-foreground absolute inset-0 -z-10">
         {videoSrc ? (
           <video
-            className="size-full object-cover object-center"
+            className="size-full object-cover object-[62%_center]"
             src={videoSrc}
             poster={imageSrc}
             autoPlay
@@ -91,21 +90,21 @@ export function Hero03({
             className="object-cover object-center"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/35 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/32 to-transparent" />
       </div>
 
-      <div className="container-content w-full pt-32 pb-16 text-white md:pb-24">
+      <div className="container-content w-full py-10 text-white sm:py-18 md:py-24">
         <div className="max-w-3xl">
           <Reveal>
-            <span className="border-white/25 bg-white/10 text-sm font-medium tracking-wide inline-flex items-center gap-2 rounded-full border px-4 py-1.5 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-medium tracking-wide shadow-sm backdrop-blur-sm">
               <Flame className="text-primary size-4" aria-hidden />
               {eyebrow}
             </span>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="font-heading mt-6 text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.98] font-semibold text-balance">
+            <h1 className="font-heading mt-4 max-w-4xl text-[clamp(2.35rem,7vw,5.75rem)] leading-[0.96] font-semibold text-balance drop-shadow-[0_3px_18px_rgba(0,0,0,0.32)] sm:mt-6">
               {titleTop}{" "}
               <span className="text-primary italic">{titleAccent}</span>
               <br />
@@ -114,14 +113,14 @@ export function Hero03({
           </Reveal>
 
           <Reveal delay={0.14}>
-            <p className="mt-6 max-w-xl text-lg text-pretty text-white/85 sm:text-xl">
+            <p className="mt-4 max-w-xl text-base leading-7 text-pretty text-white/88 sm:mt-5 sm:text-xl sm:leading-8">
               {description}
             </p>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button asChild className="h-12 px-7 text-base">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+              <Button asChild className="h-12 px-7 text-base shadow-lg shadow-black/20">
                 <Link href={primary.href}>
                   {primary.label}
                   <ArrowRight className="size-4" />
@@ -138,7 +137,7 @@ export function Hero03({
           </Reveal>
 
           <Reveal delay={0.28}>
-            <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-white/15 pt-7">
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-5 sm:mt-10 sm:gap-x-8 sm:gap-y-4 sm:pt-6">
               <div className="flex items-center gap-2">
                 <div className="flex" aria-hidden>
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -149,7 +148,7 @@ export function Hero03({
                   ))}
                 </div>
                 <span className="text-sm text-white/80">
-                  4,9/5 · +1.200 reseñas
+                  4,8/5 · 146 reseñas
                 </span>
               </div>
               {stats.map((s) => (

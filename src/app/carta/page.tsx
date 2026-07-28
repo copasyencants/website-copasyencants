@@ -68,7 +68,18 @@ const MENU_DATA = {
 export default function CartaPage() {
   return (
     <>
-      <Navbar02 />
+      <Navbar02
+        logoHref="/#inicio"
+        links={[
+          { label: "Inicio", href: "/#inicio" },
+          { label: "Especialidades", href: "/#especialidades" },
+          { label: "Carta", href: "/carta" },
+          { label: "Galería", href: "/#galeria" },
+          { label: "Historia", href: "/#historia" },
+          { label: "Contacto", href: "/#contacto" },
+        ]}
+        cta={{ label: "Reservar mesa", href: "/#contacto" }}
+      />
       <main className="min-h-screen">
         <MenuHeader />
 
@@ -187,7 +198,37 @@ export default function CartaPage() {
           </div>
         </section>
       </main>
-      <Footer02 address="Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona" />
+      <Footer02
+        columns={[
+          {
+            title: "Explora",
+            links: [
+              { label: "Especialidades", href: "/#especialidades" },
+              { label: "Carta", href: "/carta" },
+              { label: "Galería", href: "/#galeria" },
+              { label: "Historia", href: "/#historia" },
+            ],
+          },
+          {
+            title: "Visítanos",
+            links: [
+              { label: "Reservar mesa", href: "/#contacto" },
+              { label: "Horario", href: "/#contacto" },
+              { label: "Cómo llegar", href: "/#contacto" },
+              { label: "Eventos privados", href: "/#contacto" },
+            ],
+          },
+          {
+            title: "Legal",
+            links: [
+              { label: "Aviso legal", href: "#" },
+              { label: "Privacidad", href: "#" },
+              { label: "Cookies", href: "#" },
+            ],
+          },
+        ]}
+        address="Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona"
+      />
     </>
   );
 }

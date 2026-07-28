@@ -15,7 +15,6 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { ModeToggle } from "@/components/layout/mode-toggle";
 
 export interface NavLink {
   label: string;
@@ -24,13 +23,14 @@ export interface NavLink {
 
 export interface Navbar02Props extends SectionProps {
   brand?: string;
+  logoHref?: string;
   links?: NavLink[];
   cta?: NavLink;
 }
 
 const DEFAULT_LINKS: NavLink[] = [
   { label: "Especialidades", href: "#especialidades" },
-  { label: "Carta", href: "#carta" },
+  { label: "Carta", href: "/carta" },
   { label: "Galería", href: "#galeria" },
   { label: "Historia", href: "#historia" },
   { label: "Contacto", href: "#contacto" },
@@ -44,6 +44,7 @@ const DEFAULT_LINKS: NavLink[] = [
 export function Navbar02({
   className,
   brand = "Copas y Encants",
+  logoHref = "#inicio",
   links = DEFAULT_LINKS,
   cta = { label: "Reservar mesa", href: "#contacto" },
   ...props
@@ -70,7 +71,7 @@ export function Navbar02({
     >
       <nav className="container-content flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
-          href="#inicio"
+          href={logoHref}
           className="group flex items-center gap-2"
           aria-label={`${brand} — inicio`}
         >
@@ -96,7 +97,6 @@ export function Navbar02({
         </ul>
 
         <div className="flex items-center gap-2">
-          <ModeToggle />
           <Button asChild className="hidden h-10 px-5 sm:inline-flex">
             <Link href={cta.href}>{cta.label}</Link>
           </Button>
