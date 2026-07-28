@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Navbar02 } from "@/components/sections/navbar";
 import { Footer02 } from "@/components/sections/footer";
 import { MenuCard } from "@/components/menu/menu-card";
-import { MenuCategory } from "@/components/menu/menu-category";
 import { MenuHeader } from "@/components/menu/menu-header";
 import { constructMetadata } from "@/lib/metadata";
 

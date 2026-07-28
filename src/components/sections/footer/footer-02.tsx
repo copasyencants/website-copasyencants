@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Flame, MapPin } from "lucide-react";
 import { NavLink } from "@/components/ui/nav-link";
 

@@ -1,15 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  CalendarCheck,
-  CircleEuro,
-  Clock,
-  Mail,
-  MapPin,
-  Phone,
-  ShoppingBag,
-} from "lucide-react";
+import { MapPin, Phone, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
@@ -27,35 +19,16 @@ import {
 } from "@/components/ui/select";
 import { Reveal } from "@/components/effects/reveal";
 
-export interface ContactHours {
-  days: string;
-  hours: string;
-}
-
 export interface Contact01Props extends SectionProps {
   eyebrow?: string;
   title?: string;
   description?: string;
   address?: string;
   phone?: string;
-  email?: string;
-  priceRange?: string;
-  bookingUrl?: string;
   mapUrl?: string;
   glovoUrl?: string;
   uberEatsUrl?: string;
-  schedule?: ContactHours[];
 }
-
-const DEFAULT_SCHEDULE: ContactHours[] = [
-  { days: "Lunes", hours: "Cerrado" },
-  { days: "Martes", hours: "11:30 - 23:30" },
-  { days: "Miercoles", hours: "11:30 - 23:30" },
-  { days: "Jueves", hours: "11:30 - 23:30" },
-  { days: "Viernes", hours: "10:30 - 00:00" },
-  { days: "Sabado", hours: "10:30 - 00:00" },
-  { days: "Domingo", hours: "10:30 - 00:00" },
-];
 
 const DEFAULT_MAP_URL =
   "https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4a38f7a4e8dc7:0xc9b99a7a043a167e";
@@ -77,13 +50,9 @@ export function Contact01({
   description = "Escribenos y te confirmamos tu reserva en menos de una hora. Para grupos de mas de 8 personas, llamanos directamente.",
   address = "Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona",
   phone = "934 67 21 30",
-  email = "",
-  priceRange = "10-20 EUR por persona",
-  bookingUrl = "#contacto",
   mapUrl = DEFAULT_MAP_URL,
   glovoUrl = DEFAULT_GLOVO_URL,
   uberEatsUrl = DEFAULT_UBER_EATS_URL,
-  schedule = DEFAULT_SCHEDULE,
   ...props
 }: Contact01Props) {
   const [guests, setGuests] = useState("2");
