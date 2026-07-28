@@ -201,29 +201,11 @@ export default function CartaPage() {
       <Footer02
         columns={[
           {
-            title: "Explora",
+            title: "Navegación",
             links: [
-              { label: "Especialidades", href: "/#especialidades" },
+              { label: "Inicio", href: "/#inicio" },
               { label: "Carta", href: "/carta" },
-              { label: "Galería", href: "/#galeria" },
-              { label: "Historia", href: "/#historia" },
-            ],
-          },
-          {
-            title: "Visítanos",
-            links: [
               { label: "Reservar mesa", href: "/#contacto" },
-              { label: "Horario", href: "/#contacto" },
-              { label: "Cómo llegar", href: "/#contacto" },
-              { label: "Eventos privados", href: "/#contacto" },
-            ],
-          },
-          {
-            title: "Legal",
-            links: [
-              { label: "Aviso legal", href: "#" },
-              { label: "Privacidad", href: "#" },
-              { label: "Cookies", href: "#" },
             ],
           },
         ]}
