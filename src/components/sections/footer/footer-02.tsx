@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Flame, MapPin } from "lucide-react";
-import { FaInstagram, FaFacebookF } from "react-icons/fa6";
 import { NavLink } from "@/components/ui/nav-link";
 
 import { cn } from "@/lib/utils";
@@ -90,22 +89,6 @@ export function Footer02({
                 <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
                 <span>{address}</span>
               </p>
-              <div className="mt-2 flex gap-2">
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-9 items-center justify-center rounded-full border transition-colors"
-                >
-                  <FaInstagram className="size-4" aria-hidden />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-9 items-center justify-center rounded-full border transition-colors"
-                >
-                  <FaFacebookF className="size-4" aria-hidden />
-                </a>
-              </div>
             </div>
 
             {/* Navigation */}
@@ -150,7 +133,17 @@ export function Footer02({
           <p className="text-background/60">
             © {year} {brand}. Todos los derechos reservados.
           </p>
-          <p className="text-background/50">DISEÑADO POR KLENT CREATIVE</p>
+          <p className="text-background/50">
+            Diseñado por{" "}
+            <a
+              href="https://www.klentcreative.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-background hover:text-primary transition-colors font-medium"
+            >
+              KLENT CREATIVE
+            </a>
+          </p>
         </div>
       </div>
     </footer>
