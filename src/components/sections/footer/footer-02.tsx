@@ -19,11 +19,17 @@ export interface FooterColumn {
   links: FooterLink[];
 }
 
+export interface FooterSchedule {
+  day: string;
+  hours: string;
+}
+
 export interface Footer02Props extends SectionProps {
   brand?: string;
   tagline?: string;
   columns?: FooterColumn[];
   address?: string;
+  schedule?: FooterSchedule[];
 }
 
 const DEFAULT_COLUMNS: FooterColumn[] = [
@@ -37,6 +43,12 @@ const DEFAULT_COLUMNS: FooterColumn[] = [
   },
 ];
 
+const DEFAULT_SCHEDULE: FooterSchedule[] = [
+  { day: "Lunes", hours: "Cerrado" },
+  { day: "Martes - Jueves", hours: "11:30 - 23:30" },
+  { day: "Viernes - Domingo", hours: "10:30 - 00:00" },
+];
+
 /**
  * Footer 02 — pied de page riche : marque, baseline, colonnes de liens,
  * réseaux sociaux et barre inférieure (copyright). Sombre et chaleureux,
@@ -48,6 +60,7 @@ export function Footer02({
   tagline = "Restaurante pizzeria en Sant Marti, Barcelona, con servicio en sala, venta para llevar y reservas online.",
   columns = DEFAULT_COLUMNS,
   address = "Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona",
+  schedule = DEFAULT_SCHEDULE,
   ...props
 }: Footer02Props) {
   const year = new Date().getFullYear();
@@ -59,7 +72,7 @@ export function Footer02({
     >
       <div className="container-content section-sm">
         <Reveal>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full">
@@ -113,6 +126,20 @@ export function Footer02({
                 </ul>
               </nav>
             ))}
+
+            <div className="flex flex-col gap-3">
+              <p className="text-background font-heading text-sm font-semibold tracking-wide">
+                Horario
+              </p>
+              <ul className="flex flex-col gap-2.5 text-sm">
+                {schedule.map((item) => (
+                  <li key={item.day} className="flex justify-between gap-2">
+                    <span className="text-background/70">{item.day}</span>
+                    <span className="text-background font-medium">{item.hours}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
 

@@ -4,10 +4,11 @@ import { useState } from "react";
 import {
   CalendarCheck,
   CircleEuro,
-  MapPin,
   Clock,
-  Phone,
   Mail,
+  MapPin,
+  Phone,
+  ShoppingBag,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -40,32 +41,48 @@ export interface Contact01Props extends SectionProps {
   email?: string;
   priceRange?: string;
   bookingUrl?: string;
+  mapUrl?: string;
+  glovoUrl?: string;
+  uberEatsUrl?: string;
   schedule?: ContactHours[];
 }
 
 const DEFAULT_SCHEDULE: ContactHours[] = [
   { days: "Lunes", hours: "Cerrado" },
-  { days: "Martes", hours: "11:30 – 23:30" },
-  { days: "Miércoles", hours: "11:30 – 23:30" },
-  { days: "Jueves", hours: "11:30 – 23:30" },
-  { days: "Viernes – Domingo", hours: "10:30 – 00:00" },
+  { days: "Martes", hours: "11:30 - 23:30" },
+  { days: "Miercoles", hours: "11:30 - 23:30" },
+  { days: "Jueves", hours: "11:30 - 23:30" },
+  { days: "Viernes", hours: "10:30 - 00:00" },
+  { days: "Sabado", hours: "10:30 - 00:00" },
+  { days: "Domingo", hours: "10:30 - 00:00" },
 ];
 
+const DEFAULT_MAP_URL =
+  "https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4a38f7a4e8dc7:0xc9b99a7a043a167e";
+
+const DEFAULT_GLOVO_URL =
+  "https://glovoapp.com/es/es/barcelona/stores/copas-y-encants-barcelona?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google";
+
+const DEFAULT_UBER_EATS_URL =
+  "https://www.ubereats.com/es/store/copas-y-encants-pizza-napoletana/wG3xvmaoViGOzbVwUE_eog?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas";
+
 /**
- * Contact 01 — section contact en deux colonnes : coordonnées (adresse,
- * horaires, téléphone, email) et formulaire de réservation accessible (labels
- * liés, retour via toast). Idéal restaurant / prise de réservation.
+ * Contact 01 - section contact en deux colonnes : coordonnees, horaires,
+ * liens de commande et formulaire de reservation accessible.
  */
 export function Contact01({
   className,
   eyebrow = "Contacto",
   title = "Reserva tu mesa junto al fuego",
-  description = "Escríbenos y te confirmamos tu reserva en menos de una hora. Para grupos de más de 8 personas, llámanos directamente.",
-  address = "Carrer de Bilbao, 18-22, Sant Martí, 08005 Barcelona",
+  description = "Escribenos y te confirmamos tu reserva en menos de una hora. Para grupos de mas de 8 personas, llamanos directamente.",
+  address = "Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona",
   phone = "934 67 21 30",
   email = "",
-  priceRange = "10-20 € por persona",
-  bookingUrl = "https://sumupbookings.com",
+  priceRange = "10-20 EUR por persona",
+  bookingUrl = "#contacto",
+  mapUrl = DEFAULT_MAP_URL,
+  glovoUrl = DEFAULT_GLOVO_URL,
+  uberEatsUrl = DEFAULT_UBER_EATS_URL,
   schedule = DEFAULT_SCHEDULE,
   ...props
 }: Contact01Props) {
@@ -73,7 +90,7 @@ export function Contact01({
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    toast.success("¡Solicitud recibida!", {
+    toast.success("Solicitud recibida", {
       description: "Te confirmaremos tu reserva por email muy pronto.",
     });
     e.currentTarget.reset();
@@ -112,8 +129,15 @@ export function Contact01({
                     <MapPin className="size-5" aria-hidden />
                   </span>
                   <div>
-                    <p className="font-medium">Dirección</p>
-                    <p className="text-muted-foreground">{address}</p>
+                    <p className="font-medium">Direccion</p>
+                    <a
+                      href={mapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {address}
+                    </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -121,7 +145,7 @@ export function Contact01({
                     <Phone className="size-5" aria-hidden />
                   </span>
                   <div>
-                    <p className="font-medium">Teléfono</p>
+                    <p className="font-medium">Telefono</p>
                     <a
                       href={`tel:${phone.replace(/\s/g, "")}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
@@ -157,6 +181,35 @@ export function Contact01({
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
+                    <ShoppingBag className="size-5" aria-hidden />
+                  </span>
+                  <div>
+                    <p className="font-medium">Pedidos</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Button
+                        asChild
+                        size="sm"
+                        className="h-9 rounded-full px-4"
+                      >
+                        <a href={glovoUrl} target="_blank" rel="noreferrer">
+                          Glovo
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="h-9 rounded-full px-4"
+                      >
+                        <a href={uberEatsUrl} target="_blank" rel="noreferrer">
+                          Uber Eats
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
                     <CalendarCheck className="size-5" aria-hidden />
                   </span>
                   <div>
@@ -165,32 +218,13 @@ export function Contact01({
                       href={bookingUrl}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      sumupbookings.com
+                      Formulario de contacto
                     </a>
                   </div>
                 </li>
               </ul>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <div className="border-border bg-muted/40 h-full rounded-2xl border p-5">
-                <div className="text-foreground mb-3 flex items-center gap-2 font-medium">
-                  <Clock className="text-primary size-5" aria-hidden />
-                  Horario
-                </div>
-                <dl className="divide-border divide-y text-sm">
-                  {schedule.map((row) => (
-                    <div
-                      key={row.days}
-                      className="flex items-center justify-between gap-4 py-2"
-                    >
-                      <dt className="text-muted-foreground">{row.days}</dt>
-                      <dd className="shrink-0 font-medium">{row.hours}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </Reveal>
           </div>
         </div>
 
@@ -211,7 +245,7 @@ export function Contact01({
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-phone">Teléfono</Label>
+                <Label htmlFor="contact-phone">Telefono</Label>
                 <Input
                   id="contact-phone"
                   name="phone"
@@ -263,7 +297,7 @@ export function Contact01({
                 id="contact-message"
                 name="message"
                 rows={3}
-                placeholder="Alergias, ocasión especial, preferencia de mesa…"
+                placeholder="Alergias, ocasion especial, preferencia de mesa..."
               />
             </div>
 
