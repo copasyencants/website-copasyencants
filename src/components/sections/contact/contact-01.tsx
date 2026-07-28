@@ -99,8 +99,8 @@ export function Contact01({
 
   return (
     <section className={cn("section container-content", className)} {...props}>
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-end lg:gap-16">
-        <div className="flex flex-col gap-8">
+      <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="flex flex-col gap-6">
           {eyebrow ? (
             <Reveal>
               <p className="text-primary text-sm font-medium tracking-widest uppercase">
@@ -115,7 +115,7 @@ export function Contact01({
           </Reveal>
           {description ? (
             <Reveal delay={0.1}>
-              <p className="text-muted-foreground text-lg text-pretty">
+              <p className="text-muted-foreground text-base text-pretty">
                 {description}
               </p>
             </Reveal>
@@ -195,7 +195,7 @@ export function Contact01({
           </div>
         </div>
 
-        <Reveal delay={0.1} className="lg:self-end">
+        <Reveal delay={0.1} className="lg:self-start">
           <form
             onSubmit={handleSubmit}
             className="border-border bg-card flex flex-col gap-5 rounded-3xl border p-6 shadow-lg sm:p-8"
