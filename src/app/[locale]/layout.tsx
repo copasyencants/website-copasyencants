@@ -60,6 +60,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={cn("h-full", fontVariables)}
     >
       <body className="flex min-h-full flex-col">
