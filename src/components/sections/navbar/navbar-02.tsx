@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, Flame } from "lucide-react";
+import { NavLink } from "@/components/ui/nav-link";
 
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
@@ -86,12 +87,12 @@ export function Navbar02({
         <ul className="hidden items-center gap-1 lg:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <Link
+              <NavLink
                 href={link.href}
                 className="text-foreground/80 hover:text-foreground hover:bg-muted rounded-full px-3 py-2 text-sm font-medium transition-colors"
               >
                 {link.label}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -121,12 +122,12 @@ export function Navbar02({
               <nav className="flex flex-col gap-1 px-4">
                 {links.map((link) => (
                   <SheetClose asChild key={link.href}>
-                    <Link
+                    <NavLink
                       href={link.href}
                       className="hover:bg-muted rounded-lg px-3 py-3 text-base font-medium transition-colors"
                     >
                       {link.label}
-                    </Link>
+                    </NavLink>
                   </SheetClose>
                 ))}
                 <SheetClose asChild>

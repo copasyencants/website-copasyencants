@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Flame, MapPin } from "lucide-react";
 import { FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { NavLink } from "@/components/ui/nav-link";
 
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
@@ -119,12 +120,12 @@ export function Footer02({
                 <ul className="flex flex-col gap-2.5">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
+                      <NavLink
                         href={link.href}
                         className="text-background/70 hover:text-background text-sm transition-colors"
                       >
                         {link.label}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

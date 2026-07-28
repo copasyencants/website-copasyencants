@@ -69,9 +69,9 @@ export default function CartaPage() {
   return (
     <>
       <Navbar02
-        logoHref="/#inicio"
+        logoHref="/"
         links={[
-          { label: "Inicio", href: "/#inicio" },
+          { label: "Inicio", href: "/" },
           { label: "Especialidades", href: "/#especialidades" },
           { label: "Carta", href: "/carta" },
           { label: "Galería", href: "/#galeria" },
