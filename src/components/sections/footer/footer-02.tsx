@@ -72,47 +72,49 @@ export function Footer02({
     >
       <div className="container-content section-sm">
         <Reveal>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-            <div className="flex flex-col gap-4">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            {/* Brand & Contact */}
+            <div className="flex flex-col gap-4 lg:col-span-1">
               <div className="flex items-center gap-2">
                 <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full">
                   <Flame className="size-5" aria-hidden />
                 </span>
-                <span className="font-heading text-background text-xl font-semibold">
+                <span className="font-heading text-background text-lg font-semibold">
                   {brand}
                 </span>
               </div>
-              <p className="text-background/70 max-w-sm text-sm text-pretty">
+              <p className="text-background/70 text-sm text-pretty">
                 {tagline}
               </p>
               <p className="text-background/60 flex items-start gap-2 text-sm">
                 <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
-                {address}
+                <span>{address}</span>
               </p>
-              <div className="mt-1 flex gap-2">
+              <div className="mt-2 flex gap-2">
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-10 items-center justify-center rounded-full border transition-colors"
+                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-9 items-center justify-center rounded-full border transition-colors"
                 >
-                  <FaInstagram className="size-5" aria-hidden />
+                  <FaInstagram className="size-4" aria-hidden />
                 </a>
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-10 items-center justify-center rounded-full border transition-colors"
+                  className="border-background/20 text-background/80 hover:bg-primary hover:border-primary hover:text-primary-foreground flex size-9 items-center justify-center rounded-full border transition-colors"
                 >
-                  <FaFacebookF className="size-5" aria-hidden />
+                  <FaFacebookF className="size-4" aria-hidden />
                 </a>
               </div>
             </div>
 
+            {/* Navigation */}
             {columns.map((col) => (
-              <nav key={col.title} className="flex flex-col gap-3">
-                <p className="text-background font-heading text-sm font-semibold tracking-wide">
+              <nav key={col.title} className="flex flex-col gap-4 lg:col-span-1">
+                <h3 className="text-background font-heading text-sm font-bold tracking-wide uppercase">
                   {col.title}
-                </p>
-                <ul className="flex flex-col gap-2.5">
+                </h3>
+                <ul className="flex flex-col gap-3">
                   {col.links.map((link) => (
                     <li key={link.label}>
                       <NavLink
@@ -127,18 +129,19 @@ export function Footer02({
               </nav>
             ))}
 
-            <div className="flex flex-col gap-3">
-              <p className="text-background font-heading text-sm font-semibold tracking-wide">
+            {/* Schedule */}
+            <div className="flex flex-col gap-4 lg:col-span-1">
+              <h3 className="text-background font-heading text-sm font-bold tracking-wide uppercase">
                 Horario
-              </p>
-              <ul className="flex flex-col gap-2.5 text-sm">
+              </h3>
+              <dl className="flex flex-col gap-3 text-sm">
                 {schedule.map((item) => (
-                  <li key={item.day} className="flex justify-between gap-2">
-                    <span className="text-background/70">{item.day}</span>
-                    <span className="text-background font-medium">{item.hours}</span>
-                  </li>
+                  <div key={item.day} className="flex items-center justify-between gap-3">
+                    <dt className="text-background/70">{item.day}</dt>
+                    <dd className="text-background font-medium">{item.hours}</dd>
+                  </div>
                 ))}
-              </ul>
+              </dl>
             </div>
           </div>
         </Reveal>
