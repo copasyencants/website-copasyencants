@@ -150,7 +150,7 @@ export function Footer02({
           <p className="text-background/60">
             © {year} {brand}. Todos los derechos reservados.
           </p>
-          <p className="text-background/50">Hecho en Sant Marti, Barcelona.</p>
+          <p className="text-background/50">DISEÑADO POR KLENT CREATIVE</p>
         </div>
       </div>
     </footer>
