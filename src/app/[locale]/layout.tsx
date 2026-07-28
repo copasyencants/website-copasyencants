@@ -9,7 +9,6 @@ import { fontVariables } from "@/lib/fonts";
 import { constructMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -65,16 +64,8 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={false}
-            disableTransitionOnChange
-            forcedTheme="light"
-          >
-            <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
-            <Toaster richColors position="top-center" />
-          </ThemeProvider>
+          <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
+          <Toaster theme="light" richColors position="top-center" />
         </NextIntlClientProvider>
       </body>
     </html>
