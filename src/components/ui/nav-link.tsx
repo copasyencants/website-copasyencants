@@ -1,8 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 import React from "react";
+
+import { Link, useRouter } from "@/i18n/navigation";
 
 export interface NavLinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {

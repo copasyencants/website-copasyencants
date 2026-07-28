@@ -1,0 +1,344 @@
+{
+  "site": {
+    "description": "Restaurante pizzeria en Sant Marti, Barcelona, con servicio en sala, venta para llevar, reservas online y ambiente cercano."
+  },
+  "nav": {
+    "brand": "Copas y Encants",
+    "logoAriaLabel": "Copas y Encants — inicio",
+    "openMenuAriaLabel": "Abrir menú",
+    "cta": "Reservar mesa",
+    "links": {
+      "specialties": "Especialidades",
+      "menu": "Carta",
+      "gallery": "Galería",
+      "history": "Historia",
+      "contact": "Contacto"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Auténtica pizza napolitana",
+      "titleTop": "El sabor del",
+      "titleAccent": "fuego",
+      "titleBottom": "hecho a mano",
+      "description": "Masa madre madurada 48 horas, ingredientes frescos de temporada y el calor vivo de nuestro horno de leña. Cocina abierta, alma italiana.",
+      "primary": "Reservar mesa",
+      "secondary": "Ver la carta",
+      "reviewsLabel": "4,8/5 · 146 reseñas",
+      "stats": [
+        { "value": "48 h", "label": "Masa madurada" },
+        { "value": "485°", "label": "Horno de leña" },
+        { "value": "2007", "label": "Desde" }
+      ]
+    },
+    "essence": {
+      "eyebrow": "Nuestra esencia",
+      "title": "Artesanía italiana en cada bocado",
+      "description": "En Copas y Encants creemos que una gran mesa empieza por producto cuidado, servicio cercano y un ambiente pensado para disfrutar sin prisas.",
+      "badgeValue": "100%",
+      "badgeLabel": "Ingredientes frescos de temporada",
+      "points": [
+        "Masa madre viva, madurada lentamente durante 48 horas",
+        "Harinas italianas y tomate San Marzano D.O.P.",
+        "Mozzarella fior di latte y albahaca fresca cada mañana",
+        "Cocción al momento en horno de leña a 485°"
+      ]
+    },
+    "specialties": {
+      "eyebrow": "Nuestro oficio",
+      "title": "Cuatro obsesiones, una sola pizza",
+      "description": "Todo lo que hacemos gira en torno a un objetivo: la pizza napolitana perfecta, honesta y llena de carácter.",
+      "items": [
+        {
+          "title": "Horno de leña",
+          "description": "Cocción a 485° que sella el sabor en 90 segundos y da a la masa su borde aireado y ligeramente ahumado."
+        },
+        {
+          "title": "Masa madre 48 h",
+          "description": "Fermentación lenta con masa madre viva para una pizza más ligera, digestiva y llena de aroma."
+        },
+        {
+          "title": "Producto fresco",
+          "description": "Tomate San Marzano D.O.P., mozzarella fior di latte y verduras de temporada de productores locales."
+        },
+        {
+          "title": "Cocina abierta",
+          "description": "Nuestros pizzaioli trabajan a la vista: cada pizza es un pequeño espectáculo artesanal."
+        }
+      ]
+    },
+    "menu": {
+      "eyebrow": "Nuestra carta",
+      "title": "Las pizzas que nos definen",
+      "description": "Una selección de nuestras creaciones más queridas, horneadas a la leña y servidas al momento. La carta completa te espera en la mesa.",
+      "cta": "Ver la carta completa",
+      "items": [
+        {
+          "name": "Margherita D.O.P.",
+          "subtitle": "La clásica napolitana",
+          "description": "Tomate San Marzano, mozzarella fior di latte, albahaca fresca y aceite de oliva virgen extra.",
+          "price": "9.50€",
+          "tag": "Icónica"
+        },
+        {
+          "name": "Diavola",
+          "subtitle": "Para los amantes del picante",
+          "description": "Salame picante, tomate San Marzano, mozzarella y un toque de miel de romero.",
+          "price": "11.00€"
+        },
+        {
+          "name": "Tartufo & Funghi",
+          "subtitle": "Nuestra firma",
+          "description": "Crema de trufa negra, champiñones portobello, mozzarella y escamas de parmesano.",
+          "price": "15.50€",
+          "tag": "Chef"
+        },
+        {
+          "name": "Quattro Formaggi",
+          "subtitle": "Cremosa e intensa",
+          "description": "Mozzarella, gorgonzola D.O.P., pecorino y provolone ahumado sobre base blanca.",
+          "price": "16.00€"
+        },
+        {
+          "name": "Prosciutto & Rúcula",
+          "subtitle": "Fresca y ligera",
+          "description": "Jamón de Parma 18 meses, rúcula silvestre, parmesano y tomates cherry confitados.",
+          "price": "14.50€"
+        },
+        {
+          "name": "Ortolana",
+          "subtitle": "Huerta de temporada",
+          "description": "Verduras asadas al horno de leña, mozzarella, pesto de albahaca y aceite de oliva.",
+          "price": "13.00€",
+          "tag": "Vegetariana"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Reserva tu mesa",
+      "title": "Esta noche, deja que el fuego cocine para ti",
+      "description": "Las mejores mesas vuelan. Reserva en segundos y vive una velada napolitana junto al horno.",
+      "primary": "Reservar ahora",
+      "secondary": "934 67 21 30",
+      "orderLabel": "O pide para llevar",
+      "orderGlovo": "Pedir en Glovo",
+      "orderUberEats": "Pedir en Uber Eats"
+    },
+    "gallery": {
+      "eyebrow": "Galeria",
+      "title": "El fuego, la mesa, el momento",
+      "description": "Un vistazo a nuestra cocina abierta, nuestros ingredientes y el ambiente que te espera cada noche.",
+      "imagesAlt": [
+        "Pizza italiana recien horneada",
+        "Pizza Margherita con mozzarella y albahaca",
+        "Interior acogedor de restaurante italiano",
+        "Mesa italiana con platos para compartir",
+        "Cocinero preparando platos en restaurante",
+        "Pizza artesanal servida en mesa de restaurante"
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Nuestra historia",
+      "title": "Diecisiete años alimentando el fuego",
+      "description": "De una receta familiar a un rincón de Nápoles en el corazón de la ciudad. Esta es la historia que horneamos cada día.",
+      "imageAlt": "La historia de Copas y Encants",
+      "entries": [
+        {
+          "year": "2007",
+          "title": "Una idea nacida en Nápoles",
+          "description": "Marco Esposito deja su barrio del Vomero con la receta de su abuela y el sueño de un horno propio."
+        },
+        {
+          "year": "2011",
+          "title": "Se enciende el horno de leña",
+          "description": "Abrimos nuestra primera sala de 20 mesas. La cocina abierta se convierte en el corazón del local."
+        },
+        {
+          "year": "2018",
+          "title": "Del huerto a la mesa",
+          "description": "Sellamos alianzas con productores locales para trabajar solo con ingredientes frescos de temporada."
+        },
+        {
+          "year": "2024",
+          "title": "Una nueva generación",
+          "description": "Giulia Esposito toma el relevo y renueva la carta sin traicionar el alma napolitana de siempre."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Opiniones",
+      "title": "Lo que dicen nuestros comensales",
+      "description": "Miles de noches compartidas alrededor del fuego. Estas son algunas de las voces que nos hacen seguir amasando.",
+      "items": [
+        {
+          "quote": "La mejor pizza que he comido fuera de Italia. La masa es ligera, aromática y se nota el horno de leña en cada bocado.",
+          "name": "Lucía Fernández",
+          "role": "Cliente habitual",
+          "rating": 5
+        },
+        {
+          "quote": "Un lugar con alma. El servicio es cálido, la cocina abierta es todo un espectáculo y la Tartufo es simplemente memorable.",
+          "name": "Andrés Molina",
+          "role": "Crítico gastronómico",
+          "rating": 5
+        },
+        {
+          "quote": "Celebramos aquí nuestro aniversario y fue perfecto. Ingredientes frescos, ambiente acogedor y un tiramisú de otro nivel.",
+          "name": "Carla Ruiz",
+          "role": "Google Reseñas",
+          "rating": 5
+        },
+        {
+          "quote": "Se respira autenticidad italiana sin caer en lo típico. Reservad con antelación, siempre está lleno y ahora entiendo por qué.",
+          "name": "Javier Ortega",
+          "role": "Vecino del barrio",
+          "rating": 5
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Todo lo que necesitas saber",
+      "description": "¿No encuentras tu respuesta? Llámanos o escríbenos, te atendemos encantados.",
+      "items": [
+        {
+          "question": "¿Es necesario reservar mesa?",
+          "answer": "Lo recomendamos, sobre todo de viernes a domingo. Puedes reservar desde nuestra web en menos de un minuto o por teléfono."
+        },
+        {
+          "question": "¿Tenéis opciones vegetarianas o sin gluten?",
+          "answer": "Sí. Contamos con varias pizzas vegetarianas y una masa sin gluten elaborada en zona separada. Indícanoslo al reservar."
+        },
+        {
+          "question": "¿Se puede pedir para llevar?",
+          "answer": "Por supuesto. Puedes recoger tu pedido en el local; horneamos tu pizza justo antes de que llegues para que la disfrutes en su punto."
+        },
+        {
+          "question": "¿Organizáis eventos privados?",
+          "answer": "Reservamos el local para grupos y celebraciones. Escríbenos con la fecha y el número de personas y preparamos una propuesta a medida."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contacto",
+      "title": "Reserva tu mesa junto al fuego",
+      "description": "Escribenos y te confirmamos tu reserva en menos de una hora. Para grupos de mas de 8 personas, llamanos directamente.",
+      "labels": {
+        "addressCardTitle": "Direccion",
+        "phoneCardTitle": "Telefono",
+        "orderCardTitle": "Pedir Ahora",
+        "formName": "Nombre",
+        "formNamePlaceholder": "Tu nombre",
+        "formPhone": "Telefono",
+        "formPhonePlaceholder": "600 000 000",
+        "formEmail": "Email",
+        "formEmailPlaceholder": "tu@email.com",
+        "formDate": "Fecha",
+        "formGuests": "Comensales",
+        "guestSingular": "persona",
+        "guestPlural": "personas",
+        "formMessage": "Mensaje (opcional)",
+        "formMessagePlaceholder": "Alergias, ocasion especial, preferencia de mesa...",
+        "submit": "Solicitar reserva",
+        "disclaimer": "Al enviar aceptas ser contactado para confirmar tu reserva.",
+        "toastTitle": "Solicitud recibida",
+        "toastDescription": "Te confirmaremos tu reserva por email muy pronto."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Restaurante pizzeria en Sant Marti, Barcelona, con servicio en sala, venta para llevar y reservas online.",
+    "navTitle": "Navegación",
+    "navHome": "Inicio",
+    "navMenu": "Carta",
+    "navBook": "Reservar mesa",
+    "scheduleTitle": "Horario",
+    "schedule": [
+      { "day": "Lunes", "hours": "Cerrado" },
+      { "day": "Martes - Jueves", "hours": "11:30 - 23:30" },
+      { "day": "Viernes - Domingo", "hours": "10:30 - 00:00" }
+    ],
+    "rightsText": "Todos los derechos reservados.",
+    "designedByText": "Diseñado por"
+  },
+  "carta": {
+    "meta": {
+      "title": "Carta Completa",
+      "description": "Descubre nuestra carta completa: pizzas napolitanas, pizzas blancas, bebidas y cócteles. Pizzabar y cócteles artesanales en Barcelona."
+    },
+    "header": {
+      "badge": "Pizzabar & Cócteles",
+      "title": "Nuestra Carta",
+      "description": "Descubre todas nuestras pizzas napolitanas artesanales, bebidas cuidadosamente seleccionadas y cócteles auténticos. Cada plato elaborado con los mejores ingredientes frescos.",
+      "phone": "934 672 130",
+      "address": "Carrer de Bilbao, 18-22",
+      "instagramHandle": "@copasyencants"
+    },
+    "sections": {
+      "clasicas": "Pizzas Clásicas",
+      "blancas": "Pizzas Blancas",
+      "entrantes": "Entrantes",
+      "bebidas": "Bebidas",
+      "cervezas": "Cervezas",
+      "vinos": "Vinos",
+      "licores": "Licores",
+      "cocteles": "Cócteles",
+      "postres": "Postres"
+    },
+    "items": {
+      "clasicas": [
+        { "name": "Margherita", "description": "Tomate, mozzarella, albahaca fresca", "price": "9.50€" },
+        { "name": "Bufala", "description": "Tomate, mozzarella di bufala fresca", "price": "11.50€" },
+        { "name": "Marinara", "description": "Tomate, ajo, aceite de oliva, orégano", "price": "6.00€" },
+        { "name": "Diavola", "description": "Tomate, mozzarella, pepperoni", "price": "11.00€" },
+        { "name": "Vegetariana", "description": "Verduras mixtas, mozzarella", "price": "13.00€" },
+        { "name": "Prosciutto Cotto", "description": "Tomate, mozzarella, jamón", "price": "11.00€" },
+        { "name": "Salami", "description": "Tomate, mozzarella, salami", "price": "11.00€" },
+        { "name": "4 Estaciones", "description": "Tomate, mozzarella, jamón, champiñones", "price": "12.50€" },
+        { "name": "Calzone", "description": "Cerrada, queso, jamón, champiñones", "price": "13.00€" }
+      ],
+      "blancas": [
+        { "name": "Mozzarella", "description": "Mozzarella fresca, aceite de oliva virgen extra", "price": "15.50€" },
+        { "name": "Quattro Formaggi", "description": "Mozzarella, gorgonzola, pecorino, provolone ahumado", "price": "16.00€" },
+        { "name": "Prosciutto", "description": "Jamón de Parma, rúcula, parmesano", "price": "14.50€" }
+      ],
+      "entrantes": [
+        { "name": "Bruschetta", "description": "Pan tostado con tomate y albahaca", "price": "4.00€" },
+        { "name": "Focaccia", "description": "Pan tradicional italiano", "price": "5.00€" },
+        { "name": "Pan de Ajo", "description": "Pan casero con ajo y perejil", "price": "5.50€" },
+        { "name": "Camarones al Vapor", "description": "Camarones frescos al vapor", "price": "12.50€" }
+      ],
+      "cervezas": [
+        { "name": "Estrella Damm", "price": "3.50€" },
+        { "name": "Voll Damm", "price": "3.75€" },
+        { "name": "Selección Craft", "price": "5.00€" }
+      ],
+      "vinos": [
+        { "name": "Vino Blanco", "price": "4.00€ / copa" },
+        { "name": "Vino Tinto", "price": "4.00€ / copa" },
+        { "name": "Vino Rosado", "price": "3.50€ / copa" }
+      ],
+      "licores": [
+        { "name": "Gin & Tonic", "price": "8.00€" },
+        { "name": "Ron & Cola", "price": "7.50€" },
+        { "name": "Vodka & Limón", "price": "7.00€" }
+      ],
+      "cocteles": [
+        { "name": "Mojito", "description": "Ron, menta, lima y soda", "price": "9.00€" },
+        { "name": "Margarita", "description": "Tequila, triple sec y lima", "price": "9.50€" },
+        { "name": "Piña Colada", "description": "Ron, coco y piña", "price": "9.00€" },
+        { "name": "Daiquiri", "description": "Ron blanco, lima y azúcar", "price": "9.00€" }
+      ],
+      "postres": [
+        { "name": "Pizza Nutella", "description": "Base de pizza con Nutella y fresas", "price": "9.00€" },
+        { "name": "Pizza Sicilia", "description": "Base de pizza con chocolate y pistacho", "price": "8.00€" },
+        { "name": "Tiramisú", "description": "Postre italiano clásico", "price": "7.50€" }
+      ]
+    },
+    "commitment": {
+      "eyebrow": "Nuestro Compromiso",
+      "title": "Ingredientes Frescos, Artesanía Auténtica",
+      "description": "Cada pizza es elaborada artesanalmente con ingredientes frescos de primera calidad. Horneadas a 485° en nuestro horno de leña tradicional para sellar el sabor perfecto."
+    }
+  }
+}

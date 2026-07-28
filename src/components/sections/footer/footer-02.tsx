@@ -28,6 +28,9 @@ export interface Footer02Props extends SectionProps {
   columns?: FooterColumn[];
   address?: string;
   schedule?: FooterSchedule[];
+  scheduleTitle?: string;
+  rightsText?: string;
+  designedByText?: string;
 }
 
 const DEFAULT_COLUMNS: FooterColumn[] = [
@@ -59,6 +62,9 @@ export function Footer02({
   columns = DEFAULT_COLUMNS,
   address = "Carrer de Bilbao, 18-22, Sant Marti, 08005 Barcelona",
   schedule = DEFAULT_SCHEDULE,
+  scheduleTitle = "Horario",
+  rightsText = "Todos los derechos reservados.",
+  designedByText = "Diseñado por",
   ...props
 }: Footer02Props) {
   const year = new Date().getFullYear();
@@ -114,7 +120,7 @@ export function Footer02({
             {/* Schedule */}
             <div className="flex flex-col gap-4 lg:col-span-1">
               <h3 className="text-background font-heading text-sm font-bold tracking-wide uppercase">
-                Horario
+                {scheduleTitle}
               </h3>
               <dl className="flex flex-col gap-3 text-sm">
                 {schedule.map((item) => (
@@ -130,10 +136,10 @@ export function Footer02({
 
         <div className="border-background/15 mt-12 flex flex-col items-center justify-between gap-3 border-t pt-6 text-sm sm:flex-row">
           <p className="text-background/60">
-            © {year} {brand}. Todos los derechos reservados.
+            © {year} {brand}. {rightsText}
           </p>
           <p className="text-background/50">
-            Diseñado por{" "}
+            {designedByText}{" "}
             <a
               href="https://www.klentcreative.com"
               target="_blank"

@@ -19,6 +19,28 @@ import {
 } from "@/components/ui/select";
 import { Reveal } from "@/components/effects/reveal";
 
+export interface Contact01Labels {
+  addressCardTitle?: string;
+  phoneCardTitle?: string;
+  orderCardTitle?: string;
+  formName?: string;
+  formNamePlaceholder?: string;
+  formPhone?: string;
+  formPhonePlaceholder?: string;
+  formEmail?: string;
+  formEmailPlaceholder?: string;
+  formDate?: string;
+  formGuests?: string;
+  guestSingular?: string;
+  guestPlural?: string;
+  formMessage?: string;
+  formMessagePlaceholder?: string;
+  submit?: string;
+  disclaimer?: string;
+  toastTitle?: string;
+  toastDescription?: string;
+}
+
 export interface Contact01Props extends SectionProps {
   eyebrow?: string;
   title?: string;
@@ -28,7 +50,30 @@ export interface Contact01Props extends SectionProps {
   mapUrl?: string;
   glovoUrl?: string;
   uberEatsUrl?: string;
+  labels?: Contact01Labels;
 }
+
+const DEFAULT_LABELS: Required<Contact01Labels> = {
+  addressCardTitle: "Direccion",
+  phoneCardTitle: "Telefono",
+  orderCardTitle: "Pedir Ahora",
+  formName: "Nombre",
+  formNamePlaceholder: "Tu nombre",
+  formPhone: "Telefono",
+  formPhonePlaceholder: "600 000 000",
+  formEmail: "Email",
+  formEmailPlaceholder: "tu@email.com",
+  formDate: "Fecha",
+  formGuests: "Comensales",
+  guestSingular: "persona",
+  guestPlural: "personas",
+  formMessage: "Mensaje (opcional)",
+  formMessagePlaceholder: "Alergias, ocasion especial, preferencia de mesa...",
+  submit: "Solicitar reserva",
+  disclaimer: "Al enviar aceptas ser contactado para confirmar tu reserva.",
+  toastTitle: "Solicitud recibida",
+  toastDescription: "Te confirmaremos tu reserva por email muy pronto.",
+};
 
 const DEFAULT_MAP_URL =
   "https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4a38f7a4e8dc7:0xc9b99a7a043a167e";
@@ -53,14 +98,16 @@ export function Contact01({
   mapUrl = DEFAULT_MAP_URL,
   glovoUrl = DEFAULT_GLOVO_URL,
   uberEatsUrl = DEFAULT_UBER_EATS_URL,
+  labels,
   ...props
 }: Contact01Props) {
   const [guests, setGuests] = useState("2");
+  const l = { ...DEFAULT_LABELS, ...labels };
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    toast.success("Solicitud recibida", {
-      description: "Te confirmaremos tu reserva por email muy pronto.",
+    toast.success(l.toastTitle, {
+      description: l.toastDescription,
     });
     e.currentTarget.reset();
     setGuests("2");
@@ -98,7 +145,7 @@ export function Contact01({
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <MapPin className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">Direccion</p>
+                  <p className="font-medium">{l.addressCardTitle}</p>
                 </div>
                 <a
                   href={mapUrl}
@@ -118,7 +165,7 @@ export function Contact01({
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <Phone className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">Telefono</p>
+                  <p className="font-medium">{l.phoneCardTitle}</p>
                 </div>
                 <a
                   href={`tel:${phone.replace(/\s/g, "")}`}
@@ -136,7 +183,7 @@ export function Contact01({
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <ShoppingBag className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">Pedir Ahora</p>
+                  <p className="font-medium">{l.orderCardTitle}</p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <Button
@@ -171,55 +218,55 @@ export function Contact01({
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-name">Nombre</Label>
+                <Label htmlFor="contact-name">{l.formName}</Label>
                 <Input
                   id="contact-name"
                   name="name"
                   autoComplete="name"
-                  placeholder="Tu nombre"
+                  placeholder={l.formNamePlaceholder}
                   required
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-phone">Telefono</Label>
+                <Label htmlFor="contact-phone">{l.formPhone}</Label>
                 <Input
                   id="contact-phone"
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  placeholder="600 000 000"
+                  placeholder={l.formPhonePlaceholder}
                   required
                 />
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-email">Email</Label>
+              <Label htmlFor="contact-email">{l.formEmail}</Label>
               <Input
                 id="contact-email"
                 name="email"
                 type="email"
                 autoComplete="email"
-                placeholder="tu@email.com"
+                placeholder={l.formEmailPlaceholder}
                 required
               />
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-date">Fecha</Label>
+                <Label htmlFor="contact-date">{l.formDate}</Label>
                 <Input id="contact-date" name="date" type="date" required />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-guests">Comensales</Label>
+                <Label htmlFor="contact-guests">{l.formGuests}</Label>
                 <Select value={guests} onValueChange={setGuests}>
                   <SelectTrigger id="contact-guests" className="w-full">
-                    <SelectValue placeholder="Personas" />
+                    <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
                     {["1", "2", "3", "4", "5", "6", "7", "8"].map((n) => (
                       <SelectItem key={n} value={n}>
-                        {n} {n === "1" ? "persona" : "personas"}
+                        {n} {n === "1" ? l.guestSingular : l.guestPlural}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -228,20 +275,20 @@ export function Contact01({
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-message">Mensaje (opcional)</Label>
+              <Label htmlFor="contact-message">{l.formMessage}</Label>
               <Textarea
                 id="contact-message"
                 name="message"
                 rows={3}
-                placeholder="Alergias, ocasion especial, preferencia de mesa..."
+                placeholder={l.formMessagePlaceholder}
               />
             </div>
 
             <Button type="submit" className="mt-1 h-12 text-base">
-              Solicitar reserva
+              {l.submit}
             </Button>
             <p className="text-muted-foreground text-center text-xs">
-              Al enviar aceptas ser contactado para confirmar tu reserva.
+              {l.disclaimer}
             </p>
           </form>
         </Reveal>

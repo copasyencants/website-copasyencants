@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Star, Flame } from "lucide-react";
 
@@ -8,6 +7,7 @@ import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/effects/reveal";
+import { Link } from "@/i18n/navigation";
 
 export interface Hero03Action {
   label: string;
@@ -28,6 +28,7 @@ export interface Hero03Props extends SectionProps {
   primary?: Hero03Action;
   secondary?: Hero03Action;
   stats?: Hero03Stat[];
+  reviewsLabel?: string;
   imageSrc?: string;
   imageAlt?: string;
   videoSrc?: string;
@@ -54,6 +55,7 @@ export function Hero03({
   primary = { label: "Reservar mesa", href: "#contacto" },
   secondary = { label: "Ver la carta", href: "/carta" },
   stats = DEFAULT_STATS,
+  reviewsLabel = "4,8/5 · 146 reseñas",
   imageSrc = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80",
   imageAlt = "Pizza napolitana recién salida del horno de leña",
   videoSrc = "/videotest.mp4",
@@ -147,9 +149,7 @@ export function Hero03({
                     />
                   ))}
                 </div>
-                <span className="text-sm text-white/80">
-                  4,8/5 · 146 reseñas
-                </span>
+                <span className="text-sm text-white/80">{reviewsLabel}</span>
               </div>
               {stats.map((s) => (
                 <div key={s.label} className="flex items-baseline gap-2">

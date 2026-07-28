@@ -1,0 +1,344 @@
+{
+  "site": {
+    "description": "Pizzeria restaurant in Sant Marti, Barcelona, with dine-in service, takeaway, online reservations and a warm atmosphere."
+  },
+  "nav": {
+    "brand": "Copas y Encants",
+    "logoAriaLabel": "Copas y Encants — home",
+    "openMenuAriaLabel": "Open menu",
+    "cta": "Book a table",
+    "links": {
+      "specialties": "Specialties",
+      "menu": "Menu",
+      "gallery": "Gallery",
+      "history": "Our Story",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Authentic Neapolitan pizza",
+      "titleTop": "The taste of",
+      "titleAccent": "fire",
+      "titleBottom": "made by hand",
+      "description": "Sourdough matured for 48 hours, fresh seasonal ingredients and the living heat of our wood-fired oven. Open kitchen, Italian soul.",
+      "primary": "Book a table",
+      "secondary": "View the menu",
+      "reviewsLabel": "4.8/5 · 146 reviews",
+      "stats": [
+        { "value": "48 h", "label": "Dough maturation" },
+        { "value": "485°", "label": "Wood-fired oven" },
+        { "value": "2007", "label": "Since" }
+      ]
+    },
+    "essence": {
+      "eyebrow": "Our essence",
+      "title": "Italian craftsmanship in every bite",
+      "description": "At Copas y Encants we believe a great table starts with carefully sourced produce, warm service and an atmosphere made for lingering.",
+      "badgeValue": "100%",
+      "badgeLabel": "Fresh seasonal ingredients",
+      "points": [
+        "Live sourdough starter, slowly matured for 48 hours",
+        "Italian flours and San Marzano D.O.P. tomatoes",
+        "Fior di latte mozzarella and fresh basil every morning",
+        "Baked to order in a wood-fired oven at 485°"
+      ]
+    },
+    "specialties": {
+      "eyebrow": "Our craft",
+      "title": "Four obsessions, one pizza",
+      "description": "Everything we do revolves around a single goal: the perfect Neapolitan pizza, honest and full of character.",
+      "items": [
+        {
+          "title": "Wood-fired oven",
+          "description": "Baked at 485° to seal in the flavor in 90 seconds, giving the dough its airy, lightly smoky edge."
+        },
+        {
+          "title": "48h sourdough",
+          "description": "Slow fermentation with a live starter for a lighter, more digestible and aromatic pizza."
+        },
+        {
+          "title": "Fresh produce",
+          "description": "San Marzano D.O.P. tomatoes, fior di latte mozzarella and seasonal vegetables from local producers."
+        },
+        {
+          "title": "Open kitchen",
+          "description": "Our pizzaioli work in full view: every pizza is a small artisan show."
+        }
+      ]
+    },
+    "menu": {
+      "eyebrow": "Our menu",
+      "title": "The pizzas that define us",
+      "description": "A selection of our most-loved creations, wood-fired and served fresh. The full menu awaits you at the table.",
+      "cta": "View the full menu",
+      "items": [
+        {
+          "name": "Margherita D.O.P.",
+          "subtitle": "The Neapolitan classic",
+          "description": "San Marzano tomato, fior di latte mozzarella, fresh basil and extra virgin olive oil.",
+          "price": "9.50€",
+          "tag": "Iconic"
+        },
+        {
+          "name": "Diavola",
+          "subtitle": "For the spice lovers",
+          "description": "Spicy salami, San Marzano tomato, mozzarella and a touch of rosemary honey.",
+          "price": "11.00€"
+        },
+        {
+          "name": "Tartufo & Funghi",
+          "subtitle": "Our signature",
+          "description": "Black truffle cream, portobello mushrooms, mozzarella and parmesan shavings.",
+          "price": "15.50€",
+          "tag": "Chef's"
+        },
+        {
+          "name": "Quattro Formaggi",
+          "subtitle": "Creamy and rich",
+          "description": "Mozzarella, gorgonzola D.O.P., pecorino and smoked provolone on a white base.",
+          "price": "16.00€"
+        },
+        {
+          "name": "Prosciutto & Rúcula",
+          "subtitle": "Fresh and light",
+          "description": "18-month Parma ham, wild arugula, parmesan and confit cherry tomatoes.",
+          "price": "14.50€"
+        },
+        {
+          "name": "Ortolana",
+          "subtitle": "Seasonal garden",
+          "description": "Wood-fired roasted vegetables, mozzarella, basil pesto and olive oil.",
+          "price": "13.00€",
+          "tag": "Vegetarian"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Book your table",
+      "title": "Tonight, let the fire cook for you",
+      "description": "The best tables go fast. Book in seconds and enjoy a Neapolitan evening by the oven.",
+      "primary": "Book now",
+      "secondary": "934 67 21 30",
+      "orderLabel": "Or order for takeaway",
+      "orderGlovo": "Order on Glovo",
+      "orderUberEats": "Order on Uber Eats"
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "The fire, the table, the moment",
+      "description": "A glimpse of our open kitchen, our ingredients and the atmosphere waiting for you every night.",
+      "imagesAlt": [
+        "Freshly baked Italian pizza",
+        "Margherita pizza with mozzarella and basil",
+        "Cozy interior of an Italian restaurant",
+        "Italian table with dishes to share",
+        "Chef preparing dishes in the restaurant",
+        "Artisan pizza served on a restaurant table"
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Our story",
+      "title": "Seventeen years feeding the fire",
+      "description": "From a family recipe to a corner of Naples in the heart of the city. This is the story we bake every day.",
+      "imageAlt": "The story of Copas y Encants",
+      "entries": [
+        {
+          "year": "2007",
+          "title": "An idea born in Naples",
+          "description": "Marco Esposito leaves his Vomero neighborhood with his grandmother's recipe and a dream of his own oven."
+        },
+        {
+          "year": "2011",
+          "title": "The wood-fired oven is lit",
+          "description": "We open our first 20-table dining room. The open kitchen becomes the heart of the place."
+        },
+        {
+          "year": "2018",
+          "title": "From the garden to the table",
+          "description": "We form partnerships with local producers to work only with fresh, seasonal ingredients."
+        },
+        {
+          "year": "2024",
+          "title": "A new generation",
+          "description": "Giulia Esposito takes over and refreshes the menu without betraying the Neapolitan soul that started it all."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Reviews",
+      "title": "What our guests say",
+      "description": "Thousands of nights shared around the fire. Here are some of the voices that keep us kneading.",
+      "items": [
+        {
+          "quote": "The best pizza I've had outside of Italy. The dough is light, aromatic, and you can taste the wood-fired oven in every bite.",
+          "name": "Lucía Fernández",
+          "role": "Regular customer",
+          "rating": 5
+        },
+        {
+          "quote": "A place with soul. The service is warm, the open kitchen is quite a show, and the Tartufo is simply memorable.",
+          "name": "Andrés Molina",
+          "role": "Food critic",
+          "rating": 5
+        },
+        {
+          "quote": "We celebrated our anniversary here and it was perfect. Fresh ingredients, cozy atmosphere and a tiramisu on another level.",
+          "name": "Carla Ruiz",
+          "role": "Google Reviews",
+          "rating": 5
+        },
+        {
+          "quote": "You can feel the Italian authenticity without falling into cliché. Book ahead, it's always full and now I understand why.",
+          "name": "Javier Ortega",
+          "role": "Local neighbor",
+          "rating": 5
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Everything you need to know",
+      "description": "Can't find your answer? Call or write to us, we're happy to help.",
+      "items": [
+        {
+          "question": "Do I need to book a table?",
+          "answer": "We recommend it, especially from Friday to Sunday. You can book from our website in under a minute or by phone."
+        },
+        {
+          "question": "Do you have vegetarian or gluten-free options?",
+          "answer": "Yes. We offer several vegetarian pizzas and a gluten-free dough prepared in a separate area. Just let us know when booking."
+        },
+        {
+          "question": "Can I order takeaway?",
+          "answer": "Of course. You can pick up your order at the restaurant; we bake your pizza just before you arrive so you enjoy it at its best."
+        },
+        {
+          "question": "Do you host private events?",
+          "answer": "We reserve the venue for groups and celebrations. Write to us with the date and number of guests and we'll prepare a tailored proposal."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Book your table by the fire",
+      "description": "Write to us and we'll confirm your booking within the hour. For groups of more than 8, please call us directly.",
+      "labels": {
+        "addressCardTitle": "Address",
+        "phoneCardTitle": "Phone",
+        "orderCardTitle": "Order Now",
+        "formName": "Name",
+        "formNamePlaceholder": "Your name",
+        "formPhone": "Phone",
+        "formPhonePlaceholder": "600 000 000",
+        "formEmail": "Email",
+        "formEmailPlaceholder": "you@email.com",
+        "formDate": "Date",
+        "formGuests": "Guests",
+        "guestSingular": "guest",
+        "guestPlural": "guests",
+        "formMessage": "Message (optional)",
+        "formMessagePlaceholder": "Allergies, special occasion, table preference...",
+        "submit": "Request booking",
+        "disclaimer": "By submitting you agree to be contacted to confirm your booking.",
+        "toastTitle": "Request received",
+        "toastDescription": "We'll confirm your booking by email very soon."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Pizzeria restaurant in Sant Marti, Barcelona, with dine-in service, takeaway and online reservations.",
+    "navTitle": "Navigation",
+    "navHome": "Home",
+    "navMenu": "Menu",
+    "navBook": "Book a table",
+    "scheduleTitle": "Hours",
+    "schedule": [
+      { "day": "Monday", "hours": "Closed" },
+      { "day": "Tuesday - Thursday", "hours": "11:30 AM - 11:30 PM" },
+      { "day": "Friday - Sunday", "hours": "10:30 AM - 12:00 AM" }
+    ],
+    "rightsText": "All rights reserved.",
+    "designedByText": "Designed by"
+  },
+  "carta": {
+    "meta": {
+      "title": "Full Menu",
+      "description": "Discover our full menu: Neapolitan pizzas, white pizzas, drinks and cocktails. Pizza bar and craft cocktails in Barcelona."
+    },
+    "header": {
+      "badge": "Pizza Bar & Cocktails",
+      "title": "Our Menu",
+      "description": "Discover all our artisan Neapolitan pizzas, carefully selected drinks and authentic cocktails. Every dish made with the finest fresh ingredients.",
+      "phone": "934 672 130",
+      "address": "Carrer de Bilbao, 18-22",
+      "instagramHandle": "@copasyencants"
+    },
+    "sections": {
+      "clasicas": "Classic Pizzas",
+      "blancas": "White Pizzas",
+      "entrantes": "Starters",
+      "bebidas": "Drinks",
+      "cervezas": "Beers",
+      "vinos": "Wines",
+      "licores": "Spirits",
+      "cocteles": "Cocktails",
+      "postres": "Desserts"
+    },
+    "items": {
+      "clasicas": [
+        { "name": "Margherita", "description": "Tomato, mozzarella, fresh basil", "price": "9.50€" },
+        { "name": "Bufala", "description": "Tomato, fresh buffalo mozzarella", "price": "11.50€" },
+        { "name": "Marinara", "description": "Tomato, garlic, olive oil, oregano", "price": "6.00€" },
+        { "name": "Diavola", "description": "Tomato, mozzarella, pepperoni", "price": "11.00€" },
+        { "name": "Vegetariana", "description": "Mixed vegetables, mozzarella", "price": "13.00€" },
+        { "name": "Prosciutto Cotto", "description": "Tomato, mozzarella, cooked ham", "price": "11.00€" },
+        { "name": "Salami", "description": "Tomato, mozzarella, salami", "price": "11.00€" },
+        { "name": "4 Seasons", "description": "Tomato, mozzarella, ham, mushrooms", "price": "12.50€" },
+        { "name": "Calzone", "description": "Folded, cheese, ham, mushrooms", "price": "13.00€" }
+      ],
+      "blancas": [
+        { "name": "Mozzarella", "description": "Fresh mozzarella, extra virgin olive oil", "price": "15.50€" },
+        { "name": "Quattro Formaggi", "description": "Mozzarella, gorgonzola, pecorino, smoked provolone", "price": "16.00€" },
+        { "name": "Prosciutto", "description": "Parma ham, arugula, parmesan", "price": "14.50€" }
+      ],
+      "entrantes": [
+        { "name": "Bruschetta", "description": "Toasted bread with tomato and basil", "price": "4.00€" },
+        { "name": "Focaccia", "description": "Traditional Italian bread", "price": "5.00€" },
+        { "name": "Garlic Bread", "description": "Homemade bread with garlic and parsley", "price": "5.50€" },
+        { "name": "Steamed Shrimp", "description": "Fresh steamed shrimp", "price": "12.50€" }
+      ],
+      "cervezas": [
+        { "name": "Estrella Damm", "price": "3.50€" },
+        { "name": "Voll Damm", "price": "3.75€" },
+        { "name": "Craft Selection", "price": "5.00€" }
+      ],
+      "vinos": [
+        { "name": "White Wine", "price": "4.00€ / glass" },
+        { "name": "Red Wine", "price": "4.00€ / glass" },
+        { "name": "Rosé Wine", "price": "3.50€ / glass" }
+      ],
+      "licores": [
+        { "name": "Gin & Tonic", "price": "8.00€" },
+        { "name": "Rum & Cola", "price": "7.50€" },
+        { "name": "Vodka & Lime", "price": "7.00€" }
+      ],
+      "cocteles": [
+        { "name": "Mojito", "description": "Rum, mint, lime and soda", "price": "9.00€" },
+        { "name": "Margarita", "description": "Tequila, triple sec and lime", "price": "9.50€" },
+        { "name": "Piña Colada", "description": "Rum, coconut and pineapple", "price": "9.00€" },
+        { "name": "Daiquiri", "description": "White rum, lime and sugar", "price": "9.00€" }
+      ],
+      "postres": [
+        { "name": "Pizza Nutella", "description": "Pizza base with Nutella and strawberries", "price": "9.00€" },
+        { "name": "Pizza Sicilia", "description": "Pizza base with chocolate and pistachio", "price": "8.00€" },
+        { "name": "Tiramisu", "description": "Classic Italian dessert", "price": "7.50€" }
+      ]
+    },
+    "commitment": {
+      "eyebrow": "Our Commitment",
+      "title": "Fresh Ingredients, Authentic Craftsmanship",
+      "description": "Every pizza is handcrafted with the finest fresh ingredients. Baked at 485° in our traditional wood-fired oven to seal in the perfect flavor."
+    }
+  }
+}

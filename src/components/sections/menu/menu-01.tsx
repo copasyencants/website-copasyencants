@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
@@ -9,6 +8,7 @@ import type { SectionProps } from "@/lib/component-types";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/effects/reveal";
+import { Link } from "@/i18n/navigation";
 
 export interface MenuItem {
   name: string;

@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Menu, Flame } from "lucide-react";
 import { NavLink } from "@/components/ui/nav-link";
+import { Link } from "@/i18n/navigation";
 
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
@@ -25,8 +25,11 @@ export interface NavLink {
 export interface Navbar02Props extends SectionProps {
   brand?: string;
   logoHref?: string;
+  logoAriaLabel?: string;
+  openMenuAriaLabel?: string;
   links?: NavLink[];
   cta?: NavLink;
+  localeSwitcher?: React.ReactNode;
 }
 
 const DEFAULT_LINKS: NavLink[] = [
@@ -46,8 +49,11 @@ export function Navbar02({
   className,
   brand = "Copas y Encants",
   logoHref = "#inicio",
+  logoAriaLabel,
+  openMenuAriaLabel = "Abrir menú",
   links = DEFAULT_LINKS,
   cta = { label: "Reservar mesa", href: "#contacto" },
+  localeSwitcher,
   ...props
 }: Navbar02Props) {
   const [scrolled, setScrolled] = useState(false);
@@ -74,7 +80,7 @@ export function Navbar02({
         <Link
           href={logoHref}
           className="group flex items-center gap-2"
-          aria-label={`${brand} — inicio`}
+          aria-label={logoAriaLabel ?? brand}
         >
           <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full">
             <Flame className="size-5" aria-hidden />
@@ -98,6 +104,7 @@ export function Navbar02({
         </ul>
 
         <div className="flex items-center gap-2">
+          {localeSwitcher}
           <Button asChild className="hidden h-10 px-5 sm:inline-flex">
             <Link href={cta.href}>{cta.label}</Link>
           </Button>
@@ -108,7 +115,7 @@ export function Navbar02({
                 variant="outline"
                 size="icon"
                 className="size-10 lg:hidden"
-                aria-label="Abrir menú"
+                aria-label={openMenuAriaLabel}
               >
                 <Menu className="size-5" />
               </Button>
@@ -135,6 +142,9 @@ export function Navbar02({
                     <Link href={cta.href}>{cta.label}</Link>
                   </Button>
                 </SheetClose>
+                {localeSwitcher ? (
+                  <div className="mt-2 px-3">{localeSwitcher}</div>
+                ) : null}
               </nav>
             </SheetContent>
           </Sheet>
