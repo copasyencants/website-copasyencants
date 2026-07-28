@@ -121,110 +121,77 @@ export function Contact01({
             </Reveal>
           ) : null}
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+            {/* Direccion */}
             <Reveal delay={0.15}>
-              <ul className="border-border bg-muted/40 flex h-full flex-col gap-4 rounded-2xl border p-5">
-                <li className="flex items-start gap-3">
-                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
+              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+                <div className="flex items-center gap-3">
+                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <MapPin className="size-5" aria-hidden />
                   </span>
-                  <div>
-                    <p className="font-medium">Direccion</p>
-                    <a
-                      href={mapUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {address}
-                    </a>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
-                    <Phone className="size-5" aria-hidden />
-                  </span>
-                  <div>
-                    <p className="font-medium">Telefono</p>
-                    <a
-                      href={`tel:${phone.replace(/\s/g, "")}`}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {phone}
-                    </a>
-                  </div>
-                </li>
-                {email ? (
-                  <li className="flex items-start gap-3">
-                    <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
-                      <Mail className="size-5" aria-hidden />
-                    </span>
-                    <div>
-                      <p className="font-medium">Email</p>
-                      <a
-                        href={`mailto:${email}`}
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {email}
-                      </a>
-                    </div>
-                  </li>
-                ) : null}
-                <li className="flex items-start gap-3">
-                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
-                    <CircleEuro className="size-5" aria-hidden />
-                  </span>
-                  <div>
-                    <p className="font-medium">Precio</p>
-                    <p className="text-muted-foreground">{priceRange}</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
-                    <ShoppingBag className="size-5" aria-hidden />
-                  </span>
-                  <div>
-                    <p className="font-medium">Pedidos</p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      <Button
-                        asChild
-                        size="sm"
-                        className="h-9 rounded-full px-4"
-                      >
-                        <a href={glovoUrl} target="_blank" rel="noreferrer">
-                          Glovo
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        size="sm"
-                        variant="outline"
-                        className="h-9 rounded-full px-4"
-                      >
-                        <a href={uberEatsUrl} target="_blank" rel="noreferrer">
-                          Uber Eats
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-full">
-                    <CalendarCheck className="size-5" aria-hidden />
-                  </span>
-                  <div>
-                    <p className="font-medium">Reservas</p>
-                    <a
-                      href={bookingUrl}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      Formulario de contacto
-                    </a>
-                  </div>
-                </li>
-              </ul>
+                  <p className="font-medium">Direccion</p>
+                </div>
+                <a
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-muted-foreground hover:text-primary text-sm transition-colors"
+                >
+                  {address}
+                </a>
+              </div>
             </Reveal>
 
+            {/* Telefono */}
+            <Reveal delay={0.2}>
+              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+                <div className="flex items-center gap-3">
+                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
+                    <Phone className="size-5" aria-hidden />
+                  </span>
+                  <p className="font-medium">Telefono</p>
+                </div>
+                <a
+                  href={`tel:${phone.replace(/\s/g, "")}`}
+                  className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
+                >
+                  {phone}
+                </a>
+              </div>
+            </Reveal>
+
+            {/* Precio & Pedidos */}
+            <Reveal delay={0.25}>
+              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+                <div className="flex items-center gap-3">
+                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
+                    <ShoppingBag className="size-5" aria-hidden />
+                  </span>
+                  <p className="font-medium">Pedir Ahora</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Button
+                    asChild
+                    size="sm"
+                    className="h-8 rounded-full text-sm"
+                  >
+                    <a href={glovoUrl} target="_blank" rel="noreferrer">
+                      Glovo
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="h-8 rounded-full text-sm"
+                  >
+                    <a href={uberEatsUrl} target="_blank" rel="noreferrer">
+                      Uber Eats
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
 
