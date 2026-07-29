@@ -96,7 +96,7 @@ const DEFAULT_ITEMS: MenuItem[] = [
     name: "Ortolana",
     subtitle: "Huerta de temporada",
     description:
-      "Verduras asadas al horno de leña, mozzarella, pesto de albahaca y aceite de oliva.",
+      "Verduras asadas al horno, mozzarella, pesto de albahaca y aceite de oliva.",
     price: "13.00€",
     imageSrc:
       "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=900&q=80",
@@ -114,7 +114,7 @@ export function Menu01({
   className,
   eyebrow = "Nuestra carta",
   title = "Las pizzas que nos definen",
-  description = "Una selección de nuestras creaciones más queridas, horneadas a la leña y servidas al momento. La carta completa te espera en la mesa.",
+  description = "Una selección de nuestras creaciones más queridas, horneadas al momento y servidas en sala o terraza. La carta completa te espera en la mesa.",
   items = DEFAULT_ITEMS,
   categories,
   cta = { label: "Ver la carta completa", href: "/carta" },
@@ -158,7 +158,7 @@ export function Menu01({
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
             {category.items.map((item, i) => (
               <Reveal key={item.name} delay={0.05 * (i % 3)}>
-                <article className="group border-border/80 bg-card flex h-full flex-col overflow-hidden rounded-2xl border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <article className="group border-border/80 bg-card flex h-full flex-col overflow-hidden rounded-2xl border text-neutral-950 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                   {item.imageSrc ? (
                     <div className="bg-muted relative aspect-[3/2] overflow-hidden">
                       <Image
@@ -184,17 +184,17 @@ export function Menu01({
                         {item.name}
                       </h3>
                       {!item.imageSrc ? (
-                        <span className="text-muted-foreground text-sm font-semibold whitespace-nowrap">
+                        <span className="text-sm font-semibold whitespace-nowrap text-neutral-600">
                           {item.price}
                         </span>
                       ) : null}
                     </div>
                     {item.subtitle ? (
-                      <p className="text-accent text-sm font-medium italic">
+                      <p className="text-primary text-sm font-medium italic">
                         {item.subtitle}
                       </p>
                     ) : null}
-                    <p className="text-muted-foreground mt-1 text-sm text-pretty">
+                    <p className="mt-1 text-sm text-neutral-600 text-pretty">
                       {item.description}
                     </p>
                   </div>

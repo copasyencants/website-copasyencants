@@ -26,7 +26,7 @@ const DEFAULT_POINTS: string[] = [
   "Masa madre viva, madurada lentamente durante 48 horas",
   "Harinas italianas y tomate San Marzano D.O.P.",
   "Mozzarella fior di latte y albahaca fresca cada mañana",
-  "Cocción al momento en horno de leña a 485°",
+  "Cocción al momento en horno a 485°",
 ];
 
 /**
@@ -60,7 +60,7 @@ export function Features02({
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
           </div>
           {badge ? (
-            <div className="bg-card border-border absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border p-5 shadow-xl sm:right-6">
+            <div className="bg-card border-border absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border p-5 text-neutral-950 shadow-xl sm:right-6">
               <div className="flex items-center gap-3">
                 <span className="bg-accent/15 text-accent flex size-11 shrink-0 items-center justify-center rounded-full">
                   <Leaf className="size-5" aria-hidden />
@@ -69,7 +69,7 @@ export function Features02({
                   <p className="font-heading text-2xl leading-none font-semibold">
                     {badge.value}
                   </p>
-                  <p className="text-muted-foreground mt-1 text-xs text-pretty">
+                  <p className="mt-1 text-xs text-neutral-500 text-pretty">
                     {badge.label}
                   </p>
                 </div>

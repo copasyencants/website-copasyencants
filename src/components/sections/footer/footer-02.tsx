@@ -71,7 +71,10 @@ export function Footer02({
 
   return (
     <footer
-      className={cn("bg-foreground text-background/85 mt-auto", className)}
+      className={cn(
+        "mt-auto border-t border-neutral-200 bg-white text-neutral-800",
+        className,
+      )}
       {...(props as React.HTMLAttributes<HTMLElement>)}
     >
       <div className="container-content section-sm">
@@ -79,7 +82,7 @@ export function Footer02({
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
             {/* Brand & Contact */}
             <div className="flex max-w-xl items-start gap-5 lg:col-span-6">
-              <div className="flex size-22 shrink-0 items-center justify-center overflow-hidden rounded-full bg-background shadow-md ring-1 ring-background/20 md:size-24">
+              <div className="flex size-22 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-1 ring-white/20 md:size-24">
                 <Image
                   src="/logo-copasyencants.svg"
                   alt=""
@@ -90,10 +93,10 @@ export function Footer02({
                 />
               </div>
               <div className="flex min-w-0 flex-col gap-4 pt-2">
-                <p className="max-w-md text-sm leading-relaxed text-background/75 text-pretty">
+                <p className="max-w-md text-sm leading-relaxed text-neutral-700 text-pretty">
                   {tagline}
                 </p>
-                <p className="max-w-sm text-sm leading-relaxed text-background/55">
+                <p className="max-w-sm text-sm leading-relaxed text-neutral-500">
                   {address}
                 </p>
               </div>
@@ -105,7 +108,7 @@ export function Footer02({
                 key={col.title}
                 className="flex flex-col gap-4 md:pl-2 lg:col-span-2 lg:pl-0"
               >
-                <h3 className="font-heading text-sm font-bold tracking-wide text-background uppercase">
+                <h3 className="font-heading text-sm font-bold tracking-wide text-neutral-950 uppercase">
                   {col.title}
                 </h3>
                 <ul className="flex flex-col gap-3">
@@ -113,7 +116,7 @@ export function Footer02({
                     <li key={link.label}>
                       <NavLink
                         href={link.href}
-                        className="text-background/70 hover:text-background text-sm transition-colors"
+                        className="text-sm text-neutral-600 transition-colors hover:text-neutral-950"
                       >
                         {link.label}
                       </NavLink>
@@ -125,17 +128,17 @@ export function Footer02({
 
             {/* Schedule */}
             <div className="flex flex-col gap-4 lg:col-span-4 lg:pl-4">
-              <h3 className="font-heading text-sm font-bold tracking-wide text-background uppercase">
+              <h3 className="font-heading text-sm font-bold tracking-wide text-neutral-950 uppercase">
                 {scheduleTitle}
               </h3>
-              <dl className="flex max-w-sm flex-col overflow-hidden rounded-lg border border-background/10 text-sm">
+              <dl className="flex max-w-sm flex-col overflow-hidden rounded-lg border border-neutral-200 text-sm">
                 {schedule.map((item) => (
                   <div
                     key={item.day}
-                    className="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-background/10 px-4 py-3 last:border-b-0"
+                    className="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-neutral-200 px-4 py-3 last:border-b-0"
                   >
-                    <dt className="text-background/65">{item.day}</dt>
-                    <dd className="text-right font-semibold text-background">
+                    <dt className="text-neutral-600">{item.day}</dt>
+                    <dd className="text-right font-semibold text-neutral-950">
                       {item.hours}
                     </dd>
                   </div>
@@ -145,17 +148,17 @@ export function Footer02({
           </div>
         </Reveal>
 
-        <div className="border-background/15 mt-12 flex flex-col items-center justify-between gap-3 border-t pt-6 text-sm sm:flex-row">
-          <p className="text-background/60">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-neutral-200 pt-6 text-sm sm:flex-row">
+          <p className="text-neutral-500">
             © {year} {brand}. {rightsText}
           </p>
-          <p className="text-background/50">
+          <p className="text-neutral-500">
             {designedByText}{" "}
             <a
               href="https://www.klentcreative.com"
               target="_blank"
               rel="noreferrer"
-              className="text-background hover:text-primary transition-colors font-medium"
+              className="font-medium text-neutral-950 transition-colors hover:text-primary"
             >
               KLENT CREATIVE
             </a>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Flame, Wheat, Leaf, ChefHat, type LucideIcon } from "lucide-react";
+import { Armchair, Flame, Wheat, Leaf, type LucideIcon } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { constructMetadata } from "@/lib/metadata";
@@ -26,15 +26,15 @@ const GLOVO_URL =
 const UBER_EATS_URL =
   "https://www.ubereats.com/es/store/copas-y-encants-pizza-napoletana/wG3xvmaoViGOzbVwUE_eog?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas";
 
-const SPECIALTY_ICONS: LucideIcon[] = [Flame, Wheat, Leaf, ChefHat];
+const SPECIALTY_ICONS: LucideIcon[] = [Flame, Wheat, Leaf, Armchair];
 
 const MENU_IMAGE_SRCS = [
-  "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85",
+  "https://images.unsplash.com/photo-1751200884901-c1c6f43ae1d6?q=85&w=900&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=900&q=85",
+  "/images/4 fromagi-acceuil.jpg",
+  "/images/pera y gorganzola accueil.png",
+  "https://images.unsplash.com/photo-1758157835961-5db4a033390b?q=85&w=900&auto=format&fit=crop",
 ];
 
 const GALLERY_IMAGE_SRCS = [
@@ -43,16 +43,16 @@ const GALLERY_IMAGE_SRCS = [
     area: "sm:col-span-2 sm:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+    src: "/images/foto-horno.png",
   },
   {
-    src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80",
+    src: "/images/photo-pizza2.png",
   },
   {
-    src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
+    src: "/images/foto-fachada2.png",
   },
   {
-    src: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80",
+    src: "/images/foto-terraza.jpg",
   },
   {
     src: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=1200&q=80",
@@ -189,6 +189,8 @@ export default async function Home({
           ]}
           reviewsLabel={t("hero.reviewsLabel")}
           stats={t.raw("hero.stats")}
+          imageSrc="/images/foto-fachada.png"
+          videoSrc=""
         />
 
         <Features02
@@ -246,6 +248,7 @@ export default async function Home({
           title={t("timeline.title")}
           description={t("timeline.description")}
           entries={t.raw("timeline.entries")}
+          imageSrc="/images/foto-pizza.jpg"
           imageAlt={t("timeline.imageAlt")}
         />
 

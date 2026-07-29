@@ -140,18 +140,20 @@ export function Contact01({
           <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
             {/* Direccion */}
             <Reveal delay={0.15}>
-              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+              <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <MapPin className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">{l.addressCardTitle}</p>
+                  <p className="font-medium text-neutral-950">
+                    {l.addressCardTitle}
+                  </p>
                 </div>
                 <a
                   href={mapUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-muted-foreground hover:text-primary text-sm transition-colors"
+                  className="text-sm text-neutral-600 transition-colors hover:text-primary"
                 >
                   {address}
                 </a>
@@ -160,16 +162,18 @@ export function Contact01({
 
             {/* Telefono */}
             <Reveal delay={0.2}>
-              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+              <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <Phone className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">{l.phoneCardTitle}</p>
+                  <p className="font-medium text-neutral-950">
+                    {l.phoneCardTitle}
+                  </p>
                 </div>
                 <a
                   href={`tel:${phone.replace(/\s/g, "")}`}
-                  className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
+                  className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary"
                 >
                   {phone}
                 </a>
@@ -178,12 +182,14 @@ export function Contact01({
 
             {/* Precio & Pedidos */}
             <Reveal delay={0.25}>
-              <div className="border-border bg-muted/40 flex flex-col gap-3 rounded-2xl border p-5">
+              <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
                   <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
                     <ShoppingBag className="size-5" aria-hidden />
                   </span>
-                  <p className="font-medium">{l.orderCardTitle}</p>
+                  <p className="font-medium text-neutral-950">
+                    {l.orderCardTitle}
+                  </p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <Button
@@ -199,7 +205,7 @@ export function Contact01({
                     asChild
                     size="sm"
                     variant="outline"
-                    className="h-8 rounded-full text-sm"
+                    className="h-8 rounded-full border-neutral-300 bg-white text-sm text-neutral-950 hover:bg-neutral-100 hover:text-neutral-950"
                   >
                     <a href={uberEatsUrl} target="_blank" rel="noreferrer">
                       Uber Eats
@@ -214,53 +220,75 @@ export function Contact01({
         <Reveal delay={0.1} className="lg:self-start">
           <form
             onSubmit={handleSubmit}
-            className="border-border bg-card flex flex-col gap-5 rounded-3xl border p-6 shadow-lg sm:p-8"
+            className="border-border bg-card flex flex-col gap-5 rounded-3xl border p-6 text-neutral-950 shadow-lg sm:p-8"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-name">{l.formName}</Label>
+                <Label htmlFor="contact-name" className="text-neutral-950">
+                  {l.formName}
+                </Label>
                 <Input
                   id="contact-name"
                   name="name"
                   autoComplete="name"
                   placeholder={l.formNamePlaceholder}
+                  className="border-neutral-300 bg-white text-neutral-950 placeholder:text-neutral-500"
                   required
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-phone">{l.formPhone}</Label>
+                <Label htmlFor="contact-phone" className="text-neutral-950">
+                  {l.formPhone}
+                </Label>
                 <Input
                   id="contact-phone"
                   name="phone"
                   type="tel"
                   autoComplete="tel"
                   placeholder={l.formPhonePlaceholder}
+                  className="border-neutral-300 bg-white text-neutral-950 placeholder:text-neutral-500"
                   required
                 />
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-email">{l.formEmail}</Label>
+              <Label htmlFor="contact-email" className="text-neutral-950">
+                {l.formEmail}
+              </Label>
               <Input
                 id="contact-email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 placeholder={l.formEmailPlaceholder}
+                className="border-neutral-300 bg-white text-neutral-950 placeholder:text-neutral-500"
                 required
               />
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-date">{l.formDate}</Label>
-                <Input id="contact-date" name="date" type="date" required />
+                <Label htmlFor="contact-date" className="text-neutral-950">
+                  {l.formDate}
+                </Label>
+                <Input
+                  id="contact-date"
+                  name="date"
+                  type="date"
+                  className="border-neutral-300 bg-white text-neutral-950"
+                  required
+                />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="contact-guests">{l.formGuests}</Label>
+                <Label htmlFor="contact-guests" className="text-neutral-950">
+                  {l.formGuests}
+                </Label>
                 <Select value={guests} onValueChange={setGuests}>
-                  <SelectTrigger id="contact-guests" className="w-full">
+                  <SelectTrigger
+                    id="contact-guests"
+                    className="w-full border-neutral-300 bg-white text-neutral-950"
+                  >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -275,19 +303,22 @@ export function Contact01({
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="contact-message">{l.formMessage}</Label>
+              <Label htmlFor="contact-message" className="text-neutral-950">
+                {l.formMessage}
+              </Label>
               <Textarea
                 id="contact-message"
                 name="message"
                 rows={3}
                 placeholder={l.formMessagePlaceholder}
+                className="border-neutral-300 bg-white text-neutral-950 placeholder:text-neutral-500"
               />
             </div>
 
             <Button type="submit" className="mt-1 h-12 text-base">
               {l.submit}
             </Button>
-            <p className="text-muted-foreground text-center text-xs">
+            <p className="text-center text-xs text-neutral-500">
               {l.disclaimer}
             </p>
           </form>

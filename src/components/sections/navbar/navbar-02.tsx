@@ -83,12 +83,12 @@ export function Navbar02({
           className="group flex items-center"
           aria-label={logoAriaLabel ?? brand}
         >
-          <span className="flex size-12 items-center justify-center overflow-hidden rounded-full bg-background shadow-sm ring-1 ring-border/60 md:size-13">
+          <span className="flex size-13 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-sm ring-1 ring-white/25 md:size-14">
             <Image
               src="/logo-copasyencants.svg"
               alt=""
-              width={52}
-              height={52}
+              width={56}
+              height={56}
               className="size-full object-contain"
               aria-hidden
             />

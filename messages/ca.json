@@ -1,0 +1,717 @@
+{
+  "site": {
+    "description": "Restaurant pizzeria a Sant Martí, Barcelona, amb servei a sala i terrassa, venda per emportar, reserves online i ambient proper."
+  },
+  "nav": {
+    "brand": "Copas y Encants",
+    "logoAriaLabel": "Copas y Encants — inici",
+    "openMenuAriaLabel": "Obrir menú",
+    "cta": "Reservar taula",
+    "links": {
+      "specialties": "Especialitats",
+      "menu": "Carta",
+      "gallery": "Galeria",
+      "history": "Història",
+      "contact": "Contacte"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Autèntica pizza napolitana",
+      "titleTop": "El sabor del",
+      "titleAccent": "foc",
+      "titleBottom": "fet a mà",
+      "description": "Massa mare madurada 48 hores, ingredients frescos de temporada i la calor viva del nostre forn. Servei a sala i terrassa, ànima italiana.",
+      "primary": "Reservar taula",
+      "secondary": "Veure la carta",
+      "reviewsLabel": "4,8/5 · 146 ressenyes",
+      "stats": [
+        {
+          "value": "48 h",
+          "label": "Massa madurada"
+        },
+        {
+          "value": "485°",
+          "label": "Forn"
+        }
+      ]
+    },
+    "essence": {
+      "eyebrow": "La nostra essència",
+      "title": "Artesania italiana a cada mos",
+      "description": "A Copas y Encants creiem que una gran taula comença per un producte cuidat, un servei proper i un ambient pensat per gaudir sense presses.",
+      "badgeValue": "100%",
+      "badgeLabel": "Ingredients frescos de temporada",
+      "points": [
+        "Massa mare viva, madurada lentament durant 48 hores",
+        "Farines italianes i tomàquet San Marzano D.O.P.",
+        "Mozzarella fior di latte i alfàbrega fresca cada matí",
+        "Cocció al moment en forn a 485°"
+      ]
+    },
+    "specialties": {
+      "eyebrow": "El nostre ofici",
+      "title": "Quatre obsessions, una sola pizza",
+      "description": "Tot el que fem gira entorn d'un objectiu: la pizza napolitana perfecta, honesta i plena de caràcter.",
+      "items": [
+        {
+          "title": "Forn",
+          "description": "Cocció a 485° que segella el sabor en 90 segons i dona a la massa la seva vora airejada i daurada."
+        },
+        {
+          "title": "Massa mare 48 h",
+          "description": "Fermentació lenta amb massa mare viva per a una pizza més lleugera, digestiva i plena d'aroma."
+        },
+        {
+          "title": "Producte fresc",
+          "description": "Tomàquet San Marzano D.O.P., mozzarella fior di latte i verdures de temporada de productors locals."
+        },
+        {
+          "title": "Sala i terrassa",
+          "description": "Servei proper a sala i terrassa per gaudir de la pizza, les tapes i els còctels sense presses."
+        }
+      ]
+    },
+    "menu": {
+      "eyebrow": "La nostra carta",
+      "title": "Les pizzes que ens defineixen",
+      "description": "Una selecció de les nostres creacions més estimades, enfornades al moment i servides a sala o terrassa. La carta completa t'espera a la taula.",
+      "cta": "Veure la carta completa",
+      "items": [
+        {
+          "name": "Margherita",
+          "subtitle": "La clàssica napolitana",
+          "description": "Tomàquet, mozzarella, alfàbrega fresca.",
+          "price": "9.50€",
+          "tag": "Icònica"
+        },
+        {
+          "name": "Bufala",
+          "subtitle": "Mozzarella de búfala",
+          "description": "Tomàquet, mozzarella de búfala.",
+          "price": "11.50€"
+        },
+        {
+          "name": "Diavola",
+          "subtitle": "Per als amants del picant",
+          "description": "Tomàquet, mozzarella, salami picant.",
+          "price": "11.00€",
+          "tag": "Picant"
+        },
+        {
+          "name": "4 Formaggi",
+          "subtitle": "Cremosa i intensa",
+          "description": "Tomàquet, mozzarella, gorgonzola, parmesà, grana.",
+          "price": "12.50€"
+        },
+        {
+          "name": "Pera i Gorgonzola",
+          "subtitle": "Dolça i cremosa",
+          "description": "Mozzarella, pera, gorgonzola, nous de pacana.",
+          "price": "14.50€"
+        },
+        {
+          "name": "Parma",
+          "subtitle": "Pernil de Parma i burrata",
+          "description": "Tomàquet cirerol, pernil de Parma, rúcula, burrata.",
+          "price": "19.50€",
+          "tag": "Especial"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Reserva la teva taula",
+      "title": "Aquesta nit, deixa que el foc cuini per tu",
+      "description": "Les millors taules volen. Reserva en segons i viu una vetllada napolitana al costat del forn.",
+      "primary": "Reservar ara",
+      "secondary": "934 67 21 30",
+      "orderLabel": "O demana per emportar",
+      "orderGlovo": "Demanar a Glovo",
+      "orderUberEats": "Demanar a Uber Eats"
+    },
+    "gallery": {
+      "eyebrow": "Galeria",
+      "title": "El foc, la taula, el moment",
+      "description": "Una ullada als nostres plats, els nostres ingredients i l'ambient que t'espera a sala i terrassa.",
+      "imagesAlt": [
+        "Pizza italiana acabada d'enfornar",
+        "Pizza Margherita amb mozzarella i alfàbrega",
+        "Interior acollidor de restaurant italià",
+        "Taula italiana amb plats per compartir",
+        "Cuiner preparant plats al restaurant",
+        "Pizza artesanal servida a taula de restaurant"
+      ]
+    },
+    "timeline": {
+      "eyebrow": "La nostra història",
+      "title": "Una recepta familiar que va trobar casa seva a Poblenou",
+      "description": "La història de Copas y Encants comença fa més de 30 anys amb una recepta de l'avi a Nàpols i acaba a Barcelona, al voltant d'una taula compartida.",
+      "imageAlt": "La història de Copas y Encants",
+      "entries": [
+        {
+          "year": "Fa 30 anys",
+          "title": "La recepta de l'avi",
+          "description": "Tot comença a Nàpols, amb una recepta familiar transmesa per l'avi i el sabor de la cuina italiana feta amb paciència."
+        },
+        {
+          "year": "2006",
+          "title": "L'arribada a Barcelona",
+          "description": "La idea viatja fins a Barcelona amb el desig d'obrir un lloc proper, autèntic i fidel a aquella memòria napolitana."
+        },
+        {
+          "year": "2025",
+          "title": "El projecte pren forma",
+          "description": "Després d'anys de feina i cerca, la idea es concreta: una pizzeria restaurant amb ànima italiana i servei a sala i terrassa."
+        },
+        {
+          "year": "2026",
+          "title": "Copas y Encants a Poblenou",
+          "description": "Copas y Encants es converteix en un restaurant a Poblenou, pensat per compartir pizzes, tapes i còctels en un ambient proper."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Opinions",
+      "title": "El que diuen els nostres comensals",
+      "description": "Milers de nits compartides al voltant del foc. Aquestes són algunes de les veus que ens fan seguir pastant.",
+      "items": [
+        {
+          "quote": "Un lloc genial! El menjar és excel·lent i val totalment el seu preu. Plats deliciosos, begudes exquisides i una benvinguda càlida que deixa un record inesborrable. El recomano moltíssim.",
+          "name": "Kinga Seroczyńska",
+          "role": "Google Maps · 11 ressenyes · fa 5 mesos",
+          "rating": 5
+        },
+        {
+          "quote": "Molt agradable, bona pizza i servei excel·lent.",
+          "name": "Mégane F",
+          "role": "Local Guide · 17 ressenyes · fa 2 setmanes",
+          "rating": 5
+        },
+        {
+          "quote": "Restaurant molt agradable, amb terrassa assolellada. Molt bona amanida i una varietat de tapes amb molt bona relació qualitat-preu. Són molt acollidors i està situat en un barri molt bonic.",
+          "name": "Alice Caron",
+          "role": "Local Guide · 22 ressenyes · fa 5 mesos",
+          "rating": 5
+        },
+        {
+          "quote": "Tapes perfectes i una pizza 4 estacions molt bona! Servei impecable i ambient tranquil en una plaça lluny del bullici. Una adreça estupenda a Poblenou, per exemple en sortir de la platja. La recomano.",
+          "name": "Tojo Andriantseheno",
+          "role": "Local Guide · 24 ressenyes · fa un mes",
+          "rating": 5
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Preguntes freqüents",
+      "title": "Tot el que necessites saber",
+      "description": "No trobes la teva resposta? Truca'ns o escriu-nos, t'atendrem encantats.",
+      "items": [
+        {
+          "question": "Cal reservar taula?",
+          "answer": "Ho recomanem, sobretot de divendres a diumenge. Pots reservar des de la nostra web en menys d'un minut o per telèfon."
+        },
+        {
+          "question": "Teniu opcions vegetarianes o sense gluten?",
+          "answer": "Sí. Comptem amb diverses pizzes vegetarianes i una massa sense gluten elaborada en zona separada. Indica-ho en reservar."
+        },
+        {
+          "question": "Es pot demanar per emportar?",
+          "answer": "És clar. Pots recollir la teva comanda al local; enfornem la teva pizza just abans que arribis perquè la gaudeixis en el seu punt."
+        },
+        {
+          "question": "Organitzeu esdeveniments privats?",
+          "answer": "Reservem el local per a grups i celebracions. Escriu-nos amb la data i el nombre de persones i preparem una proposta a mida."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contacte",
+      "title": "Reserva la teva taula al costat del foc",
+      "description": "Escriu-nos i et confirmem la teva reserva en menys d'una hora. Per a grups de més de 8 persones, truca'ns directament.",
+      "labels": {
+        "addressCardTitle": "Adreça",
+        "phoneCardTitle": "Telèfon",
+        "orderCardTitle": "Demanar Ara",
+        "formName": "Nom",
+        "formNamePlaceholder": "El teu nom",
+        "formPhone": "Telèfon",
+        "formPhonePlaceholder": "600 000 000",
+        "formEmail": "Email",
+        "formEmailPlaceholder": "tu@email.com",
+        "formDate": "Data",
+        "formGuests": "Comensals",
+        "guestSingular": "persona",
+        "guestPlural": "persones",
+        "formMessage": "Missatge (opcional)",
+        "formMessagePlaceholder": "Al·lèrgies, ocasió especial, preferència de taula...",
+        "submit": "Sol·licitar reserva",
+        "disclaimer": "En enviar acceptes ser contactat per confirmar la teva reserva.",
+        "toastTitle": "Sol·licitud rebuda",
+        "toastDescription": "Et confirmarem la teva reserva per email molt aviat."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Restaurant pizzeria a Sant Martí, Barcelona, amb servei a sala i terrassa, venda per emportar i reserves online.",
+    "navTitle": "Navegació",
+    "navHome": "Inici",
+    "navMenu": "Carta",
+    "navBook": "Reservar taula",
+    "scheduleTitle": "Horari",
+    "schedule": [
+      {
+        "day": "Dilluns",
+        "hours": "Tancat"
+      },
+      {
+        "day": "Dimarts - Dijous",
+        "hours": "11:30 - 23:30"
+      },
+      {
+        "day": "Divendres - Diumenge",
+        "hours": "10:30 - 00:00"
+      }
+    ],
+    "rightsText": "Tots els drets reservats.",
+    "designedByText": "Dissenyat per"
+  },
+  "carta": {
+    "meta": {
+      "title": "Carta Completa",
+      "description": "Descobreix la nostra carta completa: pizzes napolitanes, pizzes blanques, begudes i còctels. Pizzabar i còctels artesanals a Barcelona."
+    },
+    "header": {
+      "badge": "Pizzabar & Còctels",
+      "title": "La Nostra Carta",
+      "description": "Descobreix totes les nostres pizzes artesanals, begudes acuradament seleccionades i còctels autèntics. Servei a sala, terrassa i comandes per emportar.",
+      "phone": "934 672 130",
+      "address": "Carrer de Bilbao, 18-22",
+      "instagramHandle": "@copasyencants",
+      "reserve": "Reservar taula",
+      "orderGlovo": "Demanar a Glovo",
+      "orderUberEats": "Demanar a Uber Eats"
+    },
+    "sections": {
+      "clasicas": "Pizzes Clàssiques",
+      "blancas": "Pizzes Blanques",
+      "entrantes": "Entrants",
+      "bebidas": "Begudes",
+      "cervezas": "Cerveses",
+      "refrescos": "Refrescos",
+      "vinos": "Vins",
+      "licores": "Copes",
+      "whiskey": "Whiskey",
+      "cafe": "Cafè",
+      "cocteles": "Còctels",
+      "combinados": "Combinats",
+      "postres": "Postres"
+    },
+    "items": {
+      "clasicas": [
+        {
+          "name": "Margherita",
+          "description": "Tomàquet, mozzarella, alfàbrega fresca",
+          "price": "9.50€"
+        },
+        {
+          "name": "Bufala",
+          "description": "Tomàquet, mozzarella de búfala",
+          "price": "11.50€"
+        },
+        {
+          "name": "Marinara",
+          "description": "Tomàquet, all, orenga",
+          "price": "8.00€"
+        },
+        {
+          "name": "Diavola",
+          "description": "Tomàquet, mozzarella, salami picant",
+          "price": "11.00€"
+        },
+        {
+          "name": "Vegetariana",
+          "description": "Tomàquet, mozzarella, albergínia, pebrot, ceba morada",
+          "price": "13.00€"
+        },
+        {
+          "name": "Prosciutto Cotto",
+          "description": "Tomàquet, mozzarella, pernil dolç",
+          "price": "11.00€"
+        },
+        {
+          "name": "Prosciutto Cotto e Funghi",
+          "description": "Tomàquet, mozzarella, pernil dolç, xampinyons",
+          "price": "12.00€"
+        },
+        {
+          "name": "Salami",
+          "description": "Tomàquet, mozzarella, salami",
+          "price": "11.00€"
+        },
+        {
+          "name": "4 Formaggi",
+          "description": "Tomàquet, mozzarella, gorgonzola, parmesà, grana",
+          "price": "12.50€"
+        },
+        {
+          "name": "4 Estaciones",
+          "description": "Tomàquet, mozzarella, pernil dolç, xampinyons, carxofa",
+          "price": "12.50€"
+        },
+        {
+          "name": "Calçots",
+          "description": "Tomàquet, mozzarella, panxeta, calçots, romesco",
+          "price": "13.00€"
+        },
+        {
+          "name": "Tonyina i Ceba",
+          "description": "Tomàquet, tonyina, mozzarella, ceba",
+          "price": "12.50€"
+        },
+        {
+          "name": "Ibérica",
+          "description": "Tomàquet, mozzarella, pernil ibèric",
+          "price": "12.00€"
+        },
+        {
+          "name": "Napoli",
+          "description": "Tomàquet, mozzarella, anxoves, tàperes, olives negres",
+          "price": "12.00€"
+        },
+        {
+          "name": "Pizza Pollo",
+          "description": "Tomàquet, mozzarella, pollastre, espinacs",
+          "price": "14.50€"
+        }
+      ],
+      "blancas": [
+        {
+          "name": "Mortadella",
+          "description": "Mortadella, mozzarella, crema de festuc",
+          "price": "15.50€"
+        },
+        {
+          "name": "Carbonara Tópica",
+          "description": "Mozzarella, panxeta, crema de tòfona, rúcula",
+          "price": "16.50€"
+        },
+        {
+          "name": "Pera i Gorgonzola",
+          "description": "Mozzarella, pera, gorgonzola, nous de pacana",
+          "price": "14.50€"
+        },
+        {
+          "name": "Pancetta",
+          "description": "Mozzarella, panxeta, Parmigiano",
+          "price": "14.90€"
+        },
+        {
+          "name": "Parma",
+          "description": "Tomàquet cirerol, pernil de Parma, rúcula, burrata",
+          "price": "19.50€"
+        }
+      ],
+      "entrantes": [
+        {
+          "name": "Bruschetta",
+          "description": "Tomàquet, oli d'oliva verge extra i alfàbrega",
+          "price": "4.50€"
+        },
+        {
+          "name": "Focaccia",
+          "description": "Oli d'oliva verge extra i orenga",
+          "price": "5.00€"
+        },
+        {
+          "name": "Pa d'All",
+          "description": "Pa torrat amb all, mantega i julivert",
+          "price": "6.00€"
+        },
+        {
+          "name": "Gambes a l'All",
+          "description": "Gambes saltades amb oli d'oliva, all i un toc picant",
+          "price": "12.90€"
+        },
+        {
+          "name": "Musclos al Vapor",
+          "description": "Musclos cuinats al vapor amb un toc de llimona",
+          "price": "11.50€"
+        },
+        {
+          "name": "Xoriço al Vi",
+          "description": "Xoriço tradicional cuinat amb vi blanc i espècies",
+          "price": "9.50€"
+        },
+        {
+          "name": "Xoriço amb Provolone",
+          "description": "Xoriço amb provolone fos",
+          "price": "10.50€"
+        },
+        {
+          "name": "Tagliere Salumi + Formaggi",
+          "description": "Taula d'embotits i formatges italians",
+          "price": "16.50€"
+        },
+        {
+          "name": "Mandonguilles Casolanes",
+          "description": "Mandonguilles casolanes amb salsa",
+          "price": "9.50€"
+        }
+      ],
+      "cervezas": [
+        {
+          "name": "Copa Estrella Damm",
+          "price": "2.50€"
+        },
+        {
+          "name": "Copa Turia",
+          "price": "2.70€"
+        },
+        {
+          "name": "Estrella Damm",
+          "price": "2.70€"
+        },
+        {
+          "name": "Estrella Galicia",
+          "price": "3.50€"
+        },
+        {
+          "name": "Daura",
+          "price": "3.00€"
+        },
+        {
+          "name": "Free Damm",
+          "price": "3.00€"
+        },
+        {
+          "name": "Voll Damm 33",
+          "price": "3.00€"
+        },
+        {
+          "name": "Lata 50",
+          "price": "5.00€"
+        },
+        {
+          "name": "Paulander 0.5L",
+          "price": "6.00€"
+        },
+        {
+          "name": "Alhambra 1",
+          "price": "3.00€"
+        },
+        {
+          "name": "Bohemia 3.5°",
+          "price": "3.50€"
+        }
+      ],
+      "refrescos": [
+        {
+          "name": "Aigua amb gas",
+          "price": "2.30€"
+        },
+        {
+          "name": "Aigua",
+          "price": "2.30€"
+        },
+        {
+          "name": "Coca-Cola",
+          "price": "2.80€"
+        },
+        {
+          "name": "Fanta",
+          "price": "2.80€"
+        },
+        {
+          "name": "Aquarius",
+          "price": "2.80€"
+        },
+        {
+          "name": "Suc",
+          "price": "3.20€"
+        },
+        {
+          "name": "Bitter Kas",
+          "price": "3.00€"
+        },
+        {
+          "name": "Nestea",
+          "price": "2.80€"
+        },
+        {
+          "name": "Sprite",
+          "price": "2.80€"
+        }
+      ],
+      "vinos": [
+        {
+          "name": "Copa",
+          "price": "4.50€"
+        },
+        {
+          "name": "Faustino Rioja Tinto",
+          "price": "22.00€"
+        },
+        {
+          "name": "Ramon Bilbao Verdejo",
+          "price": "22.00€"
+        },
+        {
+          "name": "Duet Brut Cava",
+          "price": "22.00€"
+        }
+      ],
+      "licores": [
+        {
+          "name": "Tanqueray",
+          "price": "10.00€"
+        },
+        {
+          "name": "Bombay",
+          "price": "10.00€"
+        },
+        {
+          "name": "Hendrick’s",
+          "price": "10.00€"
+        },
+        {
+          "name": "Gimber Mare",
+          "price": "11.00€"
+        },
+        {
+          "name": "Roku",
+          "price": "12.00€"
+        },
+        {
+          "name": "Beefeater",
+          "price": "15.00€"
+        },
+        {
+          "name": "Bulldog",
+          "price": "12.00€"
+        },
+        {
+          "name": "Tanqueray 10",
+          "price": "12.00€"
+        }
+      ],
+      "whiskey": [
+        {
+          "name": "James Webb",
+          "price": "6.00€"
+        },
+        {
+          "name": "Ballantine’s",
+          "price": "6.00€"
+        },
+        {
+          "name": "JB",
+          "price": "6.00€"
+        },
+        {
+          "name": "Chivas 12 Anys",
+          "price": "16.00€"
+        },
+        {
+          "name": "Johnnie Walker Double Black",
+          "price": "16.00€"
+        },
+        {
+          "name": "Jack Daniels",
+          "price": "10.00€"
+        },
+        {
+          "name": "Cardhu",
+          "price": "16.00€"
+        },
+        {
+          "name": "Hibiki",
+          "price": "25.00€"
+        }
+      ],
+      "cafe": [
+        {
+          "name": "Cafè espresso",
+          "price": "1.60€"
+        },
+        {
+          "name": "Tallat",
+          "price": "1.70€"
+        },
+        {
+          "name": "Americano",
+          "price": "2.20€"
+        },
+        {
+          "name": "Capuccino",
+          "price": "2.50€"
+        },
+        {
+          "name": "Cafè amb llet",
+          "price": "2.20€"
+        },
+        {
+          "name": "Carajillo",
+          "price": "3.00€"
+        },
+        {
+          "name": "Freddo",
+          "price": "3.50€"
+        }
+      ],
+      "cocteles": [
+        {
+          "name": "Mojito clàssic",
+          "price": "8.00€"
+        },
+        {
+          "name": "Aperol Spritz",
+          "price": "8.00€"
+        },
+        {
+          "name": "Sex on the Beach",
+          "price": "8.00€"
+        },
+        {
+          "name": "Espresso Martini",
+          "price": "10.00€"
+        }
+      ],
+      "combinados": [
+        {
+          "name": "Vodka tonic",
+          "price": "8.00€"
+        },
+        {
+          "name": "Whiskey cola",
+          "price": "8.00€"
+        },
+        {
+          "name": "Rom cola",
+          "price": "8.00€"
+        }
+      ],
+      "postres": [
+        {
+          "name": "Pizza de Nutella",
+          "description": "Base de pizza amb Nutella",
+          "price": "9.00€"
+        },
+        {
+          "name": "Cannoli Siciliano",
+          "description": "Cannoli sicilià tradicional",
+          "price": "6.50€"
+        },
+        {
+          "name": "Tiramisú",
+          "description": "Postre italià clàssic",
+          "price": "7.50€"
+        }
+      ]
+    },
+    "commitment": {
+      "eyebrow": "El Nostre Compromís",
+      "title": "Ingredients Frescos, Artesania Autèntica",
+      "description": "Cada pizza és elaborada artesanalment amb ingredients frescos de primera qualitat. Enfornades a 485° per segellar el sabor i aconseguir una massa daurada, lleugera i plena de caràcter."
+    }
+  }
+}

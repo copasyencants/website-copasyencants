@@ -60,11 +60,19 @@ export function Features01({
   ...props
 }: Features01Props) {
   return (
-    <section className={cn("section container-content", className)} {...props}>
-      <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-4 text-center">
+    <section
+      className={cn(
+        "section bg-primary text-primary-foreground relative overflow-hidden",
+        className,
+      )}
+      {...props}
+    >
+      <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] [background-size:18px_18px]" />
+      <div className="container-content relative z-10">
+        <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-4 text-center">
         {eyebrow ? (
           <Reveal>
-            <p className="text-brand text-sm font-medium tracking-widest uppercase">
+            <p className="text-sm font-medium tracking-widest text-white/80 uppercase">
               {eyebrow}
             </p>
           </Reveal>
@@ -76,31 +84,32 @@ export function Features01({
         </Reveal>
         {description ? (
           <Reveal delay={0.1}>
-            <p className="text-muted-foreground text-lg text-pretty">
+            <p className="text-lg text-white/80 text-pretty">
               {description}
             </p>
           </Reveal>
         ) : null}
-      </div>
+        </div>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((feature, i) => (
-          <Reveal key={feature.title} delay={0.05 * i}>
-            <Card className="h-full transition-shadow hover:shadow-md">
-              <CardContent className="flex flex-col gap-3 p-6">
-                <span className="bg-brand/10 text-brand flex size-11 items-center justify-center rounded-lg">
-                  <feature.icon className="size-5" aria-hidden />
-                </span>
-                <h3 className="font-heading text-lg font-semibold">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground text-sm text-pretty">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          </Reveal>
-        ))}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature, i) => (
+            <Reveal key={feature.title} delay={0.05 * i}>
+              <Card className="h-full border-neutral-800 bg-neutral-950 text-white shadow-md transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-xl">
+                <CardContent className="flex flex-col gap-3 p-6">
+                  <span className="flex size-11 items-center justify-center rounded-lg bg-white text-emerald-700">
+                    <feature.icon className="size-5" aria-hidden />
+                  </span>
+                  <h3 className="font-heading text-lg font-semibold">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-white/65 text-pretty">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

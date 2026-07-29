@@ -24,14 +24,14 @@ export interface Testimonials02Props extends SectionProps {
 const DEFAULT_TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "La mejor pizza que he comido fuera de Italia. La masa es ligera, aromática y se nota el horno de leña en cada bocado.",
+      "La mejor pizza que he comido fuera de Italia. La masa es ligera, aromática y se nota el cuidado del horno en cada bocado.",
     name: "Lucía Fernández",
     role: "Cliente habitual",
     rating: 5,
   },
   {
     quote:
-      "Un lugar con alma. El servicio es cálido, la cocina abierta es todo un espectáculo y la Tartufo es simplemente memorable.",
+      "Un lugar con alma. El servicio es cálido, la sala es acogedora y la Tartufo es simplemente memorable.",
     name: "Andrés Molina",
     role: "Crítico gastronómico",
     rating: 5,
@@ -76,14 +76,18 @@ export function Testimonials02({
 }: Testimonials02Props) {
   return (
     <section
-      className={cn("section bg-muted/40", className)}
+      className={cn(
+        "section bg-primary text-primary-foreground relative overflow-hidden",
+        className,
+      )}
       {...props}
     >
-      <div className="container-content">
+      <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] [background-size:18px_18px]" />
+      <div className="container-content relative z-10">
         <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-4 text-center">
           {eyebrow ? (
             <Reveal>
-              <p className="text-primary text-sm font-medium tracking-widest uppercase">
+              <p className="text-sm font-medium tracking-widest text-white/80 uppercase">
                 {eyebrow}
               </p>
             </Reveal>
@@ -95,7 +99,7 @@ export function Testimonials02({
           </Reveal>
           {description ? (
             <Reveal delay={0.1}>
-              <p className="text-muted-foreground text-lg text-pretty">
+              <p className="text-lg text-white/80 text-pretty">
                 {description}
               </p>
             </Reveal>
@@ -105,7 +109,7 @@ export function Testimonials02({
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={0.05 * (i % 2)}>
-              <figure className="border-border bg-card flex h-full flex-col gap-4 rounded-2xl border p-6 shadow-sm sm:p-7">
+              <figure className="border-border bg-card flex h-full flex-col gap-4 rounded-2xl border p-6 text-neutral-950 shadow-sm sm:p-7">
                 <div className="flex items-center justify-between">
                   <div className="flex" aria-label={`${t.rating ?? 5} de 5`}>
                     {Array.from({ length: t.rating ?? 5 }).map((_, s) => (
@@ -121,7 +125,7 @@ export function Testimonials02({
                     aria-hidden
                   />
                 </div>
-                <blockquote className="text-foreground/90 text-lg text-pretty">
+                <blockquote className="text-lg text-neutral-900 text-pretty">
                   “{t.quote}”
                 </blockquote>
                 <figcaption className="mt-auto flex items-center gap-3 pt-2">
@@ -131,8 +135,8 @@ export function Testimonials02({
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-medium">{t.name}</p>
-                    <p className="text-muted-foreground text-sm">{t.role}</p>
+                    <p className="font-medium text-neutral-950">{t.name}</p>
+                    <p className="text-sm text-neutral-500">{t.role}</p>
                   </div>
                 </figcaption>
               </figure>

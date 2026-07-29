@@ -37,7 +37,7 @@ export interface Hero03Props extends SectionProps {
 
 const DEFAULT_STATS: Hero03Stat[] = [
   { value: "48 h", label: "Masa madurada" },
-  { value: "485°", label: "Horno de leña" },
+  { value: "485°", label: "Horno" },
   { value: "2007", label: "Desde" },
 ];
 
@@ -52,14 +52,14 @@ export function Hero03({
   titleTop = "El sabor del",
   titleAccent = "fuego",
   titleBottom = "hecho a mano",
-  description = "Masa madre madurada 48 horas, ingredientes frescos de temporada y el calor vivo de nuestro horno de leña. Cocina abierta, alma italiana.",
+  description = "Masa madre madurada 48 horas, ingredientes frescos de temporada y el calor vivo de nuestro horno. Servicio en sala y terraza, alma italiana.",
   primary = { label: "Reservar mesa", href: "#contacto" },
   secondary = { label: "Ver la carta", href: "/carta" },
   orderActions = [],
   stats = DEFAULT_STATS,
   reviewsLabel = "4,8/5 · 146 reseñas",
   imageSrc = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80",
-  imageAlt = "Pizza napolitana recién salida del horno de leña",
+  imageAlt = "Pizza napolitana recién salida del horno",
   videoSrc = "/videotest.mp4",
   ...props
 }: Hero03Props) {
@@ -91,7 +91,7 @@ export function Hero03({
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="hero-image-drift object-cover object-center"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/35 to-black/20" />

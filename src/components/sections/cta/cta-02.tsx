@@ -65,7 +65,7 @@ export function Cta02({
               <Button
                 asChild
                 variant="secondary"
-                className="h-12 min-w-40 px-5 text-base"
+                className="h-12 min-w-40 bg-white px-5 text-base text-neutral-950 hover:bg-white/90 hover:text-neutral-950"
               >
                 <Link href={primary.href}>
                   <CalendarCheck className="size-4" />
@@ -87,7 +87,7 @@ export function Cta02({
                   key={action.href}
                   asChild
                   variant="outline"
-                  className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-foreground dark:border-primary-foreground/40 h-12 min-w-40 bg-transparent px-5 text-base dark:bg-transparent"
+                  className="h-12 min-w-40 border-primary-foreground/40 bg-transparent px-5 text-base text-primary-foreground hover:bg-white hover:text-neutral-950 dark:border-primary-foreground/40 dark:bg-transparent dark:hover:bg-white dark:hover:text-neutral-950"
                 >
                   <a href={action.href} target="_blank" rel="noreferrer">
                     <ShoppingBag className="size-4" />

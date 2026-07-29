@@ -58,7 +58,7 @@ export function Gallery01({
   className,
   eyebrow = "Galeria",
   title = "El fuego, la mesa, el momento",
-  description = "Un vistazo a nuestra cocina abierta, nuestros ingredientes y el ambiente que te espera cada noche.",
+  description = "Un vistazo a nuestros platos, nuestros ingredientes y el ambiente que te espera en sala y terraza.",
   images = DEFAULT_IMAGES,
   ...props
 }: Gallery01Props) {

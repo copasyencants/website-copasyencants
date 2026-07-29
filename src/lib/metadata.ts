@@ -7,6 +7,7 @@ import { absoluteUrl } from "@/lib/utils";
 const OG_LOCALES: Record<string, string> = {
   es: "es_ES",
   en: "en_US",
+  ca: "ca_ES",
 };
 
 /** Builds a path prefixed for the given locale ("as-needed": es has no prefix). */

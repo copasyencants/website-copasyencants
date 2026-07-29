@@ -30,9 +30,9 @@ const DEFAULT_ENTRIES: TimelineEntry[] = [
   },
   {
     year: "2011",
-    title: "Se enciende el horno de leña",
+    title: "Se enciende el horno",
     description:
-      "Abrimos nuestra primera sala de 20 mesas. La cocina abierta se convierte en el corazón del local.",
+      "Abrimos nuestra primera sala de 20 mesas. El horno se convierte en el corazón del local.",
   },
   {
     year: "2018",

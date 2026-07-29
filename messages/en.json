@@ -1,6 +1,6 @@
 {
   "site": {
-    "description": "Pizzeria restaurant in Sant Marti, Barcelona, with dine-in service, takeaway, online reservations and a warm atmosphere."
+    "description": "Pizzeria restaurant in Sant Marti, Barcelona, with indoor and terrace service, takeaway, online reservations and a warm atmosphere."
   },
   "nav": {
     "brand": "Copas y Encants",
@@ -21,13 +21,19 @@
       "titleTop": "The taste of",
       "titleAccent": "fire",
       "titleBottom": "made by hand",
-      "description": "Sourdough matured for 48 hours, fresh seasonal ingredients and the living heat of our wood-fired oven. Open kitchen, Italian soul.",
+      "description": "Sourdough matured for 48 hours, fresh seasonal ingredients and the living heat of our oven. Indoor and terrace service, Italian soul.",
       "primary": "Book a table",
       "secondary": "View the menu",
       "reviewsLabel": "4.8/5 · 146 reviews",
       "stats": [
-        { "value": "48 h", "label": "Dough maturation" },
-        { "value": "485°", "label": "Wood-fired oven" }
+        {
+          "value": "48 h",
+          "label": "Dough maturation"
+        },
+        {
+          "value": "485°",
+          "label": "Oven"
+        }
       ]
     },
     "essence": {
@@ -40,7 +46,7 @@
         "Live sourdough starter, slowly matured for 48 hours",
         "Italian flours and San Marzano D.O.P. tomatoes",
         "Fior di latte mozzarella and fresh basil every morning",
-        "Baked to order in a wood-fired oven at 485°"
+        "Baked to order in the oven at 485°"
       ]
     },
     "specialties": {
@@ -49,8 +55,8 @@
       "description": "Everything we do revolves around a single goal: the perfect Neapolitan pizza, honest and full of character.",
       "items": [
         {
-          "title": "Wood-fired oven",
-          "description": "Baked at 485° to seal in the flavor in 90 seconds, giving the dough its airy, lightly smoky edge."
+          "title": "Oven",
+          "description": "Baked at 485° to seal in the flavor in 90 seconds, giving the dough its airy, golden edge."
         },
         {
           "title": "48h sourdough",
@@ -61,55 +67,55 @@
           "description": "San Marzano D.O.P. tomatoes, fior di latte mozzarella and seasonal vegetables from local producers."
         },
         {
-          "title": "Open kitchen",
-          "description": "Our pizzaioli work in full view: every pizza is a small artisan show."
+          "title": "Dining room and terrace",
+          "description": "Warm service indoors and on the terrace, made for enjoying pizza, tapas and cocktails without rushing."
         }
       ]
     },
     "menu": {
       "eyebrow": "Our menu",
       "title": "The pizzas that define us",
-      "description": "A selection of our most-loved creations, wood-fired and served fresh. The full menu awaits you at the table.",
+      "description": "A selection of our most-loved creations, baked to order and served indoors or on the terrace. The full menu awaits you at the table.",
       "cta": "View the full menu",
       "items": [
         {
-          "name": "Margherita D.O.P.",
+          "name": "Margherita",
           "subtitle": "The Neapolitan classic",
-          "description": "San Marzano tomato, fior di latte mozzarella, fresh basil and extra virgin olive oil.",
+          "description": "Tomato, mozzarella, fresh basil.",
           "price": "9.50€",
           "tag": "Iconic"
         },
         {
+          "name": "Bufala",
+          "subtitle": "Buffalo mozzarella",
+          "description": "Tomato, buffalo mozzarella.",
+          "price": "11.50€"
+        },
+        {
           "name": "Diavola",
-          "subtitle": "For the spice lovers",
-          "description": "Spicy salami, San Marzano tomato, mozzarella and a touch of rosemary honey.",
-          "price": "11.00€"
+          "subtitle": "For spice lovers",
+          "description": "Tomato, mozzarella, spicy salami.",
+          "price": "11.00€",
+          "tag": "Spicy"
         },
         {
-          "name": "Tartufo & Funghi",
-          "subtitle": "Our signature",
-          "description": "Black truffle cream, portobello mushrooms, mozzarella and parmesan shavings.",
-          "price": "15.50€",
-          "tag": "Chef's"
-        },
-        {
-          "name": "Quattro Formaggi",
+          "name": "4 Cheeses",
           "subtitle": "Creamy and rich",
-          "description": "Mozzarella, gorgonzola D.O.P., pecorino and smoked provolone on a white base.",
-          "price": "16.00€"
+          "description": "Tomato, mozzarella, gorgonzola, parmesan, grana.",
+          "price": "12.50€"
         },
         {
-          "name": "Prosciutto & Rúcula",
-          "subtitle": "Fresh and light",
-          "description": "18-month Parma ham, wild arugula, parmesan and confit cherry tomatoes.",
+          "name": "Pear & Gorgonzola",
+          "subtitle": "Sweet and creamy",
+          "description": "Mozzarella, pear, gorgonzola, pecan nuts.",
           "price": "14.50€"
         },
         {
-          "name": "Ortolana",
-          "subtitle": "Seasonal garden",
-          "description": "Wood-fired roasted vegetables, mozzarella, basil pesto and olive oil.",
-          "price": "13.00€",
-          "tag": "Vegetarian"
+          "name": "Parma",
+          "subtitle": "Parma ham and burrata",
+          "description": "Cherry tomatoes, Parma ham, rocket, burrata.",
+          "price": "19.50€",
+          "tag": "Special"
         }
       ]
     },
@@ -126,7 +132,7 @@
     "gallery": {
       "eyebrow": "Gallery",
       "title": "The fire, the table, the moment",
-      "description": "A glimpse of our open kitchen, our ingredients and the atmosphere waiting for you every night.",
+      "description": "A glimpse of our dishes, our ingredients and the atmosphere waiting for you indoors and on the terrace.",
       "imagesAlt": [
         "Freshly baked Italian pizza",
         "Margherita pizza with mozzarella and basil",
@@ -138,29 +144,29 @@
     },
     "timeline": {
       "eyebrow": "Our story",
-      "title": "Seventeen years feeding the fire",
-      "description": "From a family recipe to a corner of Naples in the heart of the city. This is the story we bake every day.",
+      "title": "A family recipe that found its home in Poblenou",
+      "description": "The story of Copas y Encants began more than 30 years ago with a grandfather's recipe in Naples and now lives in Barcelona, around a shared table.",
       "imageAlt": "The story of Copas y Encants",
       "entries": [
         {
-          "year": "2007",
-          "title": "An idea born in Naples",
-          "description": "Marco Esposito leaves his Vomero neighborhood with his grandmother's recipe and a dream of his own oven."
+          "year": "30 years ago",
+          "title": "The grandfather's recipe",
+          "description": "Everything starts in Naples, with a family recipe passed down by the grandfather and the taste of Italian cooking made with patience."
         },
         {
-          "year": "2011",
-          "title": "The wood-fired oven is lit",
-          "description": "We open our first 20-table dining room. The open kitchen becomes the heart of the place."
+          "year": "2006",
+          "title": "Arriving in Barcelona",
+          "description": "The idea travels to Barcelona with the wish to open a warm, authentic place faithful to that Neapolitan memory."
         },
         {
-          "year": "2018",
-          "title": "From the garden to the table",
-          "description": "We form partnerships with local producers to work only with fresh, seasonal ingredients."
+          "year": "2025",
+          "title": "The project takes shape",
+          "description": "After years of work and searching, the idea becomes real: a pizzeria restaurant with Italian soul and service in the dining room and on the terrace."
         },
         {
-          "year": "2024",
-          "title": "A new generation",
-          "description": "Giulia Esposito takes over and refreshes the menu without betraying the Neapolitan soul that started it all."
+          "year": "2026",
+          "title": "Copas y Encants in Poblenou",
+          "description": "Copas y Encants becomes a restaurant in Poblenou, made for sharing pizzas, tapas and cocktails in a welcoming atmosphere."
         }
       ]
     },
@@ -246,16 +252,25 @@
     }
   },
   "footer": {
-    "tagline": "Pizzeria restaurant in Sant Marti, Barcelona, with dine-in service, takeaway and online reservations.",
+    "tagline": "Pizzeria restaurant in Sant Marti, Barcelona, with indoor and terrace service, takeaway and online reservations.",
     "navTitle": "Navigation",
     "navHome": "Home",
     "navMenu": "Menu",
     "navBook": "Book a table",
     "scheduleTitle": "Hours",
     "schedule": [
-      { "day": "Monday", "hours": "Closed" },
-      { "day": "Tuesday - Thursday", "hours": "11:30 AM - 11:30 PM" },
-      { "day": "Friday - Sunday", "hours": "10:30 AM - 12:00 AM" }
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday - Thursday",
+        "hours": "11:30 AM - 11:30 PM"
+      },
+      {
+        "day": "Friday - Sunday",
+        "hours": "10:30 AM - 12:00 AM"
+      }
     ],
     "rightsText": "All rights reserved.",
     "designedByText": "Designed by"
@@ -268,7 +283,7 @@
     "header": {
       "badge": "Pizza Bar & Cocktails",
       "title": "Our Menu",
-      "description": "Discover all our artisan Neapolitan pizzas, carefully selected drinks and authentic cocktails. Every dish made with the finest fresh ingredients.",
+      "description": "Discover all our artisan pizzas, carefully selected drinks and authentic cocktails. Indoor service, terrace and takeaway orders.",
       "phone": "934 672 130",
       "address": "Carrer de Bilbao, 18-22",
       "instagramHandle": "@copasyencants",
@@ -282,65 +297,421 @@
       "entrantes": "Starters",
       "bebidas": "Drinks",
       "cervezas": "Beers",
+      "refrescos": "Soft Drinks",
       "vinos": "Wines",
-      "licores": "Spirits",
+      "licores": "Spirits & Gin",
+      "whiskey": "Whiskey",
+      "cafe": "Coffee",
       "cocteles": "Cocktails",
+      "combinados": "Mixed Drinks",
       "postres": "Desserts"
     },
     "items": {
       "clasicas": [
-        { "name": "Margherita", "description": "Tomato, mozzarella, fresh basil", "price": "9.50€" },
-        { "name": "Bufala", "description": "Tomato, fresh buffalo mozzarella", "price": "11.50€" },
-        { "name": "Marinara", "description": "Tomato, garlic, olive oil, oregano", "price": "6.00€" },
-        { "name": "Diavola", "description": "Tomato, mozzarella, pepperoni", "price": "11.00€" },
-        { "name": "Vegetariana", "description": "Mixed vegetables, mozzarella", "price": "13.00€" },
-        { "name": "Prosciutto Cotto", "description": "Tomato, mozzarella, cooked ham", "price": "11.00€" },
-        { "name": "Salami", "description": "Tomato, mozzarella, salami", "price": "11.00€" },
-        { "name": "4 Seasons", "description": "Tomato, mozzarella, ham, mushrooms", "price": "12.50€" },
-        { "name": "Calzone", "description": "Folded, cheese, ham, mushrooms", "price": "13.00€" }
+        {
+          "name": "Margherita",
+          "description": "Tomato, mozzarella, fresh basil",
+          "price": "9.50€"
+        },
+        {
+          "name": "Bufala",
+          "description": "Tomato, buffalo mozzarella",
+          "price": "11.50€"
+        },
+        {
+          "name": "Marinara",
+          "description": "Tomato, garlic, oregano",
+          "price": "8.00€"
+        },
+        {
+          "name": "Diavola",
+          "description": "Tomato, mozzarella, spicy salami",
+          "price": "11.00€"
+        },
+        {
+          "name": "Vegetarian",
+          "description": "Tomato, mozzarella, aubergine, mixed peppers, red onion",
+          "price": "13.00€"
+        },
+        {
+          "name": "Prosciutto Cotto",
+          "description": "Tomato, mozzarella, cooked ham",
+          "price": "11.00€"
+        },
+        {
+          "name": "Prosciutto Cotto e Funghi",
+          "description": "Tomato, mozzarella, cooked ham, mushrooms",
+          "price": "12.00€"
+        },
+        {
+          "name": "Salami",
+          "description": "Tomato, mozzarella, salami",
+          "price": "11.00€"
+        },
+        {
+          "name": "4 Cheeses",
+          "description": "Tomato, mozzarella, gorgonzola, parmesan, grana",
+          "price": "12.50€"
+        },
+        {
+          "name": "4 Seasons",
+          "description": "Tomato, mozzarella, cooked ham, mushrooms, artichokes",
+          "price": "12.50€"
+        },
+        {
+          "name": "Calçots",
+          "description": "Tomato, mozzarella, pancetta, calçots, romesco",
+          "price": "13.00€"
+        },
+        {
+          "name": "Tuna & Onion",
+          "description": "Tomato, tuna, mozzarella, onion",
+          "price": "12.50€"
+        },
+        {
+          "name": "Iberian",
+          "description": "Tomato, mozzarella, Iberian ham",
+          "price": "12.00€"
+        },
+        {
+          "name": "Napoli",
+          "description": "Tomato, mozzarella, anchovies, capers, black olives",
+          "price": "12.00€"
+        },
+        {
+          "name": "Pizza Pollo",
+          "description": "Tomato, mozzarella, chicken, spinach",
+          "price": "14.50€"
+        }
       ],
       "blancas": [
-        { "name": "Mozzarella", "description": "Fresh mozzarella, extra virgin olive oil", "price": "15.50€" },
-        { "name": "Quattro Formaggi", "description": "Mozzarella, gorgonzola, pecorino, smoked provolone", "price": "16.00€" },
-        { "name": "Prosciutto", "description": "Parma ham, arugula, parmesan", "price": "14.50€" }
+        {
+          "name": "Mortadella",
+          "description": "Mortadella, mozzarella, pistachio cream",
+          "price": "15.50€"
+        },
+        {
+          "name": "Truffle Carbonara",
+          "description": "Mozzarella, pancetta, truffle cream, rocket",
+          "price": "16.50€"
+        },
+        {
+          "name": "Pear & Gorgonzola",
+          "description": "Mozzarella, pear, gorgonzola, pecan nuts",
+          "price": "14.50€"
+        },
+        {
+          "name": "Pancetta",
+          "description": "Mozzarella, pancetta, Parmigiano",
+          "price": "14.90€"
+        },
+        {
+          "name": "Parma",
+          "description": "Cherry tomatoes, Parma ham, rocket, burrata",
+          "price": "19.50€"
+        }
       ],
       "entrantes": [
-        { "name": "Bruschetta", "description": "Toasted bread with tomato and basil", "price": "4.00€" },
-        { "name": "Focaccia", "description": "Traditional Italian bread", "price": "5.00€" },
-        { "name": "Garlic Bread", "description": "Homemade bread with garlic and parsley", "price": "5.50€" },
-        { "name": "Steamed Shrimp", "description": "Fresh steamed shrimp", "price": "12.50€" }
+        {
+          "name": "Bruschetta",
+          "description": "Tomato, extra virgin olive oil and basil",
+          "price": "4.50€"
+        },
+        {
+          "name": "Focaccia",
+          "description": "Extra virgin olive oil and oregano",
+          "price": "5.00€"
+        },
+        {
+          "name": "Garlic Bread",
+          "description": "Toasted bread with garlic, butter and parsley",
+          "price": "6.00€"
+        },
+        {
+          "name": "Garlic Prawns",
+          "description": "Prawns sautéed with olive oil, garlic and a spicy touch",
+          "price": "12.90€"
+        },
+        {
+          "name": "Steamed Mussels",
+          "description": "Mussels steamed with a touch of lemon",
+          "price": "11.50€"
+        },
+        {
+          "name": "Chorizo in Wine",
+          "description": "Traditional chorizo cooked with white wine and spices",
+          "price": "9.50€"
+        },
+        {
+          "name": "Chorizo with Provolone",
+          "description": "Chorizo with melted provolone",
+          "price": "10.50€"
+        },
+        {
+          "name": "Cold Cuts & Cheese Platter",
+          "description": "Italian cured meats and cheese platter",
+          "price": "16.50€"
+        },
+        {
+          "name": "Homemade Meatballs",
+          "description": "Homemade meatballs in sauce",
+          "price": "9.50€"
+        }
       ],
       "cervezas": [
-        { "name": "Estrella Damm", "price": "3.50€" },
-        { "name": "Voll Damm", "price": "3.75€" },
-        { "name": "Craft Selection", "price": "5.00€" }
+        {
+          "name": "Copa Estrella Damm",
+          "price": "2.50€"
+        },
+        {
+          "name": "Copa Turia",
+          "price": "2.70€"
+        },
+        {
+          "name": "Estrella Damm",
+          "price": "2.70€"
+        },
+        {
+          "name": "Estrella Galicia",
+          "price": "3.50€"
+        },
+        {
+          "name": "Daura",
+          "price": "3.00€"
+        },
+        {
+          "name": "Free Damm",
+          "price": "3.00€"
+        },
+        {
+          "name": "Voll Damm 33",
+          "price": "3.00€"
+        },
+        {
+          "name": "Lata 50",
+          "price": "5.00€"
+        },
+        {
+          "name": "Paulander 0.5L",
+          "price": "6.00€"
+        },
+        {
+          "name": "Alhambra 1",
+          "price": "3.00€"
+        },
+        {
+          "name": "Bohemia 3.5°",
+          "price": "3.50€"
+        }
+      ],
+      "refrescos": [
+        {
+          "name": "Sparkling water",
+          "price": "2.30€"
+        },
+        {
+          "name": "Water",
+          "price": "2.30€"
+        },
+        {
+          "name": "Coca-Cola",
+          "price": "2.80€"
+        },
+        {
+          "name": "Fanta",
+          "price": "2.80€"
+        },
+        {
+          "name": "Aquarius",
+          "price": "2.80€"
+        },
+        {
+          "name": "Juice",
+          "price": "3.20€"
+        },
+        {
+          "name": "Bitter Kas",
+          "price": "3.00€"
+        },
+        {
+          "name": "Nestea",
+          "price": "2.80€"
+        },
+        {
+          "name": "Sprite",
+          "price": "2.80€"
+        }
       ],
       "vinos": [
-        { "name": "White Wine", "price": "4.00€ / glass" },
-        { "name": "Red Wine", "price": "4.00€ / glass" },
-        { "name": "Rosé Wine", "price": "3.50€ / glass" }
+        {
+          "name": "Copa",
+          "price": "4.50€"
+        },
+        {
+          "name": "Faustino Rioja Tinto",
+          "price": "22.00€"
+        },
+        {
+          "name": "Ramon Bilbao Verdejo",
+          "price": "22.00€"
+        },
+        {
+          "name": "Duet Brut Cava",
+          "price": "22.00€"
+        }
       ],
       "licores": [
-        { "name": "Gin & Tonic", "price": "8.00€" },
-        { "name": "Rum & Cola", "price": "7.50€" },
-        { "name": "Vodka & Lime", "price": "7.00€" }
+        {
+          "name": "Tanqueray",
+          "price": "10.00€"
+        },
+        {
+          "name": "Bombay",
+          "price": "10.00€"
+        },
+        {
+          "name": "Hendrick’s",
+          "price": "10.00€"
+        },
+        {
+          "name": "Gimber Mare",
+          "price": "11.00€"
+        },
+        {
+          "name": "Roku",
+          "price": "12.00€"
+        },
+        {
+          "name": "Beefeater",
+          "price": "15.00€"
+        },
+        {
+          "name": "Bulldog",
+          "price": "12.00€"
+        },
+        {
+          "name": "Tanqueray 10",
+          "price": "12.00€"
+        }
+      ],
+      "whiskey": [
+        {
+          "name": "James Webb",
+          "price": "6.00€"
+        },
+        {
+          "name": "Ballantine’s",
+          "price": "6.00€"
+        },
+        {
+          "name": "JB",
+          "price": "6.00€"
+        },
+        {
+          "name": "Chivas 12 Años",
+          "price": "16.00€"
+        },
+        {
+          "name": "Johnnie Walker Double Black",
+          "price": "16.00€"
+        },
+        {
+          "name": "Jack Daniels",
+          "price": "10.00€"
+        },
+        {
+          "name": "Cardhu",
+          "price": "16.00€"
+        },
+        {
+          "name": "Hibiki",
+          "price": "25.00€"
+        }
+      ],
+      "cafe": [
+        {
+          "name": "Espresso",
+          "price": "1.60€"
+        },
+        {
+          "name": "Cortado",
+          "price": "1.70€"
+        },
+        {
+          "name": "Americano",
+          "price": "2.20€"
+        },
+        {
+          "name": "Cappuccino",
+          "price": "2.50€"
+        },
+        {
+          "name": "Coffee with milk",
+          "price": "2.20€"
+        },
+        {
+          "name": "Carajillo",
+          "price": "3.00€"
+        },
+        {
+          "name": "Freddo",
+          "price": "3.50€"
+        }
       ],
       "cocteles": [
-        { "name": "Mojito", "description": "Rum, mint, lime and soda", "price": "9.00€" },
-        { "name": "Margarita", "description": "Tequila, triple sec and lime", "price": "9.50€" },
-        { "name": "Piña Colada", "description": "Rum, coconut and pineapple", "price": "9.00€" },
-        { "name": "Daiquiri", "description": "White rum, lime and sugar", "price": "9.00€" }
+        {
+          "name": "Classic mojito",
+          "price": "8.00€"
+        },
+        {
+          "name": "Aperol Spritz",
+          "price": "8.00€"
+        },
+        {
+          "name": "Sex on the Beach",
+          "price": "8.00€"
+        },
+        {
+          "name": "Espresso Martini",
+          "price": "10.00€"
+        }
+      ],
+      "combinados": [
+        {
+          "name": "Vodka tonic",
+          "price": "8.00€"
+        },
+        {
+          "name": "Whiskey cola",
+          "price": "8.00€"
+        },
+        {
+          "name": "Rum cola",
+          "price": "8.00€"
+        }
       ],
       "postres": [
-        { "name": "Pizza Nutella", "description": "Pizza base with Nutella and strawberries", "price": "9.00€" },
-        { "name": "Pizza Sicilia", "description": "Pizza base with chocolate and pistachio", "price": "8.00€" },
-        { "name": "Tiramisu", "description": "Classic Italian dessert", "price": "7.50€" }
+        {
+          "name": "Nutella Pizza",
+          "description": "Pizza base with Nutella",
+          "price": "9.00€"
+        },
+        {
+          "name": "Sicilian Cannoli",
+          "description": "Traditional Sicilian cannoli",
+          "price": "6.50€"
+        },
+        {
+          "name": "Tiramisu",
+          "description": "Classic Italian dessert",
+          "price": "7.50€"
+        }
       ]
     },
     "commitment": {
       "eyebrow": "Our Commitment",
       "title": "Fresh Ingredients, Authentic Craftsmanship",
-      "description": "Every pizza is handcrafted with the finest fresh ingredients. Baked at 485° in our traditional wood-fired oven to seal in the perfect flavor."
+      "description": "Every pizza is handcrafted with the finest fresh ingredients. Baked at 485° to seal in the flavor and create a golden, light dough full of character."
     }
   }
 }

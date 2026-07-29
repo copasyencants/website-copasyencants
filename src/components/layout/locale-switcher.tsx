@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const LOCALE_LABELS: Record<string, string> = {
   es: "ES",
   en: "EN",
+  ca: "CA",
 };
 
 export interface LocaleSwitcherProps {
