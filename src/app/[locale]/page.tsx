@@ -199,6 +199,8 @@ export default async function Home({
           title={t("essence.title")}
           description={t("essence.description")}
           points={t.raw("essence.points")}
+          imageSrc="/images/foto-pizza.jpg"
+          videoSrc="/video-copasyencants.mp4"
           badge={{
             value: t("essence.badgeValue"),
             label: t("essence.badgeLabel"),

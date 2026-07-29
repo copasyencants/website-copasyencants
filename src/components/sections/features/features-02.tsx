@@ -19,6 +19,7 @@ export interface Features02Props extends SectionProps {
   points?: string[];
   imageSrc?: string;
   imageAlt?: string;
+  videoSrc?: string;
   badge?: Features02Highlight;
 }
 
@@ -42,6 +43,7 @@ export function Features02({
   points = DEFAULT_POINTS,
   imageSrc = "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80",
   imageAlt = "Pizzaiolo trabajando la masa a mano",
+  videoSrc,
   badge = { value: "100%", label: "Ingredientes frescos de temporada" },
   ...props
 }: Features02Props) {
@@ -50,14 +52,30 @@ export function Features02({
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal className="relative">
           <div className="border-border bg-muted relative aspect-[4/5] overflow-hidden rounded-3xl border shadow-xl">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+            {videoSrc ? (
+              <video
+                className="size-full object-cover"
+                src={videoSrc}
+                poster={imageSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
+                onLoadedMetadata={(event) => {
+                  event.currentTarget.playbackRate = 0.75;
+                }}
+                aria-label={imageAlt}
+              />
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/10" />
           </div>
           {badge ? (
             <div className="bg-card border-border absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border p-5 text-neutral-950 shadow-xl sm:right-6">
