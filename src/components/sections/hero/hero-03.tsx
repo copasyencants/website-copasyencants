@@ -91,7 +91,7 @@ export function Hero03({
             fill
             priority
             sizes="100vw"
-            className="hero-image-drift object-cover object-center"
+            className="hero-image-drift object-cover object-top"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/35 to-black/20" />

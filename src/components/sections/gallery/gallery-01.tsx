@@ -5,6 +5,12 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
 import { Reveal } from "@/components/effects/reveal";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export interface GalleryImage {
   src: string;
@@ -93,15 +99,38 @@ export function Gallery01({
             delay={0.04 * i}
             className={cn("h-full", image.area)}
           >
-            <figure className="group bg-muted relative h-full w-full overflow-hidden rounded-2xl shadow-sm">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(min-width: 640px) 45vw, 90vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              />
-            </figure>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  className="group bg-muted relative h-full w-full cursor-zoom-in overflow-hidden rounded-2xl shadow-sm outline-none ring-primary/60 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  aria-label={`Abrir imagen: ${image.alt}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 640px) 45vw, 90vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                </button>
+              </DialogTrigger>
+              <DialogContent
+                className="border-white/10 bg-black/90 p-2 text-white sm:max-w-[min(92vw,1200px)]"
+                showCloseButton
+              >
+                <DialogTitle className="sr-only">{image.alt}</DialogTitle>
+                <div className="relative h-[78svh] w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="92vw"
+                    className="object-contain"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           </Reveal>
         ))}
       </div>
