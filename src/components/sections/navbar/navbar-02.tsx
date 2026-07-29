@@ -85,12 +85,13 @@ export function Navbar02({
         >
           <span className="flex size-13 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-sm ring-1 ring-white/25 md:size-14">
             <Image
-              src="/logo-copasyencants.svg"
+              src="/logo-copasyencants.png"
               alt=""
-              width={56}
-              height={56}
+              width={112}
+              height={112}
               className="size-full object-contain"
               aria-hidden
+              priority
             />
           </span>
         </Link>
