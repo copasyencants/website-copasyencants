@@ -245,9 +245,12 @@
         "formMessage": "Message (optional)",
         "formMessagePlaceholder": "Allergies, special occasion, table preference...",
         "submit": "Request booking",
+        "submitting": "Sending...",
         "disclaimer": "By submitting you agree to be contacted to confirm your booking.",
         "toastTitle": "Request received",
-        "toastDescription": "We'll confirm your booking by email very soon."
+        "toastDescription": "We'll confirm your booking by email very soon.",
+        "errorTitle": "Couldn't send the request",
+        "errorDescription": "Please try again or call us by phone."
       }
     }
   },

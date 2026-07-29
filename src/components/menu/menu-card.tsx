@@ -29,12 +29,12 @@ export function MenuCard({
         )}
       >
         {imageSrc ? (
-          <div className="bg-muted relative hidden aspect-square w-28 shrink-0 overflow-hidden sm:block">
+          <div className="bg-muted relative aspect-square w-24 shrink-0 overflow-hidden sm:w-28">
             <Image
               src={imageSrc}
               alt={imageAlt || name}
               fill
-              sizes="112px"
+              sizes="(min-width: 640px) 112px, 96px"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </div>

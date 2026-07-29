@@ -36,9 +36,12 @@ export interface Contact01Labels {
   formMessage?: string;
   formMessagePlaceholder?: string;
   submit?: string;
+  submitting?: string;
   disclaimer?: string;
   toastTitle?: string;
   toastDescription?: string;
+  errorTitle?: string;
+  errorDescription?: string;
 }
 
 export interface Contact01Props extends SectionProps {
@@ -70,10 +73,15 @@ const DEFAULT_LABELS: Required<Contact01Labels> = {
   formMessage: "Mensaje (opcional)",
   formMessagePlaceholder: "Alergias, ocasion especial, preferencia de mesa...",
   submit: "Solicitar reserva",
+  submitting: "Enviando...",
   disclaimer: "Al enviar aceptas ser contactado para confirmar tu reserva.",
   toastTitle: "Solicitud recibida",
   toastDescription: "Te confirmaremos tu reserva por email muy pronto.",
+  errorTitle: "No se pudo enviar la solicitud",
+  errorDescription: "Intentalo de nuevo o llamanos por telefono.",
 };
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 const DEFAULT_MAP_URL =
   "https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4a38f7a4e8dc7:0xc9b99a7a043a167e";
@@ -102,15 +110,43 @@ export function Contact01({
   ...props
 }: Contact01Props) {
   const [guests, setGuests] = useState("2");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const l = { ...DEFAULT_LABELS, ...labels };
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    toast.success(l.toastTitle, {
-      description: l.toastDescription,
-    });
-    e.currentTarget.reset();
-    setGuests("2");
+    const form = e.currentTarget;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      toast.error(l.errorTitle, { description: l.errorDescription });
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.append("access_key", accessKey);
+    formData.append("subject", "Nueva solicitud de reserva - Copas y Encants");
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(l.toastTitle, { description: l.toastDescription });
+        form.reset();
+        setGuests("2");
+      } else {
+        toast.error(l.errorTitle, { description: l.errorDescription });
+      }
+    } catch {
+      toast.error(l.errorTitle, { description: l.errorDescription });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -284,6 +320,7 @@ export function Contact01({
                 <Label htmlFor="contact-guests" className="text-neutral-950">
                   {l.formGuests}
                 </Label>
+                <input type="hidden" name="guests" value={guests} />
                 <Select value={guests} onValueChange={setGuests}>
                   <SelectTrigger
                     id="contact-guests"
@@ -315,8 +352,12 @@ export function Contact01({
               />
             </div>
 
-            <Button type="submit" className="mt-1 h-12 text-base">
-              {l.submit}
+            <Button
+              type="submit"
+              className="mt-1 h-12 text-base"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? l.submitting : l.submit}
             </Button>
             <p className="text-center text-xs text-neutral-500">
               {l.disclaimer}

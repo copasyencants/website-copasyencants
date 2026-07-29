@@ -245,9 +245,12 @@
         "formMessage": "Mensaje (opcional)",
         "formMessagePlaceholder": "Alergias, ocasion especial, preferencia de mesa...",
         "submit": "Solicitar reserva",
+        "submitting": "Enviando...",
         "disclaimer": "Al enviar aceptas ser contactado para confirmar tu reserva.",
         "toastTitle": "Solicitud recibida",
-        "toastDescription": "Te confirmaremos tu reserva por email muy pronto."
+        "toastDescription": "Te confirmaremos tu reserva por email muy pronto.",
+        "errorTitle": "No se pudo enviar la solicitud",
+        "errorDescription": "Intentalo de nuevo o llamanos por telefono."
       }
     }
   },

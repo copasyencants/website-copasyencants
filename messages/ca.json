@@ -245,9 +245,12 @@
         "formMessage": "Missatge (opcional)",
         "formMessagePlaceholder": "Al·lèrgies, ocasió especial, preferència de taula...",
         "submit": "Sol·licitar reserva",
+        "submitting": "Enviant...",
         "disclaimer": "En enviar acceptes ser contactat per confirmar la teva reserva.",
         "toastTitle": "Sol·licitud rebuda",
-        "toastDescription": "Et confirmarem la teva reserva per email molt aviat."
+        "toastDescription": "Et confirmarem la teva reserva per email molt aviat.",
+        "errorTitle": "No s'ha pogut enviar la sol·licitud",
+        "errorDescription": "Torna-ho a provar o truca'ns per telèfon."
       }
     }
   },
