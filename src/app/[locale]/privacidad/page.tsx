@@ -79,11 +79,20 @@ export default async function PrivacidadPage({
       <p>
         Para gestionar el envío del formulario utilizamos el servicio Web3Forms
         (Web3Forms LLC), que actúa como encargado del tratamiento y nos
-        transmite por correo electrónico los datos que envías. Este proveedor
-        puede estar ubicado fuera del Espacio Económico Europeo; en tal caso,
-        la transferencia se realiza acogiéndose a las garantías previstas por
-        el RGPD para transferencias internacionales. No cedemos tus datos a
-        ningún otro tercero salvo obligación legal.
+        transmite por correo electrónico los datos que envías.
+      </p>
+      <p>
+        Este sitio web está alojado en la infraestructura de Vercel Inc., que
+        actúa como encargado del tratamiento en su condición de proveedor de
+        alojamiento y procesa datos técnicos (dirección IP, registros de
+        acceso al servidor) necesarios para servir la página.
+      </p>
+      <p>
+        Ambos proveedores pueden estar ubicados fuera del Espacio Económico
+        Europeo; en tal caso, la transferencia se realiza acogiéndose a las
+        garantías previstas por el RGPD para transferencias internacionales
+        (cláusulas contractuales tipo u otro mecanismo equivalente). No
+        cedemos tus datos a ningún otro tercero salvo obligación legal.
       </p>
 
       <h2>Plazo de conservación</h2>
