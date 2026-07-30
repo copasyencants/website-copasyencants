@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "@/lib/component-types";
+import { NavLink } from "@/components/ui/nav-link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -360,7 +361,13 @@ export function Contact01({
               {isSubmitting ? l.submitting : l.submit}
             </Button>
             <p className="text-center text-xs text-neutral-500">
-              {l.disclaimer}
+              {l.disclaimer}{" "}
+              <NavLink
+                href="/privacidad"
+                className="underline underline-offset-2 hover:text-neutral-800"
+              >
+                Política de privacidad
+              </NavLink>
             </p>
           </form>
         </Reveal>

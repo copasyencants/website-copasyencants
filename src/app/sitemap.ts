@@ -7,7 +7,9 @@ import { siteConfig } from "@/lib/site";
  * Static routes for the sitemap. Add an entry per public page.
  * For dynamic routes, map over your data source and push more entries.
  */
-const routes = ["", "/carta"];
+const routes = ["", "/carta", "/aviso-legal", "/privacidad", "/cookies"];
+
+const LEGAL_ROUTES = new Set(["/aviso-legal", "/privacidad", "/cookies"]);
 
 function localizedPath(locale: string, path: string): string {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
@@ -22,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}${localizedPath(locale, route)}`,
       lastModified,
       changeFrequency: "monthly" as const,
-      priority: route === "" ? 1 : 0.8,
+      priority: route === "" ? 1 : LEGAL_ROUTES.has(route) ? 0.3 : 0.8,
       alternates: {
         languages: Object.fromEntries(
           routing.locales.map((l) => [

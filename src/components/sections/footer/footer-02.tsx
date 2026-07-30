@@ -31,6 +31,7 @@ export interface Footer02Props extends SectionProps {
   scheduleTitle?: string;
   rightsText?: string;
   designedByText?: string;
+  legalLinks?: FooterLink[];
 }
 
 const DEFAULT_COLUMNS: FooterColumn[] = [
@@ -50,6 +51,12 @@ const DEFAULT_SCHEDULE: FooterSchedule[] = [
   { day: "Viernes - Domingo", hours: "10:30 - 00:00" },
 ];
 
+const DEFAULT_LEGAL_LINKS: FooterLink[] = [
+  { label: "Aviso legal", href: "/aviso-legal" },
+  { label: "Privacidad", href: "/privacidad" },
+  { label: "Cookies", href: "/cookies" },
+];
+
 /**
  * Footer 02 — pied de page riche : marque, baseline, colonnes de liens,
  * réseaux sociaux et barre inférieure (copyright). Sombre et chaleureux,
@@ -65,6 +72,7 @@ export function Footer02({
   scheduleTitle = "Horario",
   rightsText = "Todos los derechos reservados.",
   designedByText = "Diseñado por",
+  legalLinks = DEFAULT_LEGAL_LINKS,
   ...props
 }: Footer02Props) {
   const year = new Date().getFullYear();
@@ -152,6 +160,20 @@ export function Footer02({
           <p className="text-neutral-500">
             © {year} {brand}. {rightsText}
           </p>
+          {legalLinks.length > 0 ? (
+            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-neutral-500">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <NavLink
+                    href={link.href}
+                    className="transition-colors hover:text-neutral-950"
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          ) : null}
           <p className="text-neutral-500">
             {designedByText}{" "}
             <a
