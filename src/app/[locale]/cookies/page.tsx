@@ -50,10 +50,18 @@ export default async function CookiesPage({
         la Agencia Española de Protección de Datos (AEPD).
       </p>
       <p>
-        No utilizamos cookies de análisis, publicidad ni de redes sociales.
-        Si en el futuro incorporamos este tipo de cookies, actualizaremos esta
-        política y solicitaremos tu consentimiento mediante un aviso
-        específico.
+        Además, utilizamos Vercel Web Analytics para conocer de forma
+        agregada y anónima cuántas visitas recibe el sitio, qué páginas se
+        consultan y desde qué país o dispositivo. Este servicio{" "}
+        <strong>no utiliza cookies ni identificadores persistentes</strong>,
+        no crea perfiles individuales de los visitantes y no comparte datos
+        con fines publicitarios, por lo que tampoco requiere tu consentimiento
+        previo.
+      </p>
+      <p>
+        No utilizamos cookies de publicidad ni de redes sociales. Si en el
+        futuro incorporamos este tipo de cookies, actualizaremos esta política
+        y solicitaremos tu consentimiento mediante un aviso específico.
       </p>
 
       <h2>Cómo desactivar las cookies</h2>

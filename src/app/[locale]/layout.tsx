@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { hasLocale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
           <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
           <Toaster theme="light" richColors position="top-center" />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

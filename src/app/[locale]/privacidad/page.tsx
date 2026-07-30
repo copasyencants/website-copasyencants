@@ -67,6 +67,12 @@ export default async function PrivacidadPage({
         exclusivamente para gestionar tu solicitud de reserva y contactar
         contigo para confirmarla.
       </p>
+      <p>
+        Además, utilizamos Vercel Web Analytics para obtener estadísticas
+        agregadas y anónimas de visitas al sitio (páginas vistas, país,
+        dispositivo). Este servicio no utiliza cookies, no identifica a
+        usuarios individuales y no permite el seguimiento entre sitios web.
+      </p>
 
       <h2>Legitimación</h2>
       <p>
@@ -85,10 +91,12 @@ export default async function PrivacidadPage({
         Este sitio web está alojado en la infraestructura de Vercel Inc., que
         actúa como encargado del tratamiento en su condición de proveedor de
         alojamiento y procesa datos técnicos (dirección IP, registros de
-        acceso al servidor) necesarios para servir la página.
+        acceso al servidor) necesarios para servir la página. Vercel también
+        presta el servicio de Vercel Web Analytics descrito en el apartado
+        anterior.
       </p>
       <p>
-        Ambos proveedores pueden estar ubicados fuera del Espacio Económico
+        Estos proveedores pueden estar ubicados fuera del Espacio Económico
         Europeo; en tal caso, la transferencia se realiza acogiéndose a las
         garantías previstas por el RGPD para transferencias internacionales
         (cláusulas contractuales tipo u otro mecanismo equivalente). No
