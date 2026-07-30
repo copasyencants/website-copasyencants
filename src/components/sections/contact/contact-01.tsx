@@ -178,7 +178,7 @@ export function Contact01({
             <Reveal delay={0.15}>
               <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
+                  <span className="flex size-9 items-center justify-center rounded-full bg-[#008C45]/10 text-[#008C45]">
                     <MapPin className="size-5" aria-hidden />
                   </span>
                   <p className="font-medium text-neutral-950">
@@ -200,7 +200,7 @@ export function Contact01({
             <Reveal delay={0.2}>
               <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
+                  <span className="flex size-9 items-center justify-center rounded-full bg-[#008C45]/10 text-[#008C45]">
                     <Phone className="size-5" aria-hidden />
                   </span>
                   <p className="font-medium text-neutral-950">
@@ -220,7 +220,7 @@ export function Contact01({
             <Reveal delay={0.25}>
               <div className="flex flex-col gap-3 rounded-2xl border border-neutral-200 bg-white p-5 text-neutral-950 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="bg-primary/10 text-primary flex size-9 items-center justify-center rounded-full">
+                  <span className="flex size-9 items-center justify-center rounded-full bg-[#008C45]/10 text-[#008C45]">
                     <ShoppingBag className="size-5" aria-hidden />
                   </span>
                   <p className="font-medium text-neutral-950">
@@ -231,7 +231,7 @@ export function Contact01({
                   <Button
                     asChild
                     size="sm"
-                    className="h-8 rounded-full text-sm"
+                    className="h-8 rounded-full bg-[#008C45] text-sm text-white hover:bg-[#007A3B]"
                   >
                     <a href={glovoUrl} target="_blank" rel="noreferrer">
                       Glovo

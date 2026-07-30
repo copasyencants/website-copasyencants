@@ -78,16 +78,16 @@ export function Features02({
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/10" />
           </div>
           {badge ? (
-            <div className="bg-card border-border absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border p-5 text-neutral-950 shadow-xl sm:right-6">
+            <div className="absolute -right-2 -bottom-6 max-w-[15rem] rounded-2xl border border-white/15 bg-[#008C45] p-5 text-white shadow-xl sm:right-6">
               <div className="flex items-center gap-3">
-                <span className="bg-accent/15 text-accent flex size-11 shrink-0 items-center justify-center rounded-full">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">
                   <Leaf className="size-5" aria-hidden />
                 </span>
                 <div>
                   <p className="font-heading text-2xl leading-none font-semibold">
                     {badge.value}
                   </p>
-                  <p className="mt-1 text-xs text-neutral-500 text-pretty">
+                  <p className="mt-1 text-xs text-white/78 text-pretty">
                     {badge.label}
                   </p>
                 </div>

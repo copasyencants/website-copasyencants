@@ -131,14 +131,14 @@ export function Footer02({
               <h3 className="font-heading text-sm font-bold tracking-wide text-neutral-950 uppercase">
                 {scheduleTitle}
               </h3>
-              <dl className="flex max-w-sm flex-col overflow-hidden rounded-lg border border-neutral-200 text-sm">
+              <dl className="flex max-w-sm flex-col overflow-hidden rounded-lg border border-[#008C45] bg-[#008C45] text-sm shadow-sm shadow-[#008C45]/10">
                 {schedule.map((item) => (
                   <div
                     key={item.day}
-                    className="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-neutral-200 px-4 py-3 last:border-b-0"
+                    className="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-white/20 px-4 py-3 last:border-b-0"
                   >
-                    <dt className="text-neutral-600">{item.day}</dt>
-                    <dd className="text-right font-semibold text-neutral-950">
+                    <dt className="text-white/85">{item.day}</dt>
+                    <dd className="text-right font-semibold text-white">
                       {item.hours}
                     </dd>
                   </div>

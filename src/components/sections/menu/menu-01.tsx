@@ -208,7 +208,10 @@ export function Menu01({
       {cta ? (
         <Reveal delay={0.1}>
           <div className="mt-12 flex justify-center">
-            <Button asChild variant="outline" className="h-11 px-6">
+            <Button
+              asChild
+              className="h-11 bg-[#008C45] px-6 text-white hover:bg-[#007A3B]"
+            >
               <Link href={cta.href}>
                 {cta.label}
                 <ArrowRight className="size-4" />

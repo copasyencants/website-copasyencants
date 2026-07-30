@@ -111,7 +111,10 @@ export function Navbar02({
 
         <div className="flex items-center gap-2">
           {localeSwitcher}
-          <Button asChild className="hidden h-10 px-5 sm:inline-flex">
+          <Button
+            asChild
+            className="hidden h-10 px-5 sm:inline-flex"
+          >
             <Link href={cta.href}>{cta.label}</Link>
           </Button>
 
@@ -144,7 +147,10 @@ export function Navbar02({
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                  <Button asChild className="mt-4 h-11">
+                  <Button
+                    asChild
+                    className="mt-4 h-11"
+                  >
                     <Link href={cta.href}>{cta.label}</Link>
                   </Button>
                 </SheetClose>

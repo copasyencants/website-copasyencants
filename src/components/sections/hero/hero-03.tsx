@@ -41,6 +41,22 @@ const DEFAULT_STATS: Hero03Stat[] = [
   { value: "2007", label: "Desde" },
 ];
 
+function renderTitleTop(title: string) {
+  const match = title.match(/^(.*?)(sabor|taste)(.*)$/i);
+
+  if (!match) {
+    return title;
+  }
+
+  return (
+    <>
+      {match[1]}
+      <span className="text-[#008C45]">{match[2]}</span>
+      {match[3]}
+    </>
+  );
+}
+
 /**
  * Hero 03 — accroche plein cadre sur photographie, dégradé chaud lisible,
  * marque en serif, double CTA et bandeau de preuves (note, chiffres clés).
@@ -109,7 +125,7 @@ export function Hero03({
 
           <Reveal delay={0.08}>
             <h1 className="font-heading mt-4 max-w-4xl text-[clamp(2.35rem,7vw,5.75rem)] leading-[0.96] font-semibold text-balance drop-shadow-[0_3px_18px_rgba(0,0,0,0.32)] sm:mt-6">
-              {titleTop}{" "}
+              {renderTitleTop(titleTop)}{" "}
               <span className="text-primary italic">{titleAccent}</span>
               <br />
               {titleBottom}

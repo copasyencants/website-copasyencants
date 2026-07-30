@@ -37,7 +37,7 @@ export function LocaleSwitcher({ className }: LocaleSwitcherProps) {
           className={cn(
             "rounded-full px-2.5 py-1 transition-colors",
             loc === locale
-              ? "bg-primary text-primary-foreground"
+              ? "!bg-[#008C45] text-white hover:!bg-[#007A3B]"
               : "text-foreground/60 hover:text-foreground",
           )}
         >
