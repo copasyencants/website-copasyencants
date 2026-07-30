@@ -43,12 +43,12 @@ export async function LegalPageShell({
         cta={{ label: tNav("cta"), href: "/#contacto" }}
         localeSwitcher={<LocaleSwitcher />}
       />
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-white text-neutral-950">
         <div className="container-content section-sm mx-auto max-w-3xl">
-          <h1 className="text-h1 font-heading font-semibold text-balance">
+          <h1 className="text-h1 font-heading font-semibold text-balance text-neutral-950">
             {title}
           </h1>
-          <p className="text-muted-foreground mt-2 text-sm">
+          <p className="mt-2 text-sm text-neutral-500">
             Última actualización: {updated}
           </p>
           <div className="mt-8 flex flex-col gap-6 text-neutral-700 [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_h2]:font-heading [&_h2]:mt-4 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-neutral-950 [&_li]:ml-5 [&_li]:list-disc [&_p]:leading-relaxed [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5">
