@@ -63,6 +63,13 @@ export default async function CookiesPage({
         futuro incorporamos este tipo de cookies, actualizaremos esta política
         y solicitaremos tu consentimiento mediante un aviso específico.
       </p>
+      <p>
+        Al pulsar &quot;Aceptar&quot; o &quot;Rechazar&quot; en el aviso de
+        cookies, guardamos tu elección en el almacenamiento local de tu
+        navegador (localStorage) para no volver a mostrarte el aviso. Este
+        dato no sale de tu dispositivo ni se comparte con nosotros ni con
+        terceros.
+      </p>
 
       <h2>Cómo desactivar las cookies</h2>
       <p>

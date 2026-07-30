@@ -2,6 +2,13 @@
   "site": {
     "description": "Pizzeria restaurant in Sant Marti, Barcelona, with indoor and terrace service, takeaway, online reservations and a warm atmosphere."
   },
+  "cookieBanner": {
+    "ariaLabel": "Cookie notice",
+    "message": "We use a technical cookie to remember your language, and anonymous analytics with no tracking cookies.",
+    "more": "Learn more",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
   "nav": {
     "brand": "Copas y Encants",
     "logoAriaLabel": "Copas y Encants — home",

@@ -2,6 +2,13 @@
   "site": {
     "description": "Restaurant pizzeria a Sant Martí, Barcelona, amb servei a sala i terrassa, venda per emportar, reserves online i ambient proper."
   },
+  "cookieBanner": {
+    "ariaLabel": "Avís de cookies",
+    "message": "Utilitzem una cookie tècnica per recordar el teu idioma i analítica anònima sense cookies de seguiment.",
+    "more": "Més informació",
+    "accept": "Acceptar",
+    "reject": "Rebutjar"
+  },
   "nav": {
     "brand": "Copas y Encants",
     "logoAriaLabel": "Copas y Encants — inici",

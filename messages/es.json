@@ -2,6 +2,13 @@
   "site": {
     "description": "Restaurante pizzeria en Sant Marti, Barcelona, con servicio en sala y terraza, venta para llevar, reservas online y ambiente cercano."
   },
+  "cookieBanner": {
+    "ariaLabel": "Aviso de cookies",
+    "message": "Usamos una cookie técnica para recordar tu idioma y analítica anónima sin cookies de seguimiento.",
+    "more": "Más información",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
+  },
   "nav": {
     "brand": "Copas y Encants",
     "logoAriaLabel": "Copas y Encants — inicio",

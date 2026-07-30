@@ -12,6 +12,7 @@ import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
+import { CookieBanner } from "@/components/layout/cookie-banner";
 
 import "../globals.css";
 
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <TooltipProvider delayDuration={200}>{children}</TooltipProvider>
           <Toaster theme="light" richColors position="top-center" />
+          <CookieBanner />
         </NextIntlClientProvider>
         <Analytics />
       </body>
