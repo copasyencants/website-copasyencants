@@ -26,12 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: route === "" ? 1 : LEGAL_ROUTES.has(route) ? 0.3 : 0.8,
       alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [
-            l,
-            `${siteConfig.url}${localizedPath(l, route)}`,
-          ]),
-        ),
+        languages: {
+          ...Object.fromEntries(
+            routing.locales.map((l) => [
+              l,
+              `${siteConfig.url}${localizedPath(l, route)}`,
+            ]),
+          ),
+          "x-default": `${siteConfig.url}${localizedPath(
+            routing.defaultLocale,
+            route,
+          )}`,
+        },
       },
     })),
   );

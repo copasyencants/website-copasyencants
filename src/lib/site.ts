@@ -8,8 +8,11 @@ export const siteConfig = {
   shortName: "Copas y Encants",
   description:
     "Restaurante pizzeria en Sant Marti, Barcelona, con servicio en sala, venta para llevar, reservas online y ambiente cercano.",
-  // No trailing slash. Set NEXT_PUBLIC_SITE_URL in production.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  // Canonical production origin. The environment variable still allows
+  // previews or another deployment target to override it.
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://copasyencants.es"
+  ).replace(/\/$/, ""),
   ogImage: "/opengraph-image.png",
   locale: "es_ES",
   themeColor: "#f4ede0",
